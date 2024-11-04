@@ -57,6 +57,67 @@ Le tableau contient :
 
 Les détails et échéances des tâches sont visibles dans le diagramme de Gantt. Plusieurs applications gratuites permettent de créer des diagrammes de Gantt comme [GanttProject](http://www.ganttproject.biz/) et [Toggl Plan](https://toggl.com/plan/).
 
+
+---
+A ranger
+
+
+Taches :
+
+DEV : TOUS
+TEST: TOUS
+2d : S.S
+Audio : R.A
+Level Manager : M.F
+
+Ganntt : S.S
+Trello : M.F
+GitHub : M.F
+UML : S.S / R.A
+
+
+
+
+Liste des choses a faire :
+
+Audio :
+Musique des niveaux
+Son des bouttons 
+Son FX (Mort, contact avec les obstacles, ...)
+
+Animations
+
+UI :
+Création du personages
+Création des sheet (carte)
+Bouttons
+
+DEV :
+Player controller
+Camera Controller
+ScoreManager
+GameManager
+SaveSys
+LevelSpawner
+SO - Pour les skins
+OptionSet
+
+
+Fichiers sauvegarde
+Fichiers de niveaux (xml ou text)
+
+Gestion de projet :
+
+Trello
+Faire un gantt (GanttProject)
+GitHub
+Faire une UML (Lucid Chart)
+
+
+---
+
+
+
 ## Outils recommandés
 Pour faciliter le suivi et la collaboration, voici quelques outils recommandés :
 - **Git** : Pour le contrôle de version.
