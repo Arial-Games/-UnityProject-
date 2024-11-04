@@ -42,6 +42,7 @@ Le tableau contient :
    - Créer un dépôt Git pour le projet.
    - Définir une structure de branches pour le développement, par exemple : `main`, `dev`, et des branches pour chaque fonctionnalité.
    - S'assurer que chaque membre de l'équipe sait cloner, créer des branches, committer et pousser ses modifications.
+   - Faire les carte sur un éditeurs de niveaux.
 
 ### 2. Création d’un diagramme de Gantt
    - Utiliser un outil gratuit pour créer un diagramme de Gantt (par exemple, [GanttProject](http://www.ganttproject.biz/) ou [Toggl Plan](https://toggl.com/plan/)).
