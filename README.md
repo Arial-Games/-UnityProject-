@@ -1,4 +1,4 @@
-# -UnityProject-
+# -UnityProject- GEOMETRY DASH
 Projet pour le projet Unity -UIMM CNAM-
 
 Ce projet est conçu dans le cadre de l'initiative UIMM CNAM pour développer un jeu Unity. Ce document contient des informations sur l'organisation, les outils de gestion de projet, et les tâches à accomplir pour assurer un bon suivi de l'évolution du projet.
@@ -12,7 +12,7 @@ Ce projet est conçu dans le cadre de l'initiative UIMM CNAM pour développer un
 - [Outils recommandés](#outils-recommandés)
 
 ## Description du projet
-Ce projet Unity a pour objectif de ////. Le développement se fera en utilisant Unity et d'autres outils de support pour garantir une production organisée et efficace.
+Ce projet Unity a pour objectif de //// et s'inspire de GEOMETRY DASH. Le développement se fera en utilisant Unity et d'autres outils de support pour garantir une production organisée et efficace.
 
 ## Configuration et installation
 1. **Unity** : Assurez-vous d'avoir installé Unity (La dernière -a definir-).
