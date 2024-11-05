@@ -114,4 +114,3 @@ Pour faciliter le suivi et la collaboration, voici quelques outils recommandés 
   
   
 N'hésitez pas à consulter la documentation Unity pour vous familiariser avec les fonctionnalités avancées si nécessaire. :)
-```
