@@ -9,6 +9,8 @@ Ce projet est conçu dans le cadre de l'initiative UIMM CNAM pour développer un
 - [Gestion de version et collaboration](#gestion-de-version-et-collaboration)
 - [Suivi de projet](#suivi-de-projet)
 - [Tâches à accomplir](#tâches-à-accomplir)
+- [Rôles et responsabilités](#rôles-et-responsabilités)
+- [Liste des tâches](#liste-des-tâches)
 - [Outils recommandés](#outils-recommandés)
 
 ## Description du projet
@@ -57,66 +59,52 @@ Le tableau contient :
 
 Les détails et échéances des tâches sont visibles dans le diagramme de Gantt. Plusieurs applications gratuites permettent de créer des diagrammes de Gantt comme [GanttProject](http://www.ganttproject.biz/) et [Toggl Plan](https://toggl.com/plan/).
 
+## Rôles et responsabilités
+- **DEV** : TOUS
+- **TEST** : TOUS
+- **2D** : S.S
+- **Audio** : R.A
+- **Level Manager** : M.F
+- **Gantt** : S.S
+- **Trello** : M.F
+- **GitHub** : M.F
+- **UML** : S.S / R.A
 
----
-A ranger
+## Liste des tâches
+### Audio
+- [ ] Musique des niveaux
+- [ ] Son des boutons
+- [ ] Effets sonores (mort, contact avec les obstacles, etc.)
 
+### Animations
+- [ ] Animation des personnages
+- [ ] Animation des obstacles
+- [ ] Effets visuels
 
-Taches :
+### UI
+- [ ] Création du personnage
+- [ ] Création des cartes (sheets)
+- [ ] Boutons et éléments interactifs
 
-DEV : TOUS
-TEST: TOUS
-2d : S.S
-Audio : R.A
-Level Manager : M.F
+### Développement
+- [ ] Player Controller
+- [ ] Camera Controller
+- [ ] ScoreManager
+- [ ] GameManager
+- [ ] SaveSys
+- [ ] LevelSpawner
+- [ ] Scriptable Objects (SO) pour les skins
+- [ ] OptionSet
 
-Ganntt : S.S
-Trello : M.F
-GitHub : M.F
-UML : S.S / R.A
+### Fichiers de gestion
+- [ ] Fichiers de sauvegarde
+- [ ] Fichiers de niveaux (XML ou texte)
 
-
-
-
-Liste des choses a faire :
-
-Audio :
-Musique des niveaux
-Son des bouttons 
-Son FX (Mort, contact avec les obstacles, ...)
-
-Animations
-
-UI :
-Création du personages
-Création des sheet (carte)
-Bouttons
-
-DEV :
-Player controller
-Camera Controller
-ScoreManager
-GameManager
-SaveSys
-LevelSpawner
-SO - Pour les skins
-OptionSet
-
-
-Fichiers sauvegarde
-Fichiers de niveaux (xml ou text)
-
-Gestion de projet :
-
-Trello
-Faire un gantt (GanttProject)
-GitHub
-Faire une UML (Lucid Chart)
-
-
----
-
-
+### Gestion de projet
+- [x] Trello
+- [ ] Diagramme de Gantt (GanttProject)
+- [x] GitHub
+- [ ] Diagrammes UML (Lucid Chart)
 
 ## Outils recommandés
 Pour faciliter le suivi et la collaboration, voici quelques outils recommandés :
@@ -124,4 +112,6 @@ Pour faciliter le suivi et la collaboration, voici quelques outils recommandés 
 - **Trello** : Pour la gestion de projet et l'organisation des tâches.
 - **GanttProject** ou **Toggl Plan** : Pour le suivi des deadlines avec des diagrammes de Gantt.
   
-N'hésitez pas à consulter la documentation Unity pour vous familiariser avec les fonctionnalités avancées si nécessaire.
+  
+N'hésitez pas à consulter la documentation Unity pour vous familiariser avec les fonctionnalités avancées si nécessaire. :)
+```
