@@ -99,12 +99,13 @@ Les détails et échéances des tâches sont visibles dans le diagramme de Gantt
 ### Fichiers de gestion
 - [ ] Fichiers de sauvegarde
 - [ ] Fichiers de niveaux (XML ou texte)
+- [ ] Shémas images
 
 ### Gestion de projet
 - [x] Trello
-- [ ] Diagramme de Gantt (GanttProject)
+- [x] Diagramme de Gantt (GanttProject)
 - [x] GitHub
-- [ ] Diagrammes UML (Lucid Chart)
+- [x] Diagrammes UML (Lucid Chart)
 
 ## Outils recommandés
 Pour faciliter le suivi et la collaboration, voici quelques outils recommandés :
