@@ -1,0 +1,4 @@
+repository "GeometryDash - Project@Arial_Games@cloud"
+  path "/"
+    br "/main"
+    co "/main"
