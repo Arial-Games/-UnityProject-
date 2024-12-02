@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public int playerLevel;
+
     [Header("Ressources")]
     public int gold;
     public int cash;
     public int stars;
-    public int starCoins;
+    public int starsCoins;
 
     [Header("Others")]
     // Mettre en scriptables
