@@ -2,15 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
-using UnityEngine.UI;
-using UnityEngine.Animations;
-using System.IO;
 
-public class UiManager : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
-    [SerializeField] GameObject shopScreen;
-    // Les texts
 
     //-------------------
     //  METHODES DEFAULT
@@ -18,26 +12,22 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
-        shopScreen.SetActive(false);
+
     }
 
     void Update()
     {
-        
+
     }
+
 
     //-------------------
     //  METHODES PUBLIC
     //-------------------
 
-    public void OnClickBackButton()
+    public void OnClickTestLevel()
     {
-        shopScreen.SetActive(false);
-    }
-
-    public void OnClickOpenShop()
-    {
-        shopScreen.SetActive(true);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
 
     //-------------------
