@@ -5637,10 +5637,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLevel: 0
-  gold: 0
-  cash: 0
-  stars: 0
-  starsCoins: 0
+  gold: 20
+  cash: 52
+  stars: 1
+  starsCoins: 4
   skins: 0
 --- !u!1 &1279435067
 GameObject:
@@ -6905,6 +6905,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopScreen: {fileID: 1980183906}
+  inventoryText:
+  - {fileID: 121572450}
+  - {fileID: 410028350}
+  - {fileID: 277279038}
+  - {fileID: 68832136}
+  playerInventory: {fileID: 1103760790}
 --- !u!1 &1641405139
 GameObject:
   m_ObjectHideFlags: 0
