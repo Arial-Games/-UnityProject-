@@ -15,7 +15,7 @@ MonoBehaviour:
   publicName: JOHNATHANNNN ?
   description: Desc
   type: 0
-  price: 0
+  price: 56
   uniqueId: 6
   rarety: 0
   skinSprite: {fileID: 21300000, guid: 17ae7701cc64e764ca1329a82630349c, type: 3}

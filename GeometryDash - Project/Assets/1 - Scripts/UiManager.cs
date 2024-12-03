@@ -31,7 +31,7 @@ public class UiManager : MonoBehaviour
 
     void Update()
     {
-
+        textOnDisplay();
     }
 
     //-------------------
@@ -54,8 +54,8 @@ public class UiManager : MonoBehaviour
 
     void textOnDisplay()
     {
-        inventoryText[0].text = "Argent : " +  playerInventory.gold.ToString();
-        inventoryText[1].text = "Or : " + playerInventory.cash.ToString();
+        inventoryText[0].text = "Argent : " +  playerInventory.cash.ToString();
+        inventoryText[1].text = "Or : " + playerInventory.gold.ToString();
         inventoryText[2].text = "Etoile : " + playerInventory.stars.ToString();
         inventoryText[3].text = "Piece etoiles : " + playerInventory.starsCoins.ToString();
     }

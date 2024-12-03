@@ -15,7 +15,7 @@ MonoBehaviour:
   publicName: Jack ?
   description: Desc
   type: 0
-  price: 0
+  price: 88
   uniqueId: 2
   rarety: 0
   skinSprite: {fileID: 21300000, guid: 0633b3e02112128499b6fa77b1111bae, type: 3}
