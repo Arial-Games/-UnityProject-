@@ -25,15 +25,12 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] Image loadingBarFill;
 
 
-    //-------------------
-    //  METHODES DEFAULT
-    //-------------------
 
     int actOptionPanel = 0;
 
     void Start()
     {
-        DiableAllPanel();
+        diableAllPanel();
 
         Screen.SetResolution(1920, 1080, Screen.fullScreen);
         Screen.fullScreen = true;
@@ -41,26 +38,54 @@ public class OptionMenu : MonoBehaviour
 
     private void Update()
     {
-        OnInputWindowsChange();
-    }
-
-
-    //-------------------
-    //  METHODES PUBLIC
-    //-------------------
-
-
-    public void OnButtonWindowsChange(int winId)
-    {
         if (mainMenu == true)
         {
-            DiableAllPanel();
-            optionGlobalPanel.SetActive(true);
-            optionPanel[winId].SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                mainMenu = false;
+                diableAllPanel();
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                actOptionPanel++;
+                windowsMove();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                actOptionPanel--;
+                windowsMove();
+            }
         }
+
+
+
     }
 
-    public void StartButton()
+
+    void windowsMove()
+    {
+        // Boucle
+        if (actOptionPanel <= -1)
+        {
+            actOptionPanel = 5;
+        }
+
+        if (actOptionPanel >= 6)
+        {
+            actOptionPanel = 0;
+        }
+
+        diableAllPanel();
+        optionGlobalPanel.SetActive(true);
+        optionPanel[actOptionPanel].SetActive(true);
+    }
+
+
+
+    public void startButton()
     {
         StartCoroutine(startSceneAsync(1));
     }
@@ -78,19 +103,62 @@ public class OptionMenu : MonoBehaviour
         }
     }
 
-    public void OptionButton()
+    // Lancemenet de la partie sur la save 
+/*
+    public void loadButton()
     {
-        WindowsMove();
+        string saveSeparator = "%DATA%";
+
+        if (File.Exists(Application.dataPath + "/data.txt"))
+        {
+            string saveString = File.ReadAllText(Application.dataPath + "/data.txt");
+
+
+            string[] content = saveString.Split(new[] { saveSeparator }, System.StringSplitOptions.None);
+            playerStat.money = float.Parse(content[0]);
+            playerStat.sharpMetal = float.Parse(content[1]);
+            playerStat.rutsyMetal = float.Parse(content[2]);
+
+            playerStat.XP = int.Parse(content[3]);
+            playerStat.storyProgression = int.Parse(content[4]);
+            playerStat._actTiers = int.Parse(content[5]);
+            playerStat._actHouseTiers = int.Parse(content[6]);
+
+
+            playerStat.openSave = bool.Parse(content[7]);
+            playerStat.openSave = true;
+            StartCoroutine(loadSceneAsync(1));
+
+        }
+    }
+    IEnumerator loadSceneAsync(int placeID)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            loadingBarFill.fillAmount = progressValue;
+
+            yield return null;
+        }
+    }*/
+
+
+    public void optionButton()
+    {
+        windowsMove();
         mainMenu = true;
     }
 
-    public void BackButton()
+    public void backButton()
     {
         mainMenu = false;
-        DiableAllPanel();
+        diableAllPanel();
     }
 
-    public void LeaveGame()
+    public void leaveGame()
     {
         Application.Quit();
     }
@@ -121,99 +189,7 @@ public class OptionMenu : MonoBehaviour
     #endregion
 
 
-    //-------------------
-    //  METHODES PRIVEE
-    //-------------------
-
-    void OnInputWindowsChange()
-    {
-        if (mainMenu == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                mainMenu = false;
-                DiableAllPanel();
-
-            }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                actOptionPanel++;
-                WindowsMove();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                actOptionPanel--;
-                WindowsMove();
-            }
-        }
-    }
-
-
-    void WindowsMove()
-    {
-        // Boucle
-        if (actOptionPanel <= -1)
-        {
-            actOptionPanel = 5;
-        }
-
-        if (actOptionPanel >= 6)
-        {
-            actOptionPanel = 0;
-        }
-
-        DiableAllPanel();
-        optionGlobalPanel.SetActive(true);
-        optionPanel[actOptionPanel].SetActive(true);
-    }
-
-
-    // Lancemenet de la partie sur la save 
-    /*
-        public void loadButton()
-        {
-            string saveSeparator = "%DATA%";
-
-            if (File.Exists(Application.dataPath + "/data.txt"))
-            {
-                string saveString = File.ReadAllText(Application.dataPath + "/data.txt");
-
-
-                string[] content = saveString.Split(new[] { saveSeparator }, System.StringSplitOptions.None);
-                playerStat.money = float.Parse(content[0]);
-                playerStat.sharpMetal = float.Parse(content[1]);
-                playerStat.rutsyMetal = float.Parse(content[2]);
-
-                playerStat.XP = int.Parse(content[3]);
-                playerStat.storyProgression = int.Parse(content[4]);
-                playerStat._actTiers = int.Parse(content[5]);
-                playerStat._actHouseTiers = int.Parse(content[6]);
-
-
-                playerStat.openSave = bool.Parse(content[7]);
-                playerStat.openSave = true;
-                StartCoroutine(loadSceneAsync(1));
-
-            }
-        }
-        IEnumerator loadSceneAsync(int placeID)
-        {
-            AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);
-            loadingScreen.SetActive(true);
-
-            while (!operation.isDone)
-            {
-                float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-                loadingBarFill.fillAmount = progressValue;
-
-                yield return null;
-            }
-        }*/
-
-
-    void DiableAllPanel()
+    void diableAllPanel()
     {
         optionGlobalPanel.SetActive(false);
         for (int i = 0; i < optionPanel.Length; i++)
