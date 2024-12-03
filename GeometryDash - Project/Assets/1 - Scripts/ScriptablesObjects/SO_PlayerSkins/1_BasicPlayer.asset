@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
+  m_Name: 1_BasicPlayer
+  m_EditorClassIdentifier: 
+  publicName: John ?
+  description: Desc
+  type: 0
+  price: 0
+  uniqueId: 1
+  rarety: 0
+  skinSprite: {fileID: 21300000, guid: 7226d61dc36ebda42a78cf9fbdb74dc7, type: 3}
+  mainColor: {r: 1, g: 0, b: 0, a: 0}
+  secColor: {r: 1, g: 0.9142746, b: 0, a: 0}
