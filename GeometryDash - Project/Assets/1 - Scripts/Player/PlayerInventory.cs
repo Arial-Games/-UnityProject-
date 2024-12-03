@@ -12,9 +12,8 @@ public class PlayerInventory : MonoBehaviour
     public int stars;
     public int starsCoins;
 
-    [Header("Others")]
-    // Mettre en scriptables
-    public int skins;
+    [Header("Other")]
+    public bool[] possesionId;
 
     void Start()
     {
@@ -23,6 +22,13 @@ public class PlayerInventory : MonoBehaviour
 
     void Update()
     {
-
+        if (Input.GetKeyUp(KeyCode.P))
+        {
+            gold += 100;
+            cash += 100;
+            stars += 100;
+            starsCoins += 100;
+            Debug.LogError("CHEAT EN COURS");
+        }
     }
 }
