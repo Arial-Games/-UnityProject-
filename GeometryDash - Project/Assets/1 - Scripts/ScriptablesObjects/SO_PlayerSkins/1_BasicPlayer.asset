@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 1_BasicPlayer
   m_EditorClassIdentifier: 
-  name: John ?
+  publicName: John ?
   description: Desc
   type: 0
   price: 0

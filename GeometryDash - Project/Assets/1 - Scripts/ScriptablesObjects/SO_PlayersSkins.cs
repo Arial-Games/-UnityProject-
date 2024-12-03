@@ -10,7 +10,7 @@ public class SO_PlayersSkins : ScriptableObject
     public enum Rarety { Commun, Atypique, Rare, Legendary, Mytique, Collection };
 
     [Header("Basic info")]
-    public string name;
+    public string publicName;
     [TextArea] public string description;
     public Type type;
     [Range(0, 100)] public int price;
