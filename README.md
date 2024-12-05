@@ -68,13 +68,14 @@ Les détails et échéances des tâches sont visibles dans le diagramme de Gantt
 - **Gantt** : S.S
 - **Trello** : M.F
 - **GitHub** : M.F
+- **GamesManager** : MF
 - **UML** : S.S / R.A
 
 ## Liste des tâches
 ### Audio
-- [ ] Musique des niveaux
-- [ ] Son des boutons
-- [ ] Effets sonores (mort, contact avec les obstacles, etc.)
+- [x] Musique des niveaux
+- [x] Son des boutons
+- [x] Effets sonores (mort, contact avec les obstacles, etc.)
 
 ### Animations
 - [ ] Animation des personnages
@@ -82,19 +83,19 @@ Les détails et échéances des tâches sont visibles dans le diagramme de Gantt
 - [ ] Effets visuels
 
 ### UI
-- [ ] Création du personnage
+- [x] Création du personnage
 - [ ] Création des cartes (sheets)
 - [ ] Boutons et éléments interactifs
 
 ### Développement
-- [ ] Player Controller
+- [x] Player Controller
 - [ ] Camera Controller
 - [ ] ScoreManager
 - [ ] GameManager
 - [ ] SaveSys
 - [ ] LevelSpawner
-- [ ] Scriptable Objects (SO) pour les skins
-- [ ] OptionSet
+- [x] Scriptable Objects (SO) pour les skins
+- [x] OptionSet
 
 ### Fichiers de gestion
 - [ ] Fichiers de sauvegarde
