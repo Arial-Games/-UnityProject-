@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f81495c7c39c9b48b96d1c5a28ee403, type: 3}
-  m_Name: MODELE --- Power Orb - Basic
+  m_Name: FlyingJumper - Basic
   m_EditorClassIdentifier: 
-  publicName: PowerOrb - Basic
-  description: A glowing orb that grants a temporary boost, enhancing the player's
-    speed, jump height, or invincibility to help overcome challenging obstacles
-  type: 3
-  objVersion: 2
-  uniqueId: 900
-  isJumper: 0
-  jumpStrenght: 0
+  publicName: FlyingJumper - Basic
+  description: An obstacle that launches players into the air while allowing them
+    to fly briefly, requiring quick reflexes to navigate through in Geometry Dash
+  type: 0
+  objVersion: 0
+  uniqueId: 4
+  isJumper: 1
+  jumpStrenght: 10
   isGate: 0
   transformTo: 0
   isTrap: 0
   canKill: 0
-  isCollectibles: 1
-  values: 10
-  PowerOrbs: 1
+  isCollectibles: 0
+  values: 0
+  PowerOrbs: 0
   powerOrbEffects: 0

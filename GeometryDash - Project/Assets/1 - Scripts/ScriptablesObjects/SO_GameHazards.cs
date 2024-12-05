@@ -7,8 +7,8 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Data", menuName = "Scriptable Object/GameHazards", order = 1)]
 public class SO_GameHazards : ScriptableObject
 {
-    public enum Type { Jumper, Gate, Trap, Collectibles}
-    public enum ObjVersion { Basic, Edited}
+    public enum Type { Jumper, Gate, Trap, Collectibles, Nothing}
+    public enum ObjVersion { Basic, Edited, Model}
     public enum TransformTo { Nothing, Basic, Triangle, Wheels, Navet, SpaceShip, Robot }
     public enum PowerOrbEffects {  Nothing, Speed, Jump, Invincibility }
 
@@ -21,7 +21,7 @@ public class SO_GameHazards : ScriptableObject
 
     [Header("Jumper")]
     public bool isJumper;
-    public bool jumpStrenght;
+    public int jumpStrenght;
 
     [Header("Gate")]
     public bool isGate;
