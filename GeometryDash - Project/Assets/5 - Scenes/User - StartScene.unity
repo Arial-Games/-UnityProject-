@@ -2371,10 +2371,10 @@ MonoBehaviour:
   - {fileID: 8815941451629409623}
   - {fileID: 3663187802939233627}
   - {fileID: 3230035816845568611}
-  audioMixerMusic: []
   mainMenu: 0
   loadingScreen: {fileID: 4042466226230168453}
   loadingBarFill: {fileID: 6193028652862705630}
+  audioMixerGroup: []
 --- !u!4 &384761851
 Transform:
   m_ObjectHideFlags: 0
