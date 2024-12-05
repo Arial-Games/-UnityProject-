@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f81495c7c39c9b48b96d1c5a28ee403, type: 3}
+  m_Name: JumpPowerOrb - Basic
+  m_EditorClassIdentifier: 
+  publicName: JumpPowerOrb - Basic
+  description: A glowing orb that temporarily enhances the player's jump height,
+    enabling them to clear taller obstacles with ease
+  type: 3
+  objVersion: 1
+  uniqueId: 302
+  isJumper: 0
+  jumpStrenght: 0
+  isGate: 0
+  transformTo: 0
+  isTrap: 0
+  canKill: 0
+  isCollectibles: 1
+  values: 10
+  PowerOrbs: 1
+  powerOrbEffects: 2

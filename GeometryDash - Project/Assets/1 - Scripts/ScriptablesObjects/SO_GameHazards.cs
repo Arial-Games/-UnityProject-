@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,13 +8,16 @@ using UnityEngine.UI;
 public class SO_GameHazards : ScriptableObject
 {
     public enum Type { Jumper, Gate, Trap, Collectibles}
-    public enum TransformTo { Basic, Triangle, Wheels, Navet, SpaceShip, Robot }
+    public enum ObjVersion { Basic, Edited}
+    public enum TransformTo { Nothing, Basic, Triangle, Wheels, Navet, SpaceShip, Robot }
+    public enum PowerOrbEffects {  Nothing, Speed, Jump, Invincibility }
 
     [Header("Common data")]
     public string publicName;
     [TextArea] public string description;
     public Type type;
-    [Range(0, 20)] public int uniqueId;
+    public ObjVersion objVersion;
+    [Range(0, 1000)] public int uniqueId; // 1 -> 99 = Jumper // 100 -> 199 = Gate ...
 
     [Header("Jumper")]
     public bool isJumper;
@@ -30,4 +34,6 @@ public class SO_GameHazards : ScriptableObject
     [Header("Collectibles")]
     public bool isCollectibles;
     public int values;
+    public bool PowerOrbs;
+    public PowerOrbEffects powerOrbEffects;
 }

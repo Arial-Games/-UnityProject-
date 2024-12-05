@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f81495c7c39c9b48b96d1c5a28ee403, type: 3}
+  m_Name: GoldCoins - Basic
+  m_EditorClassIdentifier: 
+  publicName: GoldCoins - Basic
+  description: Shiny gold coins, collectible rewards hidden in levels, challenging
+    players to master precision and exploration
+  type: 3
+  objVersion: 0
+  uniqueId: 300
+  isJumper: 0
+  jumpStrenght: 0
+  isGate: 0
+  transformTo: 0
+  isTrap: 0
+  canKill: 0
+  isCollectibles: 1
+  values: 100
