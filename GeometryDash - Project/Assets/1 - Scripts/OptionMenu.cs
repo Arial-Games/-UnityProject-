@@ -11,7 +11,6 @@ public class OptionMenu : MonoBehaviour
 {
     public GameObject optionGlobalPanel;
     public GameObject[] optionPanel;
-    public AudioMixer[] audioMixerMusic;
 
     [SerializeField] bool mainMenu = false;
 
@@ -23,6 +22,10 @@ public class OptionMenu : MonoBehaviour
 
     [SerializeField] GameObject loadingScreen;
     [SerializeField] Image loadingBarFill;
+
+
+    // Audio
+    [SerializeField] AudioMixerGroup[] audioMixerGroup;
 
 
     //-------------------
@@ -64,19 +67,7 @@ public class OptionMenu : MonoBehaviour
     {
         StartCoroutine(startSceneAsync(1));
     }
-    IEnumerator startSceneAsync(int placeID)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);
-        loadingScreen.SetActive(true);
 
-        while (!operation.isDone)
-        {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
-
-            yield return null;
-        }
-    }
 
     public void OptionButton()
     {
@@ -105,8 +96,8 @@ public class OptionMenu : MonoBehaviour
 
     public void SetMusicVolume(float volume)
     {
-        audioMixerMusic[0].SetFloat("MusicVolume", volume);
-        audioMixerMusic[1].SetFloat("MusicVolume", volume);
+        /*audioMixerGroup[0].audioMixer.
+        audioMixerGroup[1].SetFloat("MusicVolume", volume);*/
     }
 
     public void FullScreen(bool isFullScreen)
@@ -124,6 +115,20 @@ public class OptionMenu : MonoBehaviour
     //-------------------
     //  METHODES PRIVEE
     //-------------------
+
+    IEnumerator startSceneAsync(int placeID)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);
+        loadingScreen.SetActive(true);
+
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+            loadingBarFill.fillAmount = progressValue;
+
+            yield return null;
+        }
+    }
 
     void OnInputWindowsChange()
     {
