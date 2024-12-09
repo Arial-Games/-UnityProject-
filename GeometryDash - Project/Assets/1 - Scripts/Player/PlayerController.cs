@@ -10,7 +10,7 @@ public enum Speed{
     VeryFast = 3,
     SuperFast = 4,
 }
-public class Mouvement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public Speed CurrentSpeed;
 //                           0      1      2      3       4                            
