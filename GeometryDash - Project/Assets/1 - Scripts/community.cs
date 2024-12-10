@@ -41,6 +41,17 @@ public class CommunityMenuController : MonoBehaviour
         communityGlobalPanel.SetActive(false);
        
     }
+    
+       public void OnClickBackButton()
+    {
+        communityGlobalPanel.SetActive(false);
+    }
+
+    public void OnClickOpenComm()
+    {
+        communityGlobalPanel.SetActive(true);
+    }
+
 
     // Chargez une scène de manière asynchrone
     public void LoadScene(int sceneIndex)
