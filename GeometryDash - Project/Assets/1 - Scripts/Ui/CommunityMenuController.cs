@@ -10,17 +10,23 @@ using System.IO;
 public class CommunityMenuController : MonoBehaviour
 {
     // Références aux panneaux et autres éléments UI
-    public GameObject communityGlobalPanel;
+    public GameObject[] communityPanel;
 
 
     // Référence à l'écran de chargement
     public GameObject loadingScreen;
 
+
+
+    //-------------------
+    //  METHODES DEFAULT
+    //-------------------
+
     void Start()
     {
         // Assurez-vous que tous les panneaux sont désactivés au démarrage
         DisableAllPanels();
-        communityGlobalPanel.SetActive(false); // Désactive le panneau communautaire au démarrage
+        communityPanel[0].SetActive(false); // Désactive le panneau communautaire au démarrage
     }
 
     void Update()
@@ -28,36 +34,38 @@ public class CommunityMenuController : MonoBehaviour
         // Ajoutez ici toute logique supplémentaire nécessaire pendant la mise à jour
     }
 
+
+    //-------------------
+    //  METHODES PUBLIC
+    //-------------------
+
     // Méthode pour activer le panneau communautaire
     public void ActivateCommunityPanel()
     {
         DisableAllPanels();
-        communityGlobalPanel.SetActive(true);
+        communityPanel[0].SetActive(true);
     }
 
-    // Méthode pour désactiver tous les panneaux
-    private void DisableAllPanels()
+    public void OnClickBackButton()
     {
-        communityGlobalPanel.SetActive(false);
-       
-    }
-    
-       public void OnClickBackButton()
-    {
-        communityGlobalPanel.SetActive(false);
+        communityPanel[0].SetActive(false);
     }
 
     public void OnClickOpenComm()
     {
-        communityGlobalPanel.SetActive(true);
+        communityPanel[0].SetActive(true);
     }
-
 
     // Chargez une scène de manière asynchrone
     public void LoadScene(int sceneIndex)
     {
         StartCoroutine(LoadSceneAsync(sceneIndex));
     }
+
+
+    //-------------------
+    //  METHODES PRIVEE
+    //-------------------
 
     // Coroutine pour charger la scène asynchronement
     private IEnumerator LoadSceneAsync(int sceneIndex)
@@ -70,6 +78,13 @@ public class CommunityMenuController : MonoBehaviour
             // Optionnel : Mettez à jour une barre de progression ici
             yield return null;
         }
+    }
+
+    // Méthode pour désactiver tous les panneaux
+    void DisableAllPanels()
+    {
+        communityPanel[0].SetActive(false);
+
     }
 }
 
