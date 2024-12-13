@@ -2,7 +2,21 @@
 
 Ce document trace l'historique des développements pour le projet, avec des descriptions détaillées des versions, des fonctionnalités ajoutées, des améliorations et des corrections de bugs.
 
-## Early build - v0.1.0 - 2024-12-05
+
+## Early build - v0.1.1 - 10-12-2024
+
+### Added
+
+- Ajout complet du menu communautaire dans le jeu.
+- Ajout de la gestion et du nettoyage des polices dans l'interface utilisateur.
+
+### Fixed
+
+- Correction d'un bug dans le menu où les clics ne fonctionnaient pas correctement avec les nouveaux assets UI.
+
+
+
+## Early build - v0.1.0 - 05-12-2024
 
 ### Added
 
@@ -21,7 +35,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.13 - 2024-10-25
+## Early build - 0.0.13 - 25-10-2024
 
 ### Added
 
@@ -30,7 +44,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.12 - 2024-10-22
+## Early build - 0.0.12 - 22-10-2024
 
 ### Added
 
@@ -39,7 +53,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.11 - 2024-10-18
+## Early build - 0.0.11 - 18-10-2024
 
 ### Added
 
@@ -48,7 +62,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.10 - 2024-10-15
+## Early build - 0.0.10 - 15-10-2024
 
 ### Added
 
@@ -57,7 +71,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.9 - 2024-10-10
+## Early build - 0.0.9 - 10-10-2024
 
 ### Added
 
@@ -66,7 +80,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.8 - 2024-10-05
+## Early build - 0.0.8 - 05-10-2024
 
 ### Added
 
@@ -75,7 +89,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.7 - 2024-10-01
+## Early build - 0.0.7 - 01-10-2024
 
 ### Added
 
@@ -84,7 +98,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.6 - 2024-09-28
+## Early build - 0.0.6 - 28-09-2024
 
 ### Added
 
@@ -93,7 +107,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.5 - 2024-09-25
+## Early build - 0.0.5 - 25-09-2024
 
 ### Added
 
@@ -102,7 +116,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.4 - 2024-09-23
+## Early build - 0.0.4 - 23-09-2024
 
 ### Added
 
@@ -111,7 +125,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.3 - 2024-09-20
+## Early build - 0.0.3 - 20-09-2024
 
 ### Added
 
@@ -120,7 +134,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.2 - 2024-09-18
+## Early build - 0.0.2 - 18-09-2024
 
 ### Added
 
@@ -129,7 +143,7 @@ Ce document trace l'historique des développements pour le projet, avec des desc
 
 ---
 
-## Early build - 0.0.1 - 2024-09-15
+## Early build - 0.0.1 - 09-15-2024
 
 ### Added
 
