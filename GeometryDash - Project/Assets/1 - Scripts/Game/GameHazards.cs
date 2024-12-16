@@ -6,7 +6,7 @@ using static UnityEngine.ParticleSystem;
 public class GameHazards : MonoBehaviour
 {
     [SerializeField] SO_GameHazards so_GameHazards;
-    [SerializeField] GameObject particles;
+    GameRules gameRules;
 
 
     //-------------------
@@ -15,7 +15,7 @@ public class GameHazards : MonoBehaviour
 
     void Start()
     {
-
+        gameRules = GameObject.Find("GameRules").GetComponent<GameRules>();
     }
 
     void Update()
@@ -47,8 +47,7 @@ public class GameHazards : MonoBehaviour
     {
         if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
-            Destroy(Instantiate(particles, collision.gameObject.transform.position, transform.rotation), 0.4f);
-            collision.gameObject.SetActive(false);
+            gameRules.OnPlayerDeath();
         }
     }
 }
