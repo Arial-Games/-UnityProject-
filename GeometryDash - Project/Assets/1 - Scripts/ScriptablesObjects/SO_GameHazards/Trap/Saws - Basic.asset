@@ -24,5 +24,9 @@ MonoBehaviour:
   transformTo: 0
   isTrap: 1
   canKill: 1
+  canRotate: 1
+  rotationSpeed: 1
   isCollectibles: 0
   values: 0
+  PowerOrbs: 0
+  powerOrbEffects: 0

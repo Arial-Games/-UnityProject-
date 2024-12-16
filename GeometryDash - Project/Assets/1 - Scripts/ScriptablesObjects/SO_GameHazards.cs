@@ -30,6 +30,8 @@ public class SO_GameHazards : ScriptableObject
     [Header("Trap")]
     public bool isTrap;
     public bool canKill;
+    public bool canRotate;
+    public int rotationSpeed;
 
     [Header("Collectibles")]
     public bool isCollectibles;
