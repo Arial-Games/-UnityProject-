@@ -10,6 +10,7 @@ using System.IO;
 public class CommunityMenuController : MonoBehaviour
 {
     // Références aux panneaux et autres éléments UI
+    public GameObject mainCommunityPanel;
     public GameObject[] communityPanel;
 
 
@@ -26,12 +27,12 @@ public class CommunityMenuController : MonoBehaviour
     {
         // Assurez-vous que tous les panneaux sont désactivés au démarrage
         DisableAllPanels();
-        communityPanel[0].SetActive(false); // Désactive le panneau communautaire au démarrage
+        mainCommunityPanel.SetActive(false); // Désactive le panneau communautaire au démarrage
     }
 
     void Update()
     {
-        // Ajoutez ici toute logique supplémentaire nécessaire pendant la mise à jour
+        OnEscapeClick();
     }
 
 
@@ -43,17 +44,17 @@ public class CommunityMenuController : MonoBehaviour
     public void ActivateCommunityPanel()
     {
         DisableAllPanels();
-        communityPanel[0].SetActive(true);
+        mainCommunityPanel.SetActive(true);
     }
 
     public void OnClickBackButton()
     {
-        communityPanel[0].SetActive(false);
+        mainCommunityPanel.SetActive(false);
     }
 
     public void OnClickOpenComm()
     {
-        communityPanel[0].SetActive(true);
+        mainCommunityPanel.SetActive(true);
     }
 
     // Chargez une scène de manière asynchrone
@@ -83,8 +84,20 @@ public class CommunityMenuController : MonoBehaviour
     // Méthode pour désactiver tous les panneaux
     void DisableAllPanels()
     {
-        communityPanel[0].SetActive(false);
+        mainCommunityPanel.SetActive(false);
 
+        for (int i = 0; i < communityPanel.Length; i++)
+        {
+            communityPanel[i].SetActive(false);
+        }
+    }
+
+    void OnEscapeClick()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            DisableAllPanels();
+        }
     }
 }
 

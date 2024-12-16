@@ -116,6 +116,14 @@ public class OptionMenu : MonoBehaviour
     //  METHODES PRIVEE
     //-------------------
 
+    void OnEscapeClick()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            DiableAllPanel();
+        }
+    }
+
     IEnumerator startSceneAsync(int placeID)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);

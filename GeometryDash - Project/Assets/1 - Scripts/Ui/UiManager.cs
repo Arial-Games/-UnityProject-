@@ -26,12 +26,13 @@ public class UiManager : MonoBehaviour
         shopScreen.SetActive(false);
 
         // Placement à revoir
-        textOnDisplay();
+        TextOnDisplay();
     }
 
     void Update()
     {
-        textOnDisplay();
+        TextOnDisplay();
+        OnEscapeClick();
     }
 
     //-------------------
@@ -52,7 +53,15 @@ public class UiManager : MonoBehaviour
     //  METHODES PRIVEE
     //-------------------
 
-    void textOnDisplay()
+    void OnEscapeClick()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            shopScreen.SetActive(false);
+        }
+    }
+
+    void TextOnDisplay()
     {
         inventoryText[0].text = "Argent : " +  playerInventory.cash.ToString();
         inventoryText[1].text = "Or : " + playerInventory.gold.ToString();
