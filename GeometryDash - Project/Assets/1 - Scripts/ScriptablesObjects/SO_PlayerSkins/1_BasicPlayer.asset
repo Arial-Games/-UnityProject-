@@ -19,5 +19,5 @@ MonoBehaviour:
   uniqueId: 1
   rarety: 0
   skinSprite: {fileID: 21300000, guid: 7226d61dc36ebda42a78cf9fbdb74dc7, type: 3}
-  mainColor: {r: 1, g: 0, b: 0, a: 0}
-  secColor: {r: 1, g: 0.9142746, b: 0, a: 0}
+  mainColor: {r: 1, g: 0, b: 0, a: 1}
+  secColor: {r: 1, g: 0.9142746, b: 0, a: 1}
