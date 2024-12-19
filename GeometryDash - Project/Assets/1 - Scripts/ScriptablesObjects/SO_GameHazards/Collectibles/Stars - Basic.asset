@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f81495c7c39c9b48b96d1c5a28ee403, type: 3}
-  m_Name: GoldCoins - Basic
+  m_Name: Stars - Basic
   m_EditorClassIdentifier: 
-  publicName: GoldCoins - Basic
-  description: Shiny gold coins, collectible rewards hidden in levels, challenging
-    players to master precision and exploration
+  publicName: Stars - Basic
+  description: Shiny stars, collectible rewards hidden in levels, challenging players
+    to master precision and exploration
   type: 3
   objVersion: 0
   uniqueId: 300
@@ -24,5 +24,10 @@ MonoBehaviour:
   transformTo: 0
   isTrap: 0
   canKill: 0
+  canRotate: 0
+  rotationSpeed: 0
   isCollectibles: 1
+  isStars: 1
   values: 100
+  PowerOrbs: 0
+  powerOrbEffects: 0

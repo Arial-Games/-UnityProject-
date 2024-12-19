@@ -35,6 +35,7 @@ public class SO_GameHazards : ScriptableObject
 
     [Header("Collectibles")]
     public bool isCollectibles;
+    public bool isStars;
     public int values;
     public bool PowerOrbs;
     public PowerOrbEffects powerOrbEffects;
