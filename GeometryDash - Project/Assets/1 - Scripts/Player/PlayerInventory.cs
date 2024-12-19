@@ -15,6 +15,11 @@ public class PlayerInventory : MonoBehaviour
     [Header("Other")]
     public bool[] possesionId;
 
+
+    //-------------------
+    //  METHODES DEFAULT
+    //-------------------
+
     void Start()
     {
 
@@ -31,4 +36,14 @@ public class PlayerInventory : MonoBehaviour
             Debug.LogError("CHEAT EN COURS");
         }
     }
+
+
+    //-------------------
+    //  METHODES PUBLIC
+    //-------------------
+
+
+    //-------------------
+    //  METHODES PRIVEE
+    //-------------------
 }

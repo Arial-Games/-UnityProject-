@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
 
+
+    //-------------------
+    //  METHODES DEFAULT
+    //-------------------
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +53,16 @@ public class PlayerController : MonoBehaviour
             Sprite.Rotate(Vector3.back * 5);
         }
     }
+
+
+    //-------------------
+    //  METHODES PUBLIC
+    //-------------------
+
+
+    //-------------------
+    //  METHODES PRIVEE
+    //-------------------
 
     bool OnGround()
     {
