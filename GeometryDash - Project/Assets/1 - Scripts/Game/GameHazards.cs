@@ -55,7 +55,7 @@ public class GameHazards : MonoBehaviour
     {
         if (so_GameHazards.isCollectibles && so_GameHazards.isStars && collision.gameObject.tag == "Player")
         {
-            // AddScore
+            gameRules.OnTakeCollectibles();
             Destroy(gameObject);
         }
     }

@@ -36,6 +36,12 @@ public class GameRules : MonoBehaviour
         player.SetActive(false);
     }
 
+    public void OnTakeCollectibles()
+    {
+        // AddScore
+        Destroy(Instantiate(particles[2], player.transform.position, transform.rotation), 0.4f);
+    }
+
 
     //-------------------
     //  METHODES PRIVEE
