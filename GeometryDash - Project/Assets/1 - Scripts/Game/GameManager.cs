@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameObject playerGO;
 
     //-------------------
     //  METHODES DEFAULT
@@ -12,12 +13,16 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        //Time.timeScale = 0.5f;
     }
 
     void Update()
     {
-
+        if (playerGO.transform.position == new Vector3(playerGO.transform.position.x, -5, playerGO.transform.position.z))
+        {
+            // Die moment
+            Destroy(playerGO);
+        }
     }
 
 

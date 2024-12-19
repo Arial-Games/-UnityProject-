@@ -53,10 +53,25 @@ public class GameHazards : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (so_GameHazards.isCollectibles && so_GameHazards.isStars && collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            // AddScore
-            Destroy(gameObject);
+
+            if (so_GameHazards.isCollectibles && so_GameHazards.isStars)
+            {
+                gameRules.OnTakeCollectibles();
+                Destroy(gameObject);
+            }
+
+            if (so_GameHazards.isGate)
+            {
+                Debug.Log("Tranformation du Player en " +  so_GameHazards.transformTo);
+            }
+
+            if (so_GameHazards.isEndLine)
+            {
+                Debug.Log("Ligne d'arrivé passé, bien jouer !");
+                gameRules.OnEndLignePass();
+            }
         }
     }
 }

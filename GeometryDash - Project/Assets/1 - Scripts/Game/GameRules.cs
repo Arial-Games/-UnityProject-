@@ -9,7 +9,8 @@ public class GameRules : MonoBehaviour
     [SerializeField] GameObject[] particles;
     [SerializeField] GameObject player;
 
-
+    //player.SetActive(false); -> desactiver le PlayerController et le stopper
+    
     //-------------------
     //  METHODES DEFAULT
     //-------------------
@@ -34,6 +35,18 @@ public class GameRules : MonoBehaviour
         // Affichage du panel de retry
         Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
         player.SetActive(false);
+    }
+
+    public void OnTakeCollectibles()
+    {
+        // AddScore
+        Destroy(Instantiate(particles[2], player.transform.position, transform.rotation), 0.4f);
+    }
+
+    public void OnEndLignePass()
+    {
+        player.SetActive(false);
+        // Animation de fin
     }
 
 
