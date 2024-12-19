@@ -1583,7 +1583,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 781024231}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1362761865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &556886761
 GameObject:
@@ -2746,49 +2746,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 127225483}
     m_Modifications:
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 987172720876777303, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+      propertyPath: m_Name
+      value: FlyingSpike3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.192799
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5538001
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.07967739
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9994329
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.033673987
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1712289551396047850, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+    - target: {fileID: 2857409680773248615, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 3.859
-      objectReference: {fileID: 0}
-    - target: {fileID: 8513207439528224662, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
-      propertyPath: m_Name
-      value: FlyingSpike3 (2)
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3259,6 +3259,7 @@ Transform:
   m_Children:
   - {fileID: 2145937113}
   - {fileID: 357665854}
+  - {fileID: 519420032}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1362761866
@@ -3274,7 +3275,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 2
   m_AngularDrag: 0.05
   m_GravityScale: 12.41067
   m_Material: {fileID: 0}
@@ -5257,7 +5258,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 217761602}
-  - {fileID: 519420032}
   - {fileID: 1362761865}
   - {fileID: 1869242079}
   - {fileID: 896446835}
