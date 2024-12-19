@@ -50,4 +50,13 @@ public class GameHazards : MonoBehaviour
             gameRules.OnPlayerDeath();
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (so_GameHazards.isCollectibles && so_GameHazards.isStars && collision.gameObject.tag == "Player")
+        {
+            // AddScore
+            Destroy(gameObject);
+        }
+    }
 }
