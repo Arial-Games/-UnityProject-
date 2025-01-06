@@ -7,8 +7,8 @@ using System;
 
 public class ShopManagement : MonoBehaviour
 {
-    // Scripts
-    [SerializeField] PlayerInventory playerInventory;
+    [Header("Scripts")]
+    [SerializeField] SO_PlayerStat sO_PlayerStat;
     [SerializeField] SO_PlayersSkins[] so_BasicPlayersSkins; //so_TrianglePlayersSkins, so_NavettePlayersSkins, so_RobotsPlayersSkins, so_WheelsPlayersSkins, so_OtherPlayersSkins;
 
     [Header("Bouttons / Sprite")]
@@ -32,7 +32,6 @@ public class ShopManagement : MonoBehaviour
             }
             else
             {
-                Debug.Log("test");
                 if (buyingButtons[i].GetComponent<Image>().sprite = interoPoint)
                 {
                     buyingButtons[(i)].GetComponent<Button>().interactable = false;
@@ -40,6 +39,18 @@ public class ShopManagement : MonoBehaviour
             }
         }
     }
+
+    private void Start()
+    {
+        for (int i = 0; i < sO_PlayerStat.possesionId.Length; i++)
+        {
+            if (sO_PlayerStat.possesionId[i])
+            {
+                hideButton(i);
+            }
+        }
+    }
+
 
     //-------------------
     //  METHODES PUBLIC
@@ -53,16 +64,27 @@ public class ShopManagement : MonoBehaviour
         }
 
 
-        if (playerInventory.cash < so_BasicPlayersSkins[(id - 1)].price)
+        if (sO_PlayerStat.cash < so_BasicPlayersSkins[(id - 1)].price)
         {
             Debug.LogWarning("Argent insufisant !");
         }
         else
         {
-            playerInventory.cash -= so_BasicPlayersSkins[(id - 1)].price;
-            buyingButtons[(id - 1)].GetComponent<Button>().interactable = false;
-            playerInventory.possesionId[(id - 1)] = true;
+            sO_PlayerStat.cash -= so_BasicPlayersSkins[(id - 1)].price;
+            hideButton(id - 1);
+            sO_PlayerStat.possesionId[(id - 1)] = true;
         }
     }
 
+
+    //-------------------
+    //  METHODES PRIVEE
+    //-------------------
+
+    void hideButton(int id)
+    {
+        buyingButtons[(id)].GetComponent<Button>().interactable = false;
+    }
 }
+
+

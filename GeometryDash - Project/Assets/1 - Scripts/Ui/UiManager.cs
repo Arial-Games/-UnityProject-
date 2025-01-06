@@ -14,7 +14,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI[] inventoryText;
 
     [Header("Scripts")]
-    [SerializeField] PlayerInventory playerInventory;
+    [SerializeField] SO_PlayerStat sO_PlayerStat;
 
 
     //-------------------
@@ -63,9 +63,9 @@ public class UiManager : MonoBehaviour
 
     void TextOnDisplay()
     {
-        inventoryText[0].text = "Argent : " +  playerInventory.cash.ToString();
-        inventoryText[1].text = "Or : " + playerInventory.gold.ToString();
-        inventoryText[2].text = "Etoile : " + playerInventory.stars.ToString();
-        inventoryText[3].text = "Piece etoiles : " + playerInventory.starsCoins.ToString();
+        inventoryText[0].text = "Argent : " + sO_PlayerStat.gold.ToString();
+        inventoryText[1].text = "Or : " + sO_PlayerStat.cash.ToString();
+        inventoryText[2].text = "Etoile : " + sO_PlayerStat.stars.ToString();
+        inventoryText[3].text = "Piece etoiles : " + sO_PlayerStat.starsCoins.ToString();
     }
 }

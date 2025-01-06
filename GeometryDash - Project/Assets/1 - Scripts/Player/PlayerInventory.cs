@@ -4,17 +4,8 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int playerLevel;
-
     [Header("Ressources")]
-    public int gold;
-    public int cash;
-    public int stars;
-    public int starsCoins;
-
-    [Header("Other")]
-    public bool[] possesionId;
-
+    [SerializeField] SO_PlayerStat SO_playerStats;
 
     //-------------------
     //  METHODES DEFAULT
@@ -29,10 +20,10 @@ public class PlayerInventory : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.P))
         {
-            gold += 100;
-            cash += 100;
-            stars += 100;
-            starsCoins += 100;
+            SO_playerStats.gold += 100;
+            SO_playerStats.cash += 200;
+            SO_playerStats.stars += 300;
+            SO_playerStats.starsCoins += 400;
             Debug.LogError("CHEAT EN COURS");
         }
     }
@@ -41,6 +32,11 @@ public class PlayerInventory : MonoBehaviour
     //-------------------
     //  METHODES PUBLIC
     //-------------------
+
+    public void saveCall()
+    {
+        // Charger les donnés
+    }
 
 
     //-------------------
