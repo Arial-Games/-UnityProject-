@@ -35,7 +35,7 @@ public class PlayerInventory : MonoBehaviour
 
     public void saveCall()
     {
-        // Charger les donnés
+        // Charger les donnés physique si besoin
     }
 
 

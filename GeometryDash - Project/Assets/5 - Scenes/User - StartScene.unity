@@ -3717,6 +3717,7 @@ MonoBehaviour:
   - {fileID: 8815941451629409623}
   - {fileID: 3663187802939233627}
   - {fileID: 3230035816845568611}
+  saveData: {fileID: 188390116}
   mainMenu: 0
   loadingScreen: {fileID: 4042466226230168453}
   loadingBarFill: {fileID: 6193028652862705630}
@@ -20049,7 +20050,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"GeoAdventure" - Early build - 0.1.6'
+  m_text: '"GeoAdventure" - Early build - 0.1.8'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3adc3ec128494372d9a03a27f5bf328d, type: 2}
   m_sharedMaterial: {fileID: 457106443448495965, guid: 3adc3ec128494372d9a03a27f5bf328d, type: 2}
