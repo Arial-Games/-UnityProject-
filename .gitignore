@@ -49,6 +49,8 @@ ProjectSettings
 Library
 Packages
 Temp
+Resources
+Resources.meta
 .vscode
 .vs
 .vsconfig

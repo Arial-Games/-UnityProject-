@@ -22,9 +22,14 @@ MonoBehaviour:
   jumpStrenght: 0
   isGate: 1
   transformTo: 1
+  playerSkin: {fileID: 21300000, guid: 7226d61dc36ebda42a78cf9fbdb74dc7, type: 3}
   isTrap: 0
   canKill: 0
+  canRotate: 0
+  rotationSpeed: 0
   isCollectibles: 0
+  isStars: 0
   values: 0
   PowerOrbs: 0
   powerOrbEffects: 0
+  isEndLine: 0

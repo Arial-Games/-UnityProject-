@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using UnityEngine.UI;
 
 public class GameHazards : MonoBehaviour
 {
@@ -71,6 +72,18 @@ public class GameHazards : MonoBehaviour
             {
                 Debug.Log("Ligne d'arrivé passé, bien jouer !");
                 gameRules.OnEndLignePass();
+            }
+
+            if (so_GameHazards.isJumper)
+            {
+                Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+                
+                rb.velocity = Vector2.zero;
+                rb.AddForce(Vector2.up * so_GameHazards.jumpStrenght, ForceMode2D.Impulse);
+                //Transform Sprite = collision.gameObject.GetComponent<Transform>();
+                //Sprite.Rotate(Vector3.back * 5);
+
+                // Revoir la rotation
             }
         }
     }

@@ -12,17 +12,13 @@ public class OptionMenu : MonoBehaviour
     public GameObject optionGlobalPanel;
     public GameObject[] optionPanel;
 
+    [SerializeField] SaveData saveData;
+
     [SerializeField] bool mainMenu = false;
 
-
-    //public SO_PlayerStat playerStat;
-
-
     // Loading Screen
-
     [SerializeField] GameObject loadingScreen;
     [SerializeField] Image loadingBarFill;
-
 
     // Audio
     [SerializeField] AudioMixerGroup[] audioMixerGroup;
@@ -83,6 +79,7 @@ public class OptionMenu : MonoBehaviour
 
     public void LeaveGame()
     {
+        saveData.save();
         Application.Quit();
     }
 
