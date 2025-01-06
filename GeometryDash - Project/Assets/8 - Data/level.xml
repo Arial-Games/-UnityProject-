@@ -1,0 +1,19 @@
+<Level id="1" name="Premier Niveau" difficulty="Facile">
+    <Background image="background-cam"  />
+    <Player startPosition="-4.55,0" sprite="Basic_Player1.png" />
+    
+    <ObstacleZones>
+        <Zone id="1" type="BasicSPike" minPosition="1.733197,0.603" maxPosition="3.980999,0.603" count="4" />
+    </ObstacleZones>
+    
+    <Platforms>
+        <Platform sprite="GreenBigWall" position="-10.00137,5.661232" count="55" />
+        <Platform sprite="GreenBigWall" position="-10.00131,-0.08885813"  count="55" />
+    </Platforms>
+    
+    <Bonuses>
+        <Bonus type="wall46" position="4.919949,0.5656171" />
+    </Bonuses>
+    
+</Level>
+
