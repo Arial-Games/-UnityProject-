@@ -26,6 +26,7 @@ public class SO_GameHazards : ScriptableObject
     [Header("Gate")]
     public bool isGate;
     public TransformTo transformTo;
+    public Sprite playerSkin;
 
     [Header("Trap")]
     public bool isTrap;
