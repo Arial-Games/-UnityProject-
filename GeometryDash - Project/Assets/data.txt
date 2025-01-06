@@ -1,0 +1,1 @@
+600%DATA%577%DATA%1800%DATA%2400%DATA%0%DATA%0%DATA%0%DATA%False%DATA%False,False,True,True,False,True
