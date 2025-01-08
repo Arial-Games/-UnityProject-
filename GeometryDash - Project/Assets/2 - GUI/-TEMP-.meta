@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:GeometryDash - Project/Assets/1 - Scripts/LevelLoader.meta
+guid: 3d60dd269a0d5434f9eb64d7bb6845d3
+========
 guid: 2318a1959da07514590e56d706fc5458
+>>>>>>>> origin/Test-Deploiment:GeometryDash - Project/Assets/2 - GUI/-TEMP-.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
