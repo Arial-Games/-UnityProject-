@@ -11,6 +11,11 @@ public class LevelUi : MonoBehaviour
     //  METHODES DEFAULT
     //-------------------
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
 
     //-------------------
     //  METHODES PUBLIC

@@ -10,6 +10,7 @@ public class SO_ShopObjects : ScriptableObject
     public enum Rarety { Commun, Atypique, Rare, Legendary, Mytique, Collection };
 
     [Header("Basic info")]
+    public Sprite objSprite;
     public string publicName;
     [TextArea] public string description;
     public Type type;

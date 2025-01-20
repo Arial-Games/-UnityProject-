@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1322da783992fd84eac1c056ebc681de, type: 3}
   m_Name: TEST_Obj
   m_EditorClassIdentifier: 
-  name: Test Obj
+  objSprite: {fileID: 21300000, guid: 5e7b6576f92c5e5429a85fa14ec0f23b, type: 3}
+  publicName: 
   description: Un objet test pour le shop
   type: 1
   price: 38
