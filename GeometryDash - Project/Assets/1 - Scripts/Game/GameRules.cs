@@ -7,7 +7,8 @@ using static UnityEngine.ParticleSystem;
 public class GameRules : MonoBehaviour
 {
     [SerializeField] GameObject[] particles;
-    [SerializeField] GameObject player;
+    [SerializeField] GameObject player, gameOverPanel;
+
 
     //player.SetActive(false); -> desactiver le PlayerController et le stopper
     
@@ -17,7 +18,7 @@ public class GameRules : MonoBehaviour
 
     void Start()
     {
-
+        gameOverPanel.SetActive(false);
     }
 
     void Update()
@@ -35,6 +36,8 @@ public class GameRules : MonoBehaviour
         // Affichage du panel de retry
         Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
         player.SetActive(false);
+        gameOverPanel.SetActive(true);
+
     }
 
     public void OnTakeCollectibles()
