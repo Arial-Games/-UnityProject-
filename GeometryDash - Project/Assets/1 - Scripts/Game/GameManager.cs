@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         //Time.timeScale = 0.5f;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     void Update()

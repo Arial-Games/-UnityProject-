@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
 using UnityEngine.UI;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class GameHazards : MonoBehaviour
 {
@@ -44,11 +45,18 @@ public class GameHazards : MonoBehaviour
         }
     }
 
+    void OnPlayerDeathInit()
+    {
+        gameRules.OnPlayerDeath();
+    }
+
+
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
-            gameRules.OnPlayerDeath();
+            OnPlayerDeathInit();
         }
     }
 
@@ -65,7 +73,7 @@ public class GameHazards : MonoBehaviour
 
             if (so_GameHazards.isGate)
             {
-                Debug.Log("Tranformation du Player en " +  so_GameHazards.transformTo);
+                Debug.Log("Tranformation du Player en " + so_GameHazards.transformTo);
             }
 
             if (so_GameHazards.isEndLine)
@@ -77,7 +85,7 @@ public class GameHazards : MonoBehaviour
             if (so_GameHazards.isJumper)
             {
                 Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-                
+
                 rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * so_GameHazards.jumpStrenght, ForceMode2D.Impulse);
                 //Transform Sprite = collision.gameObject.GetComponent<Transform>();
@@ -87,4 +95,5 @@ public class GameHazards : MonoBehaviour
             }
         }
     }
+
 }
