@@ -37,6 +37,7 @@ public class GameRules : MonoBehaviour
         Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
         player.SetActive(false);
         gameOverPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
 
     }
 
