@@ -167,6 +167,7 @@ GameObject:
   - component: {fileID: 5769603183886215519}
   - component: {fileID: 1013779652611284819}
   - component: {fileID: 6330508667552492898}
+  - component: {fileID: 4445221934275607986}
   m_Layer: 0
   m_Name: 1 - Player
   m_TagString: Player
@@ -283,3 +284,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4445221934275607986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9005473948018729976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4dc2b26acfd899468a3e9df2209a4dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sO_PlayerStat: {fileID: 11400000, guid: 890c0508aea2abe43b52bf937dc5177f, type: 2}
+  so_BasicPlayersSkins:
+  - {fileID: 11400000, guid: 6d027af83466fe841bbaaf8552385fa8, type: 2}
+  - {fileID: 11400000, guid: 07650011aff0a1140a1bed8273d04b2f, type: 2}
+  - {fileID: 11400000, guid: 53de463f697ecb948abb07f47b00d2fa, type: 2}
+  - {fileID: 11400000, guid: fa2b9187bc7bcfd489f5266d1d4add8e, type: 2}
+  - {fileID: 11400000, guid: f05fef2c410cb9240bb94f5144d5c8d0, type: 2}
+  - {fileID: 11400000, guid: 60d70a5b4543de742a73ab94df3ced98, type: 2}
+  playerVisu: {fileID: 4590160134865591000}

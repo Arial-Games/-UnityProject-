@@ -73,6 +73,7 @@ public class OptionMenu : MonoBehaviour
 
     public void BackButton()
     {
+        saveData.save();
         mainMenu = false;
         DiableAllPanel();
     }

@@ -60,7 +60,8 @@ public class SaveData : MonoBehaviour
             playerStat.storyProgression.ToString(),
             playerStat.openSave.ToString(),
 
-            skinsString
+            skinsString,
+            playerStat.actualSkinId.ToString()
         };
 
         string saveString = string.Join(saveSeparator, content);
@@ -95,7 +96,11 @@ public class SaveData : MonoBehaviour
             string skinsString = content[8];
             string[] skins = skinsString.Split(',');
 
+
+
             playerStat.possesionId = Array.ConvertAll(skins, bool.Parse);
+
+            playerStat.actualSkinId = int.Parse(content[9]);
 
             _inventory.saveCall();
 
