@@ -23115,10 +23115,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5769603183886215519, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
-      propertyPath: GroundMask.m_Bits
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8719864260666907234, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.3

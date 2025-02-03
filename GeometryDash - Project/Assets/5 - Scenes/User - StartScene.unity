@@ -20617,6 +20617,7 @@ MonoBehaviour:
   - {fileID: 906546242}
   interoPoint: {fileID: 21300000, guid: beb33459a97f34b458a5cdf626fe9702, type: 3}
   actualSkin: {fileID: 1959867862}
+  saveData: {fileID: 188390116}
 --- !u!1 &2085572412
 GameObject:
   m_ObjectHideFlags: 0

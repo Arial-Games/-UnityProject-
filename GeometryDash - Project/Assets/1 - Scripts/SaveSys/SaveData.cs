@@ -96,9 +96,11 @@ public class SaveData : MonoBehaviour
             string skinsString = content[8];
             string[] skins = skinsString.Split(',');
 
-            playerStat.actualSkinId = int.Parse(content[9]);
+
 
             playerStat.possesionId = Array.ConvertAll(skins, bool.Parse);
+
+            playerStat.actualSkinId = int.Parse(content[9]);
 
             _inventory.saveCall();
 

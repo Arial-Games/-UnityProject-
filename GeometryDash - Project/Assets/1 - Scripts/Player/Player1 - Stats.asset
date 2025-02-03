@@ -16,12 +16,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   gold: 600
-  cash: 526
+  cash: 444
   stars: 1800
   starsCoins: 2400
   XP: 0
   playerLevel: 0
   storyProgression: 0
   openSave: 1
-  actualSkinId: 3
-  possesionId: 010001010001
+  actualSkinId: 5
+  possesionId: 010001010101

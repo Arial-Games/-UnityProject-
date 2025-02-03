@@ -15,6 +15,14 @@ public class SkinsManager : MonoBehaviour
     [SerializeField] GameObject actualSkin;
 
 
+    [SerializeField] SaveData saveData;
+
+
+
+    //-------------------
+    //  METHODES DEFAULT
+    //-------------------
+
     private void Start()
     {
         actualSkin.GetComponent<Image>().sprite = so_BasicPlayersSkins[sO_PlayerStat.actualSkinId].skinSprite;
@@ -66,6 +74,7 @@ public class SkinsManager : MonoBehaviour
         {
             sO_PlayerStat.actualSkinId = id - 1;
             actualSkin.GetComponent<Image>().sprite = so_BasicPlayersSkins[id - 1].skinSprite;
+            saveData.save();
         }
     }
 }
