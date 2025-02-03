@@ -15,7 +15,8 @@ MonoBehaviour:
   publicName: Jordan ?
   description: Desc
   type: 0
-  price: 82
+  price: 1000
+  moneyNeed: 1
   uniqueId: 5
   rarety: 0
   skinSprite: {fileID: 21300000, guid: 2e1abc767943649449a815942071ac36, type: 3}

@@ -15,7 +15,8 @@ MonoBehaviour:
   publicName: Jostar ?
   description: Desc
   type: 0
-  price: 71
+  price: 1000
+  moneyNeed: 1
   uniqueId: 4
   rarety: 0
   skinSprite: {fileID: 21300000, guid: 6b82048fdf3efcb45ab386e8c06f9b9a, type: 3}
