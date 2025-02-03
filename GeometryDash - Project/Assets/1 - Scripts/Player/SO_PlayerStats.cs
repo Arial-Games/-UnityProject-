@@ -12,6 +12,7 @@ public class SO_PlayerStat : ScriptableObject
     [Header("Other")]
     public int XP = 0, playerLevel = 0, storyProgression = 0;
     public bool openSave = false;
+    public int actualSkinId = 0;
     public bool[] possesionId;
 
 
