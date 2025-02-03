@@ -9,18 +9,12 @@ public class ShopManagement : MonoBehaviour
 {
     [Header("Scripts")]
     [SerializeField] SO_PlayerStat sO_PlayerStat;
-    [SerializeField] SO_PlayersSkins[] so_BasicPlayersSkins; //so_TrianglePlayersSkins, so_NavettePlayersSkins, so_RobotsPlayersSkins, so_WheelsPlayersSkins, so_OtherPlayersSkins;
+    [SerializeField] SO_PlayersSkins[] so_BasicPlayersSkins;
     [SerializeField] SO_ShopObjects[] so_ShopObjects;
 
     [Header("Bouttons / Sprite")]
     [SerializeField] GameObject[] buyingButtons;
     [SerializeField] Sprite interoPoint;
-
-
-    //private int shopTurn = 0;
-
-    // Achat de skins avec suppression et rajout dans inventaire 
-    // Ajout auto via SO
 
     //-------------------
     //  METHODES DEFAULT
@@ -32,18 +26,20 @@ public class ShopManagement : MonoBehaviour
         {
             if (i < so_BasicPlayersSkins.Length)
             {
-                //shopTurn++;
-                buyingButtons[i].GetComponent<Image>().sprite = so_BasicPlayersSkins[i].skinSprite;
+                // Get the "SkinVisu" child and set its sprite
+                Image skinImage = buyingButtons[i].transform.Find("SkinVisu").GetComponent<Image>();
+                skinImage.sprite = so_BasicPlayersSkins[i].skinSprite;
+
+                // Get the "PriceText" child and set its price
+                TextMeshProUGUI priceText = buyingButtons[i].transform.Find("PriceText (TMP)").GetComponent<TextMeshProUGUI>();
+                priceText.text = so_BasicPlayersSkins[i].price.ToString() + " " + so_BasicPlayersSkins[i].moneyNeed;
             }
-            //else if (i < so_ShopObjects.Length + shopTurn)
-            //{
-            //    buyingButtons[i].GetComponent<Image>().sprite = so_ShopObjects[i].objSprite;
-            //}
             else
             {
-                if (buyingButtons[i].GetComponent<Image>().sprite = interoPoint)
+                Image skinImage = buyingButtons[i].transform.Find("SkinVisu").GetComponent<Image>();
+                if (skinImage.sprite == interoPoint)
                 {
-                    buyingButtons[(i)].GetComponent<Button>().interactable = false;
+                    buyingButtons[i].GetComponent<Button>().interactable = false;
                 }
             }
         }
@@ -60,7 +56,6 @@ public class ShopManagement : MonoBehaviour
         }
     }
 
-
     //-------------------
     //  METHODES PUBLIC
     //-------------------
@@ -71,7 +66,6 @@ public class ShopManagement : MonoBehaviour
         {
             Debug.LogWarning("Boutton non renseigné");
         }
-
 
         if (sO_PlayerStat.cash < so_BasicPlayersSkins[(id - 1)].price)
         {
@@ -85,7 +79,6 @@ public class ShopManagement : MonoBehaviour
         }
     }
 
-
     //-------------------
     //  METHODES PRIVEE
     //-------------------
@@ -95,5 +88,3 @@ public class ShopManagement : MonoBehaviour
         buyingButtons[(id)].GetComponent<Button>().interactable = false;
     }
 }
-
-
