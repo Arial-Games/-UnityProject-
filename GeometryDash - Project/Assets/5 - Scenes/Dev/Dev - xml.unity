@@ -247,7 +247,8 @@ MonoBehaviour:
   level: {fileID: 4900000, guid: f4e6579d3fed498399b935a7443b8756, type: 3}
   playerPrefab: {fileID: 9005473948018729976, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
   spikePrefab: {fileID: 515237706601078655, guid: 93019949d5006c745b9dc3f8f610f90d, type: 3}
-  platformPrefab: {fileID: 4423212254192511254, guid: 451120853a92c4e44a8c5dcb31167d05, type: 3}
+  platformPrefab: {fileID: 6921699821149384227, guid: bfba587c21a0e0f46bc8864ca284fa64, type: 3}
+  NewplatformPrefab: {fileID: 2027630971487851396, guid: b3d57eb7d7a0ee34b9c3f23261be1372, type: 3}
   bonusPrefab: {fileID: 8239037968559558844, guid: 1ddcd0e34188b924faf62542a348a430, type: 3}
   backgroundSprite: {fileID: 21300000, guid: fe0043fd9fa3f14ce91c2ecc0c9f7471, type: 3}
 --- !u!4 &578276213
@@ -552,6 +553,12 @@ MonoBehaviour:
   - {fileID: 1604227354005263177, guid: d6d04e4b024a73147a9b9f10d607f384, type: 3}
   - {fileID: 6445666186361868711, guid: 9deea548c44c9ac4e94d6932a0d85eaf, type: 3}
   player: {fileID: 1174732808}
+  gameOverPanel: {fileID: 0}
+  starsUi: []
+  playerLevelScore: 0
+  bestPayerLevelScore: 0
+  scoreDisplay: {fileID: 0}
+  bestScoreDisplay: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

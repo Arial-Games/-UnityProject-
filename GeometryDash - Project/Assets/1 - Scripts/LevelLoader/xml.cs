@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using MyGameNamespace;
+
 
 [XmlRoot("Level")]
 public class Level

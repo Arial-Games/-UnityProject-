@@ -1,9 +1,10 @@
 <Level id="1" name="Premier Niveau" difficulty="Facile">
     <Background image="background-cam"  />
-    <Player startPosition="-4.55,0" sprite="Basic_Player1.png" />
+    <Player startPosition="-4.55,0" sprite="Basic-player.png" />
     
     <ObstacleZones>
-        <Zone id="1" type="BasicSPike" minPosition="1.733197,0.603" maxPosition="3.980999,0.603" count="4" />
+        <Zone id="1" type="BasicSPike" minPosition="2.733197,1.3" maxPosition="5.980999,1.3" count="2" />
+        <Zone id="2" type="BasicSPike" minPosition="3.733197,1.3" maxPosition="6.980999,1.3" count="2" />
     </ObstacleZones>
     
     <Platforms>
@@ -12,8 +13,9 @@
     </Platforms>
     
     <Bonuses>
-        <Bonus type="wall46" position="4.919949,0.5656171" />
+        <Bonus type="wall46" position="11.919949,2.5656171" />
     </Bonuses>
     
+
 </Level>
 

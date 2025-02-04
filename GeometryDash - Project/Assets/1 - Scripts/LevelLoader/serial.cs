@@ -3,6 +3,9 @@ using System.IO;
 using System.Xml.Serialization;
 using UnityEngine;
 using System.Collections.Generic;
+using MyGameNamespace;
+
+
 
 public class LevelLoader : MonoBehaviour
 {
@@ -11,10 +14,17 @@ public class LevelLoader : MonoBehaviour
     public GameObject spikePrefab;
     public GameObject platformPrefab;
     public GameObject bonusPrefab;
-    public Sprite backgroundSprite; // Assigné via l'inspecteur
-
+    public Sprite backgroundSprite; 
+    public Dictionary<string, GameObject> bonusPrefabs;
     void Start()
     {
+    
+    
+         bonusPrefabs = new Dictionary<string, GameObject>
+        {
+            {"bonusType1", bonusPrefab1},
+            {"bonusType2", bonusPrefab2},
+        };
         XmlSerializer serializer = new XmlSerializer(typeof(Level));
         using (StringReader reader = new StringReader(level.text))
         {
@@ -93,7 +103,7 @@ void ResizeBackground(SpriteRenderer renderer)
 
     void InstantiateLevel(Level level)
     {
-        // Instancier le background
+
         InstantiateBackground(level);
 
         // Instancier le joueur
@@ -103,23 +113,23 @@ void ResizeBackground(SpriteRenderer renderer)
         // Configurer la caméra pour suivre le joueur
         ConfigureCameraFollow(player);
 
-        // Générer les obstacles
-        foreach (var zone in level.ObstacleZones)
-        {
-            Vector2 minPos = ParsePosition(zone.MinPosition);
-            Vector2 maxPos = ParsePosition(zone.MaxPosition);
-            for (int i = 0; i < zone.Count; i++)
-            {
-                Vector2 randomPosition = new Vector2(
-                    Random.Range(minPos.x, maxPos.x),
-                    Random.Range(minPos.y, maxPos.y)
-                );
-                Instantiate(spikePrefab, randomPosition, Quaternion.identity);
-            }
-        }
+       foreach (var zone in level.ObstacleZones)
+    {
+    Vector2 minPos = ParsePosition(zone.MinPosition);
+    Vector2 maxPos = ParsePosition(zone.MaxPosition);
+    
 
-        // Générer les plateformes
-        foreach (var platform in level.Platforms)
+    Instantiate(spikePrefab, minPos, Quaternion.identity);
+    
+
+    if (minPos != maxPos)
+    {
+        Instantiate(spikePrefab, maxPos, Quaternion.identity);
+    }
+    
+    }
+
+     foreach (var platform in level.Platforms)
         {
             Vector2 startPosition = ParsePosition(platform.Position);
             for (int i = 0; i < platform.Count; i++)
@@ -127,13 +137,20 @@ void ResizeBackground(SpriteRenderer renderer)
                 Vector2 position = startPosition + new Vector2(i * 1.0f, 0);
                 Instantiate(platformPrefab, position, Quaternion.identity);
             }
-        }
-
-        // Générer les bonus
-        foreach (var bonus in level.Bonuses)
+      }
+        
+      foreach (var bonus in level.Bonuses)
         {
             Vector2 position = ParsePosition(bonus.Position);
-            Instantiate(bonusPrefab, position, Quaternion.identity);
+            if (bonusPrefabs.ContainsKey(bonus.Type))
+            {
+                GameObject prefab = bonusPrefabs[bonus.Type];
+                Instantiate(prefab, position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogError("Préfabriqué non trouvé pour le type de bonus : " + bonus.Type);
+            }
         }
     }
 
@@ -165,8 +182,8 @@ namespace MyGameNamespace
         public List<Zone> ObstacleZones { get; set; }
         public List<Platform> Platforms { get; set; }
         public List<Bonus> Bonuses { get; set; }
-    }
 
+}
     public class Background
     {
         [XmlAttribute("image")]
@@ -199,6 +216,10 @@ namespace MyGameNamespace
         [XmlAttribute("count")]
         public int Count { get; set; }
     }
+    
+ 
+
+
 
     public class Platform
     {
