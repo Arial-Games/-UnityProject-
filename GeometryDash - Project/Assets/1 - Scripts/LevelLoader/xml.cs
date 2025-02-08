@@ -36,7 +36,7 @@ public class MiddleBackground
     public string Image { get; set; }
 
     [XmlAttribute("position")]
-    public string Position { get; set; }  // nouvel attribut
+    public string Position { get; set; } 
 }
 
 public class Player

@@ -10,7 +10,7 @@ using MyGameNamespace;
 public class LevelLoader : MonoBehaviour
 {
 
-public Sprite middleBackgroundSprite;
+    public Sprite gateBackgroundSprite; 
     public TextAsset level;
     public GameObject playerPrefab;
     public GameObject spikePrefab;
@@ -19,12 +19,15 @@ public Sprite middleBackgroundSprite;
     public GameObject bonusPrefab2;
     public GameObject bonusPrefab3; 
     public GameObject bonusPrefab4; 
+        public GameObject bonusPrefab5; 
     public Sprite backgroundSprite; 
-public GameObject barrierPrefab1;
-public GameObject barrierPrefab2;
-public GameObject barrierPrefab3;
-public GameObject barrierPrefab4;
-public Dictionary<string, GameObject> barrierPrefabs;
+    public GameObject barrierPrefab1;
+    public GameObject barrierPrefab2;
+    public GameObject barrierPrefab3;
+    public GameObject barrierPrefab4;
+    public GameObject barrierPrefab5;
+        public GameObject barrierPrefab6;
+    public Dictionary<string, GameObject> barrierPrefabs;
 
     public Dictionary<string, GameObject> bonusPrefabs;
     void Start()
@@ -37,14 +40,17 @@ public Dictionary<string, GameObject> barrierPrefabs;
             {"bonusType2", bonusPrefab2},
             {"bonusType3", bonusPrefab3},
             {"bonusType4", bonusPrefab4},
+            {"bonusType5", bonusPrefab5},
             
         };
         barrierPrefabs = new Dictionary<string, GameObject>
           {
-       { "barrierType1", barrierPrefab1 },
-        { "barrierType2", barrierPrefab2 },
-       { "barrierType3", barrierPrefab3 },
-        { "barrierType4", barrierPrefab4 },
+           { "barrierType1", barrierPrefab1 },
+           { "barrierType2", barrierPrefab2 },
+           { "barrierType3", barrierPrefab3 },
+           { "barrierType4", barrierPrefab4 },
+           { "barrierType5", barrierPrefab5 },
+           { "barrierType6", barrierPrefab6 },
          };
 
         XmlSerializer serializer = new XmlSerializer(typeof(Level));
@@ -55,34 +61,32 @@ public Dictionary<string, GameObject> barrierPrefabs;
         }
     }
     
+public int repeatCount = 7; 
 void InstantiateMiddleBackground(Level level)
 {
     if(level.MiddleBackground != null && !string.IsNullOrEmpty(level.MiddleBackground.Image))
     {
-         Sprite middleSprite = Resources.Load<Sprite>(level.MiddleBackground.Image);
+         Sprite middleSprite = gateBackgroundSprite;
          if(middleSprite != null)
          {
-              GameObject middleBg = new GameObject("MiddleBackground");
-              SpriteRenderer renderer = middleBg.AddComponent<SpriteRenderer>();
-              renderer.sprite = middleSprite;
-
-              // Parse la position depuis XML (format "x,y,z" ou "x,y")
-              Vector3 position = Vector3.zero;
+              Vector3 startPos = Vector3.zero;
               if(!string.IsNullOrEmpty(level.MiddleBackground.Position))
               {
                   string[] coords = level.MiddleBackground.Position.Split(',');
-                  if(coords.Length >= 2)
-                  {
-                      float x = float.Parse(coords[0], CultureInfo.InvariantCulture);
-                      float y = float.Parse(coords[1], CultureInfo.InvariantCulture);
-                      float z = (coords.Length > 2) ? float.Parse(coords[2], CultureInfo.InvariantCulture) : 0f;
-                      position = new Vector3(x, y, z);
-                  }
+                  float x = float.Parse(coords[0], CultureInfo.InvariantCulture);
+                  float y = float.Parse(coords[1], CultureInfo.InvariantCulture);
+                  float z = (coords.Length > 2) ? float.Parse(coords[2], CultureInfo.InvariantCulture) : 0f;
+                  startPos = new Vector3(x, y, z);
               }
-              middleBg.transform.position = position;
-middleBg.transform.SetParent(Camera.main.transform);
-renderer.sortingOrder = -5;
-
+              float spriteWidth = middleSprite.bounds.size.x;
+              for (int i = 0; i < repeatCount; i++)
+              {
+                  GameObject mb = new GameObject("MiddleBackground_" + i);
+                  SpriteRenderer renderer = mb.AddComponent<SpriteRenderer>();
+                  renderer.sprite = middleSprite;
+                  mb.transform.position = startPos + new Vector3(i * spriteWidth, 0, 0);
+                  renderer.sortingOrder = -5;
+              }
          }
          else
          {
@@ -163,7 +167,7 @@ void ResizeBackground(SpriteRenderer renderer)
     {
 
         InstantiateBackground(level);
-    InstantiateMiddleBackground(level);  // appel du background du milieu
+        InstantiateMiddleBackground(level);  
         // Instancier le joueur
         Vector2 playerPosition = ParsePosition(level.Player.StartPosition);
         GameObject player = Instantiate(playerPrefab, playerPosition, Quaternion.identity);
@@ -197,8 +201,7 @@ void ResizeBackground(SpriteRenderer renderer)
             }
       }
         
-   
-      foreach (var barrier in level.Barriers)
+   foreach (var barrier in level.Barriers)
 {
     Vector2 startPos = ParsePosition(barrier.Position);
     if (barrierPrefabs.ContainsKey(barrier.Type))
@@ -207,7 +210,11 @@ void ResizeBackground(SpriteRenderer renderer)
         for (int i = 0; i < barrier.Count; i++)
         {
             Vector2 pos = startPos + new Vector2(i * 1.0f, 0);
-            Instantiate(prefab, pos, Quaternion.identity);
+            GameObject instance = Instantiate(prefab, pos, Quaternion.identity);
+            if (barrier.Type == "barrierType6")
+            {
+                instance.transform.rotation = Quaternion.Euler(0, 0, 90);
+            }
         }
     }
     else
@@ -215,6 +222,7 @@ void ResizeBackground(SpriteRenderer renderer)
         Debug.LogError("Préfabriqué pour barrier non trouvé : " + barrier.Type);
     }
 }
+
 
         
       foreach (var bonus in level.Bonuses)
