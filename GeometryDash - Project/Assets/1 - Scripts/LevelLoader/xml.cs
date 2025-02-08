@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Xml.Serialization;
+using MyGameNamespace;
+
 
 [XmlRoot("Level")]
 public class Level
@@ -12,7 +14,8 @@ public class Level
 
     [XmlAttribute("difficulty")]
     public string Difficulty { get; set; }
-
+public List<Barrier> Barriers { get; set; }
+    public Background MiddleBackground { get; set; }  
     public Background Background { get; set; }
     public Player Player { get; set; }
     public List<Zone> ObstacleZones { get; set; }
@@ -24,6 +27,16 @@ public class Background
 {
     [XmlAttribute("image")]
     public string Image { get; set; }
+    [XmlAttribute("position")]
+    public string Position { get; set; }
+}
+public class MiddleBackground
+{
+    [XmlAttribute("image")]
+    public string Image { get; set; }
+
+    [XmlAttribute("position")]
+    public string Position { get; set; } 
 }
 
 public class Player
