@@ -54,7 +54,6 @@ public class CameraController : MonoBehaviour
             if (foundPlayer != null)
             {
                 player = foundPlayer.transform;
-                Debug.Log("Player found: " + player.name);
             }
             yield return new WaitForSeconds(0.01f);
         }
