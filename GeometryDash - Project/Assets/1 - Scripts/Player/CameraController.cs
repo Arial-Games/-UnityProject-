@@ -21,6 +21,20 @@ public class CameraController : MonoBehaviour
     //  METHODES DEFAULT
     //-------------------
 
+    void Start()
+    {
+        StartCoroutine(FindPlayer());
+    }
+
+    void LateUpdate()
+    {
+        if (player != null)
+        {
+            Vector3 targetPosition = new Vector3(player.position.x + offsetX, fixedY, transform.position.z);
+
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        }
+    }
 
     //-------------------
     //  METHODES PUBLIC
@@ -31,13 +45,18 @@ public class CameraController : MonoBehaviour
     //  METHODES PRIVEE
     //-------------------
 
-    void LateUpdate()
-    {
-        if (player != null)
-        {
-            Vector3 targetPosition = new Vector3(player.position.x + offsetX, fixedY, transform.position.z);
 
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+    private IEnumerator FindPlayer()
+    {
+        while (player == null)
+        {
+            GameObject foundPlayer = GameObject.Find("Basic-player(Clone)");
+            if (foundPlayer != null)
+            {
+                player = foundPlayer.transform;
+                Debug.Log("Player found: " + player.name);
+            }
+            yield return new WaitForSeconds(0.01f);
         }
     }
 }

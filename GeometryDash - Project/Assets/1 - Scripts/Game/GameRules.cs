@@ -35,6 +35,18 @@ public class GameRules : MonoBehaviour
         {
             starsUi[i].enabled = false;
         }
+
+
+        player = GameObject.Find("Basic-player(Clone)");
+        if (player != null)
+        {
+            Debug.Log("Player found: " + player.name);
+        }
+        else
+        {
+            Debug.Log("Player not found");
+        }
+
     }
 
     void Update()
@@ -77,6 +89,7 @@ public class GameRules : MonoBehaviour
 
     public void OnPlayerDeath()
     {
+        Debug.Log("TESTDeath");
         Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
         player.SetActive(false);
         gameOverPanel.SetActive(true);

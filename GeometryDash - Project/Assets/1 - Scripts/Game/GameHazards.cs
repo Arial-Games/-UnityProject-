@@ -56,6 +56,7 @@ public class GameHazards : MonoBehaviour
     {
         if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
+            Debug.Log("TEST");
             OnPlayerDeathInit();
         }
     }
@@ -64,6 +65,7 @@ public class GameHazards : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("TEST2");
 
             if (so_GameHazards.isCollectibles && so_GameHazards.isStars)
             {
