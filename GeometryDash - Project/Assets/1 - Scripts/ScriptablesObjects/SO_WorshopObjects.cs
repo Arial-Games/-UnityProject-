@@ -13,7 +13,7 @@ public class SO_WorkshopObjects : ScriptableObject
     public string publicName;
     [TextArea] public string description;
     public Type type;
-    [Range(0, 1000)] public int dataSize; // Pour limiter la taille des niveaux
+    [Range(0, 100)] public int dataSize; // Pour limiter la taille des niveaux
 
     [Header("Back info")]
     [Range(0, 20)] public int uniqueId;

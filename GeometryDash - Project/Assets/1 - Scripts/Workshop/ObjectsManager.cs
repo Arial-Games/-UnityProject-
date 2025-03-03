@@ -100,9 +100,9 @@ public class ObjectsManager : MonoBehaviour
             CancelPlacement();
         }
 
-        if (selectedObject.uniqueId == 1)
+        if (selectedObject.uniqueId == 1 || selectedObject.uniqueId == 12)
         {
-            buyingButtons[0].GetComponent<Button>().interactable = false;
+            buyingButtons[(selectedObject.uniqueId - 1)].GetComponent<Button>().interactable = false;
             CancelPlacement();
         }
     }
