@@ -59,9 +59,9 @@ public class OptionMenu : MonoBehaviour
         }
     }
 
-    public void StartButton()
+    public void StartButton(int sceneId)
     {
-        StartCoroutine(startSceneAsync(1));
+        StartCoroutine(startSceneAsync(sceneId));
     }
 
 

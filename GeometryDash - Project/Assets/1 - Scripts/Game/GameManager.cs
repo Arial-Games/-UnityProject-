@@ -32,9 +32,9 @@ public class GameManager : MonoBehaviour
     //-------------------
 
     // Temp DEBUG
-    public void OnClickTestLevel()
+    public void OnClickTestLevel(int scneneId)
     {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        SceneManager.LoadScene(scneneId, LoadSceneMode.Single);
     }
 
     //-------------------
