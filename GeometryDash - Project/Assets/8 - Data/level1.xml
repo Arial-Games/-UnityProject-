@@ -4,8 +4,8 @@
     <Player startPosition="-4.55,0" sprite="Basic-player.png" />
     
     <ObstacleZones>
-        <Zone id="1" type="BasicSPike" minPosition="2.733197,1.3" maxPosition="5.980999,1.3" count="2" />
-        <Zone id="2" type="BasicSPike" minPosition="3.733197,1.3" maxPosition="6.980999,1.3" count="2" />
+        <Zone id="1" type="BasicSPike" minPosition="4.6,1.3" maxPosition="6.4,1.3" count="2" />
+        <Zone id="2" type="BasicSPike" minPosition="5.5,1.3" maxPosition="7.4,1.3" count="2" />
         <Zone id="3" type="BasicSPike" minPosition="118,1.3" maxPosition="120,1.3" count="2" />
         <Zone id="4" type="BasicSPike" minPosition="121,1.3" maxPosition="122,1.3" count="2" />
     </ObstacleZones>
@@ -23,13 +23,15 @@
     <Bonuses>
         <Bonus type="bonusType1" position="13.919949,2.5656171" />
         <Bonus type="bonusType1" position="127,2.5656171" />
-        <Bonus type="bonusType2" position="2.733197,2.3" />
-        <Bonus type="bonusType2" position="4.733197,2.3" />
-        <Bonus type="bonusType2" position="6.733197,2.3" />
+        <Bonus type="bonusType2" position="4.6,2.3" />
+        <Bonus type="bonusType2" position="6.5,2.3" />
+        <Bonus type="bonusType2" position="7.8,2.3" />
         <Bonus type="bonusType2" position="118,2.3" />
         <Bonus type="bonusType2" position="120,2.3" />
         <Bonus type="bonusType2" position="122,2.3" />
         <Bonus type="bonusType3" position="21.9,1.3" />
+        <Bonus type="bonusType3" position="36.4,3.3" />
+        <Bonus type="bonusType3" position="137,3.3" />
         <Bonus type="bonusType4" position="50.9,2.6" />
         <Bonus type="bonusType5" position="113.0,2.6" />
     </Bonuses>
@@ -47,7 +49,7 @@
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="65,3.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="80,-0.3" count="3" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="88,3.3" count="3" />
-    <Barrier type="barrierType6" sprite="BarrierSprite6" position="146,2.5" count="1" />
+    <!--<Barrier type="barrierType6" sprite="BarrierSprite6" position="146,2.5" count="1" />-->
   </Barriers>
  
  
