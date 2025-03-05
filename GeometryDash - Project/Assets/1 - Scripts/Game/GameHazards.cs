@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
-using static UnityEngine.ParticleSystem;
 using UnityEngine.UI;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class GameHazards : MonoBehaviour
 {
     [SerializeField] SO_GameHazards so_GameHazards;
     GameRules gameRules;
+
+    GameObject spaceShipVisu;
 
 
     //-------------------
@@ -18,6 +17,8 @@ public class GameHazards : MonoBehaviour
     void Start()
     {
         gameRules = GameObject.Find("GameRules").GetComponent<GameRules>();
+        spaceShipVisu = GameObject.Find("SpaceShipVisu");
+        ToggleSpaceShipVisu(false);
     }
 
     void Update()
@@ -36,6 +37,15 @@ public class GameHazards : MonoBehaviour
     //-------------------
     //  METHODES PRIVEE
     //-------------------
+
+    void ToggleSpaceShipVisu(bool isVisible)
+    {
+        if (spaceShipVisu != null)
+        {
+            spaceShipVisu.GetComponent<SpriteRenderer>().enabled = isVisible;
+        }
+    }
+
 
     void TrapMoveement()
     {
@@ -72,7 +82,15 @@ public class GameHazards : MonoBehaviour
 
             if (so_GameHazards.isGate)
             {
-                Debug.Log("Tranformation du Player en " + so_GameHazards.transformTo);
+                if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
+                {
+                    ToggleSpaceShipVisu(true);
+                }
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
+                {
+                    ToggleSpaceShipVisu(false);
+                }
+                    Debug.Log("Tranformation du Player en " + so_GameHazards.transformTo);
             }
 
             if (so_GameHazards.isEndLine)
