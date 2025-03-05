@@ -84,6 +84,7 @@ public class GameRules : MonoBehaviour
         gameOverPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
 
+
         isDead = true;
     }
 
