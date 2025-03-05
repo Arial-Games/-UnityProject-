@@ -21,7 +21,7 @@ public class OptionMenu : MonoBehaviour
     [SerializeField] Image loadingBarFill;
 
     // Audio
-    [SerializeField] AudioMixerGroup[] audioMixerGroup;
+    [SerializeField, Header("Sound")] private AudioMixer audioMixer;
 
 
     //-------------------
@@ -92,11 +92,22 @@ public class OptionMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(qualityInd);
     }
 
+    #region Volume
+    public void SetMasterVolume(float volume)
+    {
+        audioMixer.SetFloat("MasterVolume", volume);
+    }
+
+    public void SetEffectVolume(float volume)
+    {
+        audioMixer.SetFloat("EffectVolume", volume);
+    }
+
     public void SetMusicVolume(float volume)
     {
-        /*audioMixerGroup[0].audioMixer.
-        audioMixerGroup[1].SetFloat("MusicVolume", volume);*/
+        audioMixer.SetFloat("MusicVolume", volume);
     }
+    #endregion
 
     public void FullScreen(bool isFullScreen)
     {
