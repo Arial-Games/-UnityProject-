@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 2_BasicPlayer
   m_EditorClassIdentifier: 
-  publicName: Jack ?
-  description: Desc
+  publicName: ' Ziggy'
+  description: "Ziggy, le cube vert qui croit \xEAtre un extraterrestre avec ses
+    yeux en forme de X, essaie toujours de communiquer avec sa base... malheureusement,
+    il ne re\xE7oit que des \xE9chos de ses propres rebonds dans Geometry Dash!"
   type: 0
   price: 1000
   moneyNeed: 1

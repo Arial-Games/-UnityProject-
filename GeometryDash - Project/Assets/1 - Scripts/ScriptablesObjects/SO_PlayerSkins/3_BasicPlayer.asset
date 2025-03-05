@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 3_BasicPlayer
   m_EditorClassIdentifier: 
-  publicName: Jotar ?
-  description: Desc
+  publicName: Mr. Chomp
+  description: "Mr. Chomp, avec sa moustache majestueuse et ses yeux en feu, se prend
+    pour un super-vilain des pixels. Mais ne vous y trompez pas, il rate plus souvent
+    ses sauts qu'il ne r\xE9ussit ses plans diaboliques!"
   type: 0
   price: 1000
   moneyNeed: 1

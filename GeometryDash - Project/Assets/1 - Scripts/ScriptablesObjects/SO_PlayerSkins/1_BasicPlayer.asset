@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 1_BasicPlayer
   m_EditorClassIdentifier: 
-  publicName: John ?
-  description: Desc
+  publicName: 'Red fang '
+  description: Red fang, le cube rouge qui pense que son triangle jaune est une antenne
+    Wi-Fi, se demande toujours pourquoi il capte autant d'obstacles dans Geometry
+    Dash.
   type: 0
   price: 500
   moneyNeed: 1
