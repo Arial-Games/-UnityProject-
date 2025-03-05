@@ -6,6 +6,8 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.Animations;
 using System.IO;
+using UnityEditor;
+using TMPro;
 
 public class OptionMenu : MonoBehaviour
 {
@@ -24,6 +26,17 @@ public class OptionMenu : MonoBehaviour
     [SerializeField, Header("Sound")] private AudioMixer audioMixer;
 
 
+    // Sensivity
+    bool invertY = false;
+    float horizontalSensitivity = 2f;
+    float verticalSensitivity = 2f;
+
+
+    // Input
+    [SerializeField, Header("Input")] Button changeJumpButton;
+    [SerializeField] TextMeshProUGUI buttonText;
+    bool waitingForInput = false;
+
     //-------------------
     //  METHODES DEFAULT
     //-------------------
@@ -38,16 +51,33 @@ public class OptionMenu : MonoBehaviour
         Screen.fullScreen = true;
     }
 
+
     private void Update()
     {
         OnInputWindowsChange();
+
+
+        // Gestion des Inputs
+        if (waitingForInput)
+        {
+            foreach (KeyCode key in System.Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKeyDown(key))
+                {
+                    buttonText.text = "Saut avec : " + key.ToString();
+                    waitingForInput = false;
+                    changeJumpButton.interactable = true;
+                    Debug.Log("Nouvelle touche de saut : " + key.ToString());
+                    break;
+                }
+            }
+        }
     }
 
 
     //-------------------
     //  METHODES PUBLIC
     //-------------------
-
 
     public void OnButtonWindowsChange(int winId)
     {
@@ -92,6 +122,13 @@ public class OptionMenu : MonoBehaviour
         QualitySettings.SetQualityLevel(qualityInd);
     }
 
+    public void OnChangeJumpKeyClick()
+    {
+        changeJumpButton.interactable = false;
+        buttonText.text = "Appuyez sur une touche...";
+        waitingForInput = true;
+    }
+
     #region Volume
     public void SetMasterVolume(float volume)
     {
@@ -106,6 +143,23 @@ public class OptionMenu : MonoBehaviour
     public void SetMusicVolume(float volume)
     {
         audioMixer.SetFloat("MusicVolume", volume);
+    }
+    #endregion
+
+    #region Souris Clavier
+    public void ToggleInvertY(bool state)
+    {
+        invertY = state;
+    }
+
+    public void UpdateHorizontalSensitivity(float value)
+    {
+        horizontalSensitivity = value;
+    }
+
+    public void UpdateVerticalSensitivity(float value)
+    {
+        verticalSensitivity = value;
     }
     #endregion
 
