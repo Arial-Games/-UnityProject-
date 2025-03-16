@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 4_BasicPlayer
   m_EditorClassIdentifier: 
-  publicName: Jostar ?
-  description: Desc
+  publicName: Squiggle
+  description: "Squiggle, le cube jaune au sourire ondul\xE9, est toujours un peu
+    perdu dans les niveaux de Geometry Dash. Il croit que chaque obstacle est une
+    vague \xE0 surfer!"
   type: 0
   price: 1000
   moneyNeed: 1

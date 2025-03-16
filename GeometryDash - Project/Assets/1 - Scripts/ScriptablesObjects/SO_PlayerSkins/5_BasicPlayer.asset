@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 5_BasicPlayer
   m_EditorClassIdentifier: 
-  publicName: Jordan ?
-  description: Desc
+  publicName: Grumpster
+  description: "Grumpster, le cube rouge qui pense toujours qu\u2019il est dans une
+    salle d\u2019horreur, se fait peur \xE0 lui-m\xEAme avec ses dents pointues \xE0
+    chaque saut rat\xE9 dans Geometry Dash!"
   type: 0
   price: 1000
   moneyNeed: 1
