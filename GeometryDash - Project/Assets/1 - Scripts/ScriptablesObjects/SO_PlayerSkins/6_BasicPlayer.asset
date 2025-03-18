@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbdde3741a710f46b51da4986442ce8, type: 3}
   m_Name: 6_BasicPlayer
   m_EditorClassIdentifier: 
-  publicName: JOHNATHANNNN ?
-  description: Desc
+  publicName: Gloomeon
+  description: "Gloomeon, avec ses yeux tourbillonnants et son sourire renvers\xE9,
+    est le cube qui prend chaque niveau de Geometry Dash un peu trop s\xE9rieusement,
+    comme s'il r\xE9solvait un myst\xE8re plut\xF4t que de simplement \xE9viter des
+    obstacles!"
   type: 0
   price: 2000
   moneyNeed: 1
