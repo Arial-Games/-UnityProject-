@@ -29,7 +29,13 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: eca80a935f6bc0744b27e66da7018e9e
+    name: MasterVolume
+  - guid: 840d97ee37234ba44a6a6545f4acec5d
+    name: MusicVolume
+  - guid: 41ddfa04ddb19434b9b9b097be8b29de
+    name: EffectVolume
   m_AudioMixerGroupViews:
   - guids:
     - a08b62457bf786842a322358baafd024
@@ -125,7 +131,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sound
+  m_Name: Effect
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: a70966c11d55251479108919ca1d17a5
   m_Children: []
