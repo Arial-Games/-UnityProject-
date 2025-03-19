@@ -101,14 +101,14 @@ Les détails et échéances des tâches sont visibles dans le diagramme de Gantt
 ### UI
 
 - [x] Création du personnage
-- [ ] Création des cartes (sheets)
-- [ ] Boutons et éléments interactifs
+- [x] Création des cartes (sheets)
+- [x] Boutons et éléments interactifs
 
 ### Développement
 
 - [x] Player Controller
-- [ ] Camera Controller
-- [ ] ScoreManager
+- [x] Camera Controller
+- [x] ScoreManager
 - [x] GameManager
 - [x] SaveSys
 - [x] LevelSpawner
@@ -119,7 +119,7 @@ Les détails et échéances des tâches sont visibles dans le diagramme de Gantt
 
 - [x] Fichiers de sauvegarde
 - [x] Fichiers de niveaux (XML ou texte)
-- [ ] Shémas images
+- [x] Shémas images
 
 ### Gestion de projet
 
@@ -134,12 +134,12 @@ Les détails et échéances des tâches sont visibles dans le diagramme de Gantt
   - [x] Contrôles du Joueur : Script pour le déplacement automatique et le saut.
   - [x] Environnement et Obstacles : Génération d’obstacles dynamiques, gestion des collisions, type d’obstacles différents qui font perdre ou non de la vie au joueur,
   - [x] Acces a différents bonus affectant le joueur *(supe rieur a 2 bonus)*,
-  - [ ] UI et Feedback Visuel, Audio: Effets audios et visuels durant la partie, effets visuels de fin de partie avec animation de mort ou de réussite de niveau.
+  - [x] UI et Feedback Visuel, Audio: Effets audios et visuels durant la partie, effets visuels de fin de partie avec animation de mort ou de réussite de niveau.
 - Interface
   - [ ] Menu de démarrage *(Jouer, Choix de difficulté, Quitter ..)*,
-  - [ ] Menu de pause *(Continuer, Recommencer, Quitter ..)*,
+  - [x] Menu de pause *(Continuer, Recommencer, Quitter ..)*,
   - [ ] Interface permettant de visualiser le score au cours du jeu, l’écoulement du temps de la partie, son meilleur score a battre,
-  - [x]  Menu option *(Activer/Désactiver le son)*
+  - [x] Menu option *(Activer/Désactiver le son)*
 - Générateur de niveau
   - [x] Générateur des niveaux et des cartes en fonction de fichiers *(ex. json, xml)*
   - [ ] Editeur de carte *(Optionnel)*,
