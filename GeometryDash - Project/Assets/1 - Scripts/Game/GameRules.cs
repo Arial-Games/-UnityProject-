@@ -88,10 +88,12 @@ public class GameRules : MonoBehaviour
         isDead = true;
     }
 
-    public void OnTakeCollectibles()
+    public void OnTakeCollectibles(Transform objPos)
     {
         playerLevelScore += 1000;
-        Destroy(Instantiate(particles[2], player.transform.position, transform.rotation), 0.4f);
+        Vector3 spawnPos = objPos.position + Vector3.down * -0.2f;
+        Destroy(Instantiate(particles[2], spawnPos, transform.rotation), 0.4f);
+
     }
 
     void OnSecondChange()

@@ -77,7 +77,7 @@ public class GameHazards : MonoBehaviour
         {
             if (so_GameHazards.isCollectibles && so_GameHazards.isStars)
             {
-                gameRules.OnTakeCollectibles();
+                gameRules.OnTakeCollectibles(this.transform);
                 Destroy(gameObject);
             }
 
