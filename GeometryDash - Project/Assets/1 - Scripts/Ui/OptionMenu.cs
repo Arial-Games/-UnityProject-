@@ -18,10 +18,6 @@ public class OptionMenu : MonoBehaviour
 
     [SerializeField] bool mainMenu = false;
 
-    // Loading Screen
-    [SerializeField] GameObject loadingScreen;
-    [SerializeField] Image loadingBarFill;
-
     // Audio
     [SerializeField, Header("Sound")] private AudioMixer audioMixer;
 
@@ -88,12 +84,6 @@ public class OptionMenu : MonoBehaviour
             optionPanel[winId].SetActive(true);
         }
     }
-
-    public void StartButton(int sceneId)
-    {
-        StartCoroutine(startSceneAsync(sceneId));
-    }
-
 
     public void OptionButton()
     {
@@ -187,19 +177,6 @@ public class OptionMenu : MonoBehaviour
         }
     }
 
-    IEnumerator startSceneAsync(int placeID)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);
-        loadingScreen.SetActive(true);
-
-        while (!operation.isDone)
-        {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
-
-            yield return null;
-        }
-    }
 
     void OnInputWindowsChange()
     {

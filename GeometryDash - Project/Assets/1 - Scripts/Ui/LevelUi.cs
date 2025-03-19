@@ -25,10 +25,6 @@ public class LevelUi : MonoBehaviour
     //  METHODES PUBLIC
     //-------------------
 
-    public void SceneLoadOnBtnClick(int sceneId)
-    {
-        SceneManager.LoadScene(sceneId);
-    }
 
 
     //-------------------
