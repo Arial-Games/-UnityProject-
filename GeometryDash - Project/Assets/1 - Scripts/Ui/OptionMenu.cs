@@ -16,7 +16,7 @@ public class OptionMenu : MonoBehaviour
 
     [SerializeField] SaveData saveData;
 
-    [SerializeField] bool mainMenu = false;
+    [SerializeField] bool mainMenu = false, isMute = false;
 
     // Audio
     [SerializeField, Header("Sound")] private AudioMixer audioMixer;
@@ -32,6 +32,8 @@ public class OptionMenu : MonoBehaviour
     [SerializeField, Header("Input")] Button changeJumpButton;
     [SerializeField] TextMeshProUGUI buttonText;
     bool waitingForInput = false;
+
+    [SerializeField] Slider[] soundSlider;
 
     //-------------------
     //  METHODES DEFAULT
@@ -122,17 +124,44 @@ public class OptionMenu : MonoBehaviour
     #region Volume
     public void SetMasterVolume(float volume)
     {
-        audioMixer.SetFloat("MasterVolume", volume);
+        if (isMute == false)
+        {
+            audioMixer.SetFloat("MasterVolume", volume);
+        }
     }
 
     public void SetEffectVolume(float volume)
     {
-        audioMixer.SetFloat("EffectVolume", volume);
+        if (isMute == false)
+        {
+            audioMixer.SetFloat("EffectVolume", volume);
+        }
     }
 
     public void SetMusicVolume(float volume)
     {
-        audioMixer.SetFloat("MusicVolume", volume);
+        if (isMute == false)
+        {
+            audioMixer.SetFloat("MusicVolume", volume);
+        }
+    }
+
+    public void MuteAllSound(bool _isMute)
+    {
+        isMute = _isMute;
+
+        float musicVolume = isMute ? -80 : -15;
+        float effectVolume = isMute ? -80 : 0;
+        float masterVolume = isMute ? -80 : 0;
+
+        audioMixer.SetFloat("MusicVolume", musicVolume);
+        audioMixer.SetFloat("EffectVolume", effectVolume);
+        audioMixer.SetFloat("MasterVolume", masterVolume);
+
+        for (int i = 0; i < soundSlider.Length; i++)
+        {
+            soundSlider[i].value = isMute ? -80 : (i == 0 ? -15 : 0);
+        }
     }
     #endregion
 
