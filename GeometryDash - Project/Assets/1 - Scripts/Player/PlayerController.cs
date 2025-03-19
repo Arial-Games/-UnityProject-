@@ -11,10 +11,17 @@ public enum Speed
     SuperFast = 4,
 }
 
+public enum Mode
+{
+    Normal,
+    Ship
+}
+
 public class PlayerController : MonoBehaviour
 {
     public Speed CurrentSpeed;
-    //                           0      1      2      3       4                             
+    public Mode CurrentMode = Mode.Normal;
+
     float[] speedValues = { 8.6f, 10.4f, 12.96f, 15.6f, 19.27f };
 
     public Transform GroundCheckTransform;
@@ -26,6 +33,7 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Quaternion targetRotation;
     private float rotationSpeed = 500f;
+
 
     //-------------------
     //  METHODES DEFAULT
@@ -42,19 +50,48 @@ public class PlayerController : MonoBehaviour
         transform.position += Vector3.right * speedValues[(int)CurrentSpeed] * Time.deltaTime;
         isGrounded = OnGround();
 
-        if (isGrounded)
+        //if (Input.GetKeyDown(KeyCode.U))
+        //{
+        //    ToggleMode();
+        //}
+
+        if (CurrentMode == Mode.Normal)
         {
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            if (isGrounded && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
             {
                 Jump();
             }
         }
+        else if (CurrentMode == Mode.Ship)
+        {
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 12f); // Monte fortement à chaque clic
+            }
+        }
+
         Sprite.rotation = Quaternion.RotateTowards(Sprite.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
+
 
     //-------------------
     //  METHODES PUBLIC
     //-------------------
+
+    public void ToggleMode()
+    {
+        if (CurrentMode == Mode.Normal)
+        {
+            CurrentMode = Mode.Ship;
+            rb.gravityScale = 4f;
+        }
+        else
+        {
+            CurrentMode = Mode.Normal;
+            rb.gravityScale = 12.41067f;
+        }
+    }
+
 
     //-------------------
     //  METHODES PRIVEE
