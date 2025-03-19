@@ -18,7 +18,7 @@ public class GameHazards : MonoBehaviour
     {
         gameRules = GameObject.Find("GameRules").GetComponent<GameRules>();
         spaceShipVisu = GameObject.Find("SpaceShipVisu");
-        ToggleSpaceShipVisu(false);
+        spaceShipVisu.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     void Update()
@@ -38,10 +38,11 @@ public class GameHazards : MonoBehaviour
     //  METHODES PRIVEE
     //-------------------
 
-    void ToggleSpaceShipVisu(bool isVisible)
+    void ToggleSpaceShipVisu(bool isVisible, GameObject playerGO)
     {
         if (spaceShipVisu != null)
         {
+            playerGO.GetComponent<PlayerController>().ToggleMode();
             spaceShipVisu.GetComponent<SpriteRenderer>().enabled = isVisible;
         }
     }
@@ -84,13 +85,12 @@ public class GameHazards : MonoBehaviour
             {
                 if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
                 {
-                    ToggleSpaceShipVisu(true);
+                    ToggleSpaceShipVisu(true, collision.gameObject);
                 }
-                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Basic)
                 {
-                    ToggleSpaceShipVisu(false);
+                    ToggleSpaceShipVisu(false, collision.gameObject);
                 }
-                    Debug.Log("Tranformation du Player en " + so_GameHazards.transformTo);
             }
 
             if (so_GameHazards.isEndLine)
