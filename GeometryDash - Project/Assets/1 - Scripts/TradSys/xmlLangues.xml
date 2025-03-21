@@ -4,13 +4,13 @@
 
   <language>
     <Name>Francais</Name>
-
     <Musique>Musique :</Musique>
     <Qualite>Qualite :</Qualite>
     <Langue>Langue :</Langue>
     <Back>Retour</Back>
     <Fullscreen>Plein ecran</Fullscreen>
-    <LevelSelect>Selection du niveau</LevelSelect>
+    <LevelSelect>Niveaux</LevelSelect>
+    <LevelChoice>Choix du niveau</LevelChoice>
     <Quit>Quitter</Quit>
     <Level>Niveau </Level>
     <Option>Options</Option>
@@ -28,17 +28,22 @@
     <Recherche>Recherche</Recherche>
     <MultiJoueurs>Multi-joueurs</MultiJoueurs>
     <Scores>Scores</Scores>
+    <Community>Communauté</Community>
+    <Money>Argent</Money>
+    <Gold>Or</Gold>
+    <Star>Étoile</Star>
+    <StarCoins>Pièces étoiles</StarCoins>
   </language>
 
   <language>
     <Name>English</Name>
-
     <Musique>Music :</Musique>
     <Qualite>Quality :</Qualite>
     <Langue>Language :</Langue>
     <Back>Back</Back>
     <Fullscreen>Fullscreen</Fullscreen>
     <LevelSelect>Level selector</LevelSelect>
+    <LevelChoice>Level choice</LevelChoice>
     <Quit>Leave</Quit>
     <Level>Level </Level>
     <Option>Option</Option>
@@ -56,17 +61,22 @@
     <Recherche>Search</Recherche>
     <MultiJoueurs>Multiplayer</MultiJoueurs>
     <Scores>Scores</Scores>
+    <Community>Community</Community>
+    <Money>Money</Money>
+    <Gold>Gold</Gold>
+    <Star>Star</Star>
+    <StarCoins>Star Coins</StarCoins>
   </language>
 
   <language>
     <Name>Deutsch</Name>
-
     <Musique>Musik :</Musique>
     <Qualite>Qualitat :</Qualite>
     <Langue>Sprache :</Langue>
     <Back>Ruckkehr</Back>
     <Fullscreen>Vollbild</Fullscreen>
     <LevelSelect>Auswahl der Stufe</LevelSelect>
+    <LevelChoice>Stufenauswahl</LevelChoice>
     <Quit>Verlasse</Quit>
     <Level>Stufe </Level>
     <Option>Optionen</Option>
@@ -84,17 +94,22 @@
     <Recherche>Suche</Recherche>
     <MultiJoueurs>Mehrspieler</MultiJoueurs>
     <Scores>Punktzahlen</Scores>
+    <Community>Gemeinschaft</Community>
+    <Money>Geld</Money>
+    <Gold>Gold</Gold>
+    <Star>Stern</Star>
+    <StarCoins>Sternmünzen</StarCoins>
   </language>
 
   <language>
     <Name>Espanola</Name>
-
     <Musique>Musica :</Musique>
     <Qualite>Calidad :</Qualite>
     <Langue>Idioma :</Langue>
     <Back>Volver</Back>
     <Fullscreen>Pantalla completa</Fullscreen>
     <LevelSelect>Seleccion de nivel</LevelSelect>
+    <LevelChoice>Elección de nivel</LevelChoice>
     <Quit>Salida</Quit>
     <Level>Nivel </Level>
     <Option>Opciones</Option>
@@ -112,17 +127,22 @@
     <Recherche>Busqueda</Recherche>
     <MultiJoueurs>Multijugador</MultiJoueurs>
     <Scores>Puntuaciones</Scores>
+    <Community>Comunidad</Community>
+    <Money>Dinero</Money>
+    <Gold>Oro</Gold>
+    <Star>Estrella</Star>
+    <StarCoins>Monedas estrella</StarCoins>
   </language>
 
   <language>
     <Name>Italiano</Name>
-
     <Musique>Musica :</Musique>
     <Qualite>Qualita :</Qualite>
     <Langue>Lingua :</Langue>
     <Back>Indietro</Back>
     <Fullscreen>Schermo intero</Fullscreen>
     <LevelSelect>Selezione del livello</LevelSelect>
+    <LevelChoice>Scelta del livello</LevelChoice>
     <Quit>Sinistra</Quit>
     <Level>Livello </Level>
     <Option>Opzioni</Option>
@@ -140,6 +160,11 @@
     <Recherche>Ricerca</Recherche>
     <MultiJoueurs>Multigiocatore</MultiJoueurs>
     <Scores>Punteggi</Scores>
+    <Community>Comunità</Community>
+    <Money>Soldi</Money>
+    <Gold>Oro</Gold>
+    <Star>Stella</Star>
+    <StarCoins>Monete stella</StarCoins>
   </language>
 
 </languages>

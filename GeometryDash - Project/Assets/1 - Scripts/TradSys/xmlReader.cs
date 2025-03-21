@@ -13,7 +13,7 @@ public class xmlReader : MonoBehaviour
     public string langueName;
     public int currentLangue;
 
-    [HideInInspector] public string musique, quality, language, back, fullscreen, levelSelect, quit, level, option, suivant, quittDem, oui, non, _menuVeri, beta, galerie, magasin, casier, creer, enregistre, recherche, multiJoueurs, scores;
+    [HideInInspector] public string musique, quality, language, back, fullscreen, levelSelect, quit, level, option, suivant, quittDem, oui, non, _menuVeri, beta, galerie, magasin, casier, creer, enregistre, recherche, multiJoueurs, scores, communaute, levelChoice, money, gold, star, starCoins;
 
     public TMP_Dropdown selectDropdown;
 
@@ -42,6 +42,16 @@ public class xmlReader : MonoBehaviour
         languages[currentLangue].TryGetValue("Level", out level);
         languages[currentLangue].TryGetValue("Suivant", out suivant);
         languages[currentLangue].TryGetValue("Galerie", out galerie);
+        languages[currentLangue].TryGetValue("Community", out communaute);
+
+        // Level
+        languages[currentLangue].TryGetValue("LevelChoice", out levelChoice);
+
+        // Money
+        languages[currentLangue].TryGetValue("Money", out money);
+        languages[currentLangue].TryGetValue("Gold", out gold);
+        languages[currentLangue].TryGetValue("Star", out star);
+        languages[currentLangue].TryGetValue("Star Coins", out starCoins);
 
         //Quit
         languages[currentLangue].TryGetValue("QuitVeri", out quittDem);
