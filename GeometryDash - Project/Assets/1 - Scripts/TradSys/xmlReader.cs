@@ -13,7 +13,7 @@ public class xmlReader : MonoBehaviour
     public string langueName;
     public int currentLangue;
 
-    [HideInInspector] public string musique, quality, language, back, fullscreen, levelSelect, quit, level, option, suivant, quittDem, oui, non, _menuVeri, beta, galerie;
+    [HideInInspector] public string musique, quality, language, back, fullscreen, levelSelect, quit, level, option, suivant, quittDem, oui, non, _menuVeri, beta, galerie, magasin, casier, creer, enregistre, recherche, multiJoueurs, scores;
 
     public TMP_Dropdown selectDropdown;
 
@@ -49,8 +49,16 @@ public class xmlReader : MonoBehaviour
         languages[currentLangue].TryGetValue("Non", out non);
         languages[currentLangue].TryGetValue("MenuVeri", out _menuVeri);
         languages[currentLangue].TryGetValue("PasDispo", out beta);
+
+        languages[currentLangue].TryGetValue("Magasin", out magasin);
+        languages[currentLangue].TryGetValue("Casier", out casier);
+        languages[currentLangue].TryGetValue("Creer", out creer);
+        languages[currentLangue].TryGetValue("Enregistre", out enregistre);
+        languages[currentLangue].TryGetValue("Recherche", out recherche);
+        languages[currentLangue].TryGetValue("MultiJoueurs", out multiJoueurs);
+        languages[currentLangue].TryGetValue("Scores", out scores);
     }
-    
+
     void Reader()
     {
         XmlDocument xmlDoc = new XmlDocument();
@@ -64,92 +72,7 @@ public class xmlReader : MonoBehaviour
 
             foreach (XmlNode value in languagueContent)
             {
-                if(value.Name == "Name")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                //Parametres
-                if (value.Name == "Musique")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Qualite")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Langue")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Back")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Fullscreen")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                //MainMenu Menu
-                if (value.Name == "LevelSelect")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Quit")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Option")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Level")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Suivant")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "QuitVeri")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Oui")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Non")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "MenuVeri")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "PasDispo")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
-
-                if (value.Name == "Galerie")
-                {
-                    obj.Add(value.Name, value.InnerText);
-                }
+                obj.Add(value.Name, value.InnerText);
             }
             languages.Add(obj);
         }

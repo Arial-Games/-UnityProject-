@@ -2,136 +2,144 @@
 
 <languages>
 
-	<language>
-		<Name>Francais</Name>
-		
-		<Musique>Musique :</Musique>
-		<Qualite>Qualite :</Qualite>
-		<Langue>Langue :</Langue>
-		<Back>Retour</Back>
-		<Fullscreen>Plein ecran</Fullscreen>
+  <language>
+    <Name>Francais</Name>
 
-		<LevelSelect>Selection du niveau</LevelSelect>
-		<Quit>Quitter</Quit>
-		<Level>Niveau </Level>
-		<Option>Options</Option>
-		<Galerie>Images</Galerie>
-		
-		<Suivant>Suivant</Suivant>
-		<QuitVeri>Voulez vous vraiment quitter ?</QuitVeri>
-		<Oui>Oui</Oui>
-		<Non>Non</Non>
-		<MenuVeri>Retourer au menu principale ?</MenuVeri>
-		<PasDispo>Pas disponible en demo !</PasDispo>
+    <Musique>Musique :</Musique>
+    <Qualite>Qualite :</Qualite>
+    <Langue>Langue :</Langue>
+    <Back>Retour</Back>
+    <Fullscreen>Plein ecran</Fullscreen>
+    <LevelSelect>Selection du niveau</LevelSelect>
+    <Quit>Quitter</Quit>
+    <Level>Niveau </Level>
+    <Option>Options</Option>
+    <Galerie>Images</Galerie>
+    <Suivant>Suivant</Suivant>
+    <QuitVeri>Voulez vous vraiment quitter ?</QuitVeri>
+    <Oui>Oui</Oui>
+    <Non>Non</Non>
+    <MenuVeri>Retourer au menu principale ?</MenuVeri>
+    <PasDispo>Pas disponible en demo !</PasDispo>
+    <Magasin>Magasin</Magasin>
+    <Casier>Casier</Casier>
+    <Creer>Creer</Creer>
+    <Enregistre>Enregistre</Enregistre>
+    <Recherche>Recherche</Recherche>
+    <MultiJoueurs>Multi-joueurs</MultiJoueurs>
+    <Scores>Scores</Scores>
+  </language>
 
-		
-	</language>
+  <language>
+    <Name>English</Name>
 
-	
-	<language>
-		<Name>English</Name>
-		
-		<Musique>Music :</Musique>
-		<Qualite>Quality :</Qualite>
-		<Langue>Language :</Langue>
-		<Back>Back</Back>
-		<Fullscreen>Fullscreen</Fullscreen>
+    <Musique>Music :</Musique>
+    <Qualite>Quality :</Qualite>
+    <Langue>Language :</Langue>
+    <Back>Back</Back>
+    <Fullscreen>Fullscreen</Fullscreen>
+    <LevelSelect>Level selector</LevelSelect>
+    <Quit>Leave</Quit>
+    <Level>Level </Level>
+    <Option>Option</Option>
+    <Galerie>Pics</Galerie>
+    <Suivant>Next</Suivant>
+    <QuitVeri>Are you sure you want to leave ?</QuitVeri>
+    <Oui>Yes</Oui>
+    <Non>No</Non>
+    <MenuVeri>Back to menu ?</MenuVeri>
+    <PasDispo>Not available in demo !</PasDispo>
+    <Magasin>Store</Magasin>
+    <Casier>Locker</Casier>
+    <Creer>Create</Creer>
+    <Enregistre>Save</Enregistre>
+    <Recherche>Search</Recherche>
+    <MultiJoueurs>Multiplayer</MultiJoueurs>
+    <Scores>Scores</Scores>
+  </language>
 
-		<LevelSelect>Level selectior</LevelSelect>
-		<Quit>Leave</Quit>
-		<Level>Level </Level>
-		<Option>Option</Option>
-		<Galerie>Pics</Galerie>
-		
-		<Suivant>Next</Suivant>
-		<QuitVeri>Are you sure you want to leave ?</QuitVeri>
-		<Oui>Yes</Oui>
-		<Non>No</Non>
-		<MenuVeri>Back to menu ?</MenuVeri>
-		<PasDispo>Not available in demo !</PasDispo>
+  <language>
+    <Name>Deutsch</Name>
 
-		
-	</language>
-	
-	
-	<language>
-	
-	<Name>Deutsch</Name>
-        
-        <Musique>Musik :</Musique>
-        <Qualite>Qualitat :</Qualite>
-        <Langue>Sprache :</Langue>
-        <Back>Ruckkehr</Back>
-        <Fullscreen>Vollbild</Fullscreen>
+    <Musique>Musik :</Musique>
+    <Qualite>Qualitat :</Qualite>
+    <Langue>Sprache :</Langue>
+    <Back>Ruckkehr</Back>
+    <Fullscreen>Vollbild</Fullscreen>
+    <LevelSelect>Auswahl der Stufe</LevelSelect>
+    <Quit>Verlasse</Quit>
+    <Level>Stufe </Level>
+    <Option>Optionen</Option>
+    <Galerie>Bilder</Galerie>
+    <Suivant>Nachster</Suivant>
+    <QuitVeri>Mochten Sie wirklich verlassen ?</QuitVeri>
+    <Oui>Ja</Oui>
+    <Non>Nein</Non>
+    <MenuVeri>Zuruck zum Hauptmenu ?</MenuVeri>
+    <PasDispo>Nicht in der Demo verfugbar !</PasDispo>
+    <Magasin>Laden</Magasin>
+    <Casier>Schliessfach</Casier>
+    <Creer>Erstellen</Creer>
+    <Enregistre>Speichern</Enregistre>
+    <Recherche>Suche</Recherche>
+    <MultiJoueurs>Mehrspieler</MultiJoueurs>
+    <Scores>Punktzahlen</Scores>
+  </language>
 
-        <LevelSelect>Auswahl der Stufe</LevelSelect>
-        <Quit>Verlasse</Quit>
-        <Level>Stufe </Level>
-		<Option>Optionen</Option>
-		<Galerie>Bilder</Galerie>
+  <language>
+    <Name>Espanola</Name>
 
-		<Suivant>Nachster</Suivant>
-		<QuitVeri>Mochten Sie wirklich verlassen ?</QuitVeri>
-		<Oui>Ja</Oui>
-		<Non>Nein</Non>
-		<MenuVeri>Zuruck zum Hauptmenu ?</MenuVeri>
-		<PasDispo>Nicht in der Demo verfugbar !</PasDispo>
+    <Musique>Musica :</Musique>
+    <Qualite>Calidad :</Qualite>
+    <Langue>Idioma :</Langue>
+    <Back>Volver</Back>
+    <Fullscreen>Pantalla completa</Fullscreen>
+    <LevelSelect>Seleccion de nivel</LevelSelect>
+    <Quit>Salida</Quit>
+    <Level>Nivel </Level>
+    <Option>Opciones</Option>
+    <Galerie>Fotos</Galerie>
+    <Suivant>Siguiente</Suivant>
+    <QuitVeri>Realmente quieres irte ?</QuitVeri>
+    <Oui>Si</Oui>
+    <Non>No</Non>
+    <MenuVeri>¿Volver al menú principal ?</MenuVeri>
+    <PasDispo>No disponible en demo !</PasDispo>
+    <Magasin>Tienda</Magasin>
+    <Casier>Casillero</Casier>
+    <Creer>Crear</Creer>
+    <Enregistre>Guardar</Enregistre>
+    <Recherche>Busqueda</Recherche>
+    <MultiJoueurs>Multijugador</MultiJoueurs>
+    <Scores>Puntuaciones</Scores>
+  </language>
 
-	
-		</language>
+  <language>
+    <Name>Italiano</Name>
 
+    <Musique>Musica :</Musique>
+    <Qualite>Qualita :</Qualite>
+    <Langue>Lingua :</Langue>
+    <Back>Indietro</Back>
+    <Fullscreen>Schermo intero</Fullscreen>
+    <LevelSelect>Selezione del livello</LevelSelect>
+    <Quit>Sinistra</Quit>
+    <Level>Livello </Level>
+    <Option>Opzioni</Option>
+    <Galerie>Foto</Galerie>
+    <Suivant>Seguendo</Suivant>
+    <QuitVeri>Vuoi davvero andartene ?</QuitVeri>
+    <Oui>Si</Oui>
+    <Non>No</Non>
+    <MenuVeri>Ritorno al menu principale ?</MenuVeri>
+    <PasDispo>Non disponibile in demo !</PasDispo>
+    <Magasin>Negozio</Magasin>
+    <Casier>Armadio</Casier>
+    <Creer>Creare</Creer>
+    <Enregistre>Salva</Enregistre>
+    <Recherche>Ricerca</Recherche>
+    <MultiJoueurs>Multigiocatore</MultiJoueurs>
+    <Scores>Punteggi</Scores>
+  </language>
 
-    <language>
-
-		<Name>Espanola</Name>
-
-		<Musique>Musica :</Musique>
-		<Qualite>Calidad :</Qualite>
-		<Langue>Idioma :</Langue>
-		<Back>Volver</Back>
-		<Fullscreen>Pantalla completa</Fullscreen>
-
-		<LevelSelect>Seleccion de nivel</LevelSelect>
-		<Quit>Salida</Quit>
-		<Level>Nivel </Level>
-		<Option>Opciones</Option>
-		<Galerie>Fotos</Galerie>
-
-		<Suivant>Siguiente</Suivant>
-		<QuitVeri>Realmente quieres irte ?</QuitVeri>
-		<Oui>Si</Oui>
-		<Non>No</Non>
-		<MenuVeri>¿Volver al menú principal ?</MenuVeri>
-		<PasDispo>No disponible en demo !</PasDispo>
-
-	</language>
-
-
-	<language>
-
-		<Name>Italiano</Name>
-
-		<Musique>Musica :</Musique>
-		<Qualite>Qualita :</Qualite>
-		<Langue>Lingua :</Langue>
-		<Back>Indietro</Back>
-		<Fullscreen>Schermo intero</Fullscreen>
-
-		<LevelSelect>Selezione del livello</LevelSelect>
-		<Quit>Sinistra</Quit>
-		<Level>Livello </Level>
-		<Option>Opzioni</Option>
-		<Galerie>Foto</Galerie>
-
-		<Suivant>Seguendo</Suivant>
-		<QuitVeri>Vuoi davvero andartene ?</QuitVeri>
-		<Oui>Si</Oui>
-		<Non>No</Non>
-		<MenuVeri>Ritorno al menu principale ?</MenuVeri>
-		<PasDispo>Non disponibile in demo !</PasDispo>
-
-
-	</language>
-	
-	
 </languages>
