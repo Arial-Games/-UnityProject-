@@ -84,7 +84,6 @@ public class GameRules : MonoBehaviour
         gameOverPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
 
-
         isDead = true;
     }
 
@@ -109,8 +108,12 @@ public class GameRules : MonoBehaviour
 
     public void OnEndLignePass()
     {
+        Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
         player.SetActive(false);
-        // Animation de fin
+        gameOverPanel.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+
+        isDead = true;
     }
 
 

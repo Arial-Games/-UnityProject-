@@ -95,7 +95,6 @@ public class GameHazards : MonoBehaviour
 
             if (so_GameHazards.isEndLine)
             {
-                Debug.Log("Ligne d'arrivé passé, bien jouer !");
                 gameRules.OnEndLignePass();
             }
 
