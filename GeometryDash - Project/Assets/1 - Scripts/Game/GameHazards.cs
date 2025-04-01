@@ -81,6 +81,13 @@ public class GameHazards : MonoBehaviour
                 Destroy(gameObject);
             }
 
+            if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
+            {
+                // TEMP
+                gameRules.OnTakeCollectibles(this.transform);
+                Destroy(gameObject);
+            }
+
             if (so_GameHazards.isGate)
             {
                 if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
