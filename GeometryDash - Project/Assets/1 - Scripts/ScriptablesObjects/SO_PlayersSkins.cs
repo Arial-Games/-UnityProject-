@@ -14,11 +14,11 @@ public class SO_PlayersSkins : ScriptableObject
     public string publicName;
     [TextArea] public string description;
     public Type type;
-    [Range(0, 2000)] public int price;
+    [Range(0, 5000)] public int price;
     public MoneyNeed moneyNeed;
 
     [Header("Back info")]
-    [Range(0, 6)] public int uniqueId;
+    [Range(0, 20)] public int uniqueId;
     public Rarety rarety;
 
     [Header("Visuel")]

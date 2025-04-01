@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentSpeed: 0
+  CurrentMode: 0
   GroundCheckTransform: {fileID: 7296028731407550158}
   GroundCheckRadius: 1
   GroundMask:
