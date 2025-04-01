@@ -16,15 +16,20 @@ MonoBehaviour:
   description: A glowing orb that temporarily enhances the player's jump height,
     enabling them to clear taller obstacles with ease
   type: 3
-  objVersion: 1
+  objVersion: 0
   uniqueId: 302
   isJumper: 0
   jumpStrenght: 0
   isGate: 0
   transformTo: 0
+  playerSkin: {fileID: 0}
   isTrap: 0
   canKill: 0
+  canRotate: 0
+  rotationSpeed: 0
   isCollectibles: 1
+  isStars: 0
   values: 10
-  PowerOrbs: 1
+  isPowerUp: 1
   powerOrbEffects: 2
+  isEndLine: 0

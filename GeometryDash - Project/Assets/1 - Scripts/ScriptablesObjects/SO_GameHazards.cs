@@ -10,7 +10,7 @@ public class SO_GameHazards : ScriptableObject
     public enum Type { Jumper, Gate, Trap, Collectibles, Other, Nothing }
     public enum ObjVersion { Basic, Edited, Model}
     public enum TransformTo { Nothing, Basic, Triangle, Wheels, Navet, SpaceShip, Robot }
-    public enum PowerOrbEffects {  Nothing, Speed, Jump, Invincibility }
+    public enum PowerOrbEffects {  Nothing, Speed, Jump, Invincibility, Monster, Explod }
 
     [Header("Common data")]
     public string publicName;
@@ -38,7 +38,9 @@ public class SO_GameHazards : ScriptableObject
     public bool isCollectibles;
     public bool isStars;
     public int values;
-    public bool PowerOrbs;
+
+    [Header("PowerUps")]
+    public bool isPowerUp;
     public PowerOrbEffects powerOrbEffects;
 
     [Header("Other")]

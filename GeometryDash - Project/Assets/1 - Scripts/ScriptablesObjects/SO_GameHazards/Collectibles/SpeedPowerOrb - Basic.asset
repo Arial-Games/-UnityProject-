@@ -16,15 +16,20 @@ MonoBehaviour:
   description: A vibrant orb that temporarily increases the player's speed, allowing
     them to move faster through obstacles and reach new heights
   type: 3
-  objVersion: 1
+  objVersion: 0
   uniqueId: 301
   isJumper: 0
   jumpStrenght: 0
   isGate: 0
   transformTo: 0
+  playerSkin: {fileID: 0}
   isTrap: 0
   canKill: 0
+  canRotate: 0
+  rotationSpeed: 0
   isCollectibles: 1
+  isStars: 0
   values: 10
-  PowerOrbs: 1
+  isPowerUp: 1
   powerOrbEffects: 1
+  isEndLine: 0
