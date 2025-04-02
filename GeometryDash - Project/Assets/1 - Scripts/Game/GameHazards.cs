@@ -7,7 +7,7 @@ public class GameHazards : MonoBehaviour
     [SerializeField] SO_GameHazards so_GameHazards;
     GameRules gameRules;
 
-    GameObject spaceShipVisu;
+    GameObject[] playerVisu;
 
 
     //-------------------
@@ -17,8 +17,14 @@ public class GameHazards : MonoBehaviour
     void Start()
     {
         gameRules = GameObject.Find("GameRules").GetComponent<GameRules>();
-        spaceShipVisu = GameObject.Find("SpaceShipVisu");
-        spaceShipVisu.GetComponent<SpriteRenderer>().enabled = false;
+        playerVisu[0] = GameObject.Find("SpaceShipVisu");
+        playerVisu[1] = GameObject.Find("WheelsVisu");
+        playerVisu[2] = GameObject.Find("TriangleVisu");
+
+        for (int i = 0; i < playerVisu.Length; i++)
+        {
+            playerVisu[i].GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     void Update()
@@ -40,10 +46,10 @@ public class GameHazards : MonoBehaviour
 
     void ToggleSpaceShipVisu(bool isVisible, GameObject playerGO)
     {
-        if (spaceShipVisu != null)
+        if (playerVisu[0] != null)
         {
             playerGO.GetComponent<PlayerController>().ToggleMode();
-            spaceShipVisu.GetComponent<SpriteRenderer>().enabled = isVisible;
+            playerVisu[0].GetComponent<SpriteRenderer>().enabled = isVisible;
         }
     }
 
@@ -98,6 +104,21 @@ public class GameHazards : MonoBehaviour
                 {
                     ToggleSpaceShipVisu(false, collision.gameObject);
                 }
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Triangle)
+                {
+                    // Hide PLAYER and show triangle
+                }
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Wheels)
+                {
+                    // Hide PLAYER and show Wheels
+                }
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Navet)
+                {
+                }
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Robot)
+                {
+                }
+
             }
 
             if (so_GameHazards.isEndLine)
