@@ -7,7 +7,7 @@ public class GameHazards : MonoBehaviour
     [SerializeField] SO_GameHazards so_GameHazards;
     GameRules gameRules;
 
-    GameObject[] playerVisu;
+    GameObject[] playerVisu = new GameObject[4];
 
 
     //-------------------
@@ -17,14 +17,13 @@ public class GameHazards : MonoBehaviour
     void Start()
     {
         gameRules = GameObject.Find("GameRules").GetComponent<GameRules>();
-        playerVisu[0] = GameObject.Find("SpaceShipVisu");
-        playerVisu[1] = GameObject.Find("WheelsVisu");
-        playerVisu[2] = GameObject.Find("TriangleVisu");
+        playerVisu[0] = GameObject.Find("PlayerVisual");
+        playerVisu[1] = GameObject.Find("SpaceShipVisu");
+        playerVisu[2] = GameObject.Find("WheelsVisu");
+        playerVisu[3] = GameObject.Find("TriangleVisu");
 
-        for (int i = 0; i < playerVisu.Length; i++)
-        {
-            playerVisu[i].GetComponent<SpriteRenderer>().enabled = false;
-        }
+        DisableAllVisu();
+        playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
     }
 
     void Update()
@@ -44,12 +43,21 @@ public class GameHazards : MonoBehaviour
     //  METHODES PRIVEE
     //-------------------
 
-    void ToggleSpaceShipVisu(bool isVisible, GameObject playerGO)
+    void DisableAllVisu()
     {
         if (playerVisu[0] != null)
         {
-            playerGO.GetComponent<PlayerController>().ToggleMode();
-            playerVisu[0].GetComponent<SpriteRenderer>().enabled = isVisible;
+            for (int i = 0; i < playerVisu.Length; i++)
+            {
+                if (playerVisu[i]?.GetComponent<SpriteRenderer>() is SpriteRenderer sr)
+                {
+                    sr.enabled = false;
+                }
+                else
+                {
+                    Debug.LogError($"playerVisu[{i}] est null ou pas de Rendere");
+                }
+            }
         }
     }
 
@@ -96,48 +104,56 @@ public class GameHazards : MonoBehaviour
 
             if (so_GameHazards.isGate)
             {
-                if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
-                {
-                    ToggleSpaceShipVisu(true, collision.gameObject);
+                int modeID = 0;
+                DisableAllVisu();
+                if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Basic)
+                { 
+                    playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
+                    modeID = 1;
                 }
-                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Basic)
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.SpaceShip)
                 {
-                    ToggleSpaceShipVisu(false, collision.gameObject);
-                }
-                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Triangle)
-                {
-                    // Hide PLAYER and show triangle
+                    playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
+                    playerVisu[1].GetComponent<SpriteRenderer>().enabled = true;
+                    modeID = 2;
                 }
                 else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Wheels)
                 {
-                    // Hide PLAYER and show Wheels
+                    playerVisu[2].GetComponent<SpriteRenderer>().enabled = true;
+                    modeID = 3;
+                }
+                else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Triangle)
+                {
+                    playerVisu[3].GetComponent<SpriteRenderer>().enabled = true;
+                    modeID = 4;
                 }
                 else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Navet)
                 {
+                    modeID = 5;
                 }
                 else if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Robot)
                 {
+                    modeID = 6;
                 }
-
-            }
-
-            if (so_GameHazards.isEndLine)
-            {
-                gameRules.OnEndLignePass();
-            }
-
-            if (so_GameHazards.isJumper)
-            {
-                Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
-
-                rb.velocity = Vector2.zero;
-                rb.AddForce(Vector2.up * so_GameHazards.jumpStrenght, ForceMode2D.Impulse);
-                //Transform Sprite = collision.gameObject.GetComponent<Transform>();
-                //Sprite.Rotate(Vector3.back * 5);
-
-                // Revoir la rotation
+                collision.gameObject.GetComponent<PlayerController>().ToggleMode(modeID);
             }
         }
-    }
 
+        if (so_GameHazards.isEndLine)
+        {
+            gameRules.OnEndLignePass();
+        }
+
+        if (so_GameHazards.isJumper)
+        {
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
+
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * so_GameHazards.jumpStrenght, ForceMode2D.Impulse);
+            //Transform Sprite = collision.gameObject.GetComponent<Transform>();
+            //Sprite.Rotate(Vector3.back * 5);
+
+            // Revoir la rotation
+        }
+    }
 }

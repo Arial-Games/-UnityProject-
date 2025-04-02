@@ -14,7 +14,9 @@ public enum Speed
 public enum Mode
 {
     Normal,
-    Ship
+    Ship,
+    Wheels,
+    Triangle
 }
 
 public class PlayerController : MonoBehaviour
@@ -33,11 +35,8 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Quaternion targetRotation;
     private float rotationSpeed = 500f;
-
-
-    //-------------------
-    //  METHODES DEFAULT
-    //-------------------
+    private bool isOnCeiling = false;
+    private bool isMovingUp = true;
 
     void Start()
     {
@@ -50,52 +49,68 @@ public class PlayerController : MonoBehaviour
         transform.position += Vector3.right * speedValues[(int)CurrentSpeed] * Time.deltaTime;
         isGrounded = OnGround();
 
-        //if (Input.GetKeyDown(KeyCode.U))
-        //{
-        //    ToggleMode();
-        //}
-
         if (CurrentMode == Mode.Normal)
         {
             if (isGrounded && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)))
             {
                 Jump();
             }
+            targetRotation = Quaternion.Euler(0, 0, 0);
         }
         else if (CurrentMode == Mode.Ship)
         {
+            if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 12f);
+            }
+            targetRotation = Quaternion.Euler(0, 0, 0);
+        }
+        else if (CurrentMode == Mode.Triangle)
+        {
             if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
-                rb.velocity = new Vector2(rb.velocity.x, 12f); // Monte fortement à chaque clic
+                ToggleTriangleDirection();
+            }
+        }
+        else if (CurrentMode == Mode.Wheels)
+        {
+            if (isGrounded || isOnCeiling)
+            {
+                if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+                {
+                    FlipGravity();
+                }
             }
         }
 
         Sprite.rotation = Quaternion.RotateTowards(Sprite.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
-
-    //-------------------
-    //  METHODES PUBLIC
-    //-------------------
-
-    public void ToggleMode()
+    public void ToggleMode(int modeId)
     {
-        if (CurrentMode == Mode.Normal)
-        {
-            CurrentMode = Mode.Ship;
-            rb.gravityScale = 4f;
-        }
-        else
+        if (modeId == 1)
         {
             CurrentMode = Mode.Normal;
             rb.gravityScale = 12.41067f;
         }
+        else if (modeId == 2)
+        {
+            CurrentMode = Mode.Ship;
+            rb.gravityScale = 4f;
+        }
+        else if (modeId == 3)
+        {
+            CurrentMode = Mode.Wheels;
+            rb.gravityScale = 12.41067f;
+        }
+        else if (modeId == 4)
+        {
+            CurrentMode = Mode.Triangle;
+            rb.gravityScale = 0f;
+            rb.velocity = new Vector2(12f, isMovingUp ? 12f : -12f);
+            targetRotation = Quaternion.Euler(0, 0, isMovingUp ? 45 : -45);
+        }
     }
-
-
-    //-------------------
-    //  METHODES PRIVEE
-    //-------------------
 
     bool OnGround()
     {
@@ -106,11 +121,25 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(Vector2.up * 25, ForceMode2D.Impulse);
-        RotateSprite();
+        RotateSprite(-90);
     }
 
-    void RotateSprite()
+    void FlipGravity()
     {
-        targetRotation *= Quaternion.Euler(0, 0, -90);
+        rb.gravityScale *= -1;
+        isOnCeiling = !isOnCeiling;
+        RotateSprite(180);
+    }
+
+    void ToggleTriangleDirection()
+    {
+        isMovingUp = !isMovingUp;
+        rb.velocity = new Vector2(12f, isMovingUp ? 12f : -12f);
+        targetRotation = Quaternion.Euler(0, 0, isMovingUp ? 45 : -45);
+    }
+
+    void RotateSprite(float angle)
+    {
+        targetRotation *= Quaternion.Euler(0, 0, angle);
     }
 }
