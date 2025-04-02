@@ -8,14 +8,18 @@ using UnityEngine.UI;
 
 public class GameRules : MonoBehaviour
 {
+    [SerializeField, Header("Script")] LevelSaveData levelSaveData;
+
     [SerializeField] GameObject[] particles;
     [SerializeField] GameObject player, gameOverPanel;
 
     [SerializeField] Image[] starsUi;
-    public int playerLevelScore = 0, bestPayerLevelScore = 0;
-    [SerializeField] TextMeshProUGUI scoreDisplay, bestScoreDisplay;
+    public TextMeshProUGUI scoreDisplay, bestScoreDisplay;
 
-    private float timer = 0f;
+    // Public
+    public int playerLevelScore = 0, bestPayerLevelScore = 0;
+    [HideInInspector] public float timer = 0f;
+
     private float incrementInterval = 0.5f;
     private bool isDead = false;
 
@@ -29,7 +33,7 @@ public class GameRules : MonoBehaviour
     void Start()
     {
         gameOverPanel.SetActive(false);
-        bestScoreDisplay.text = "Meilleur score : " + bestPayerLevelScore;
+        //bestScoreDisplay.text = "Meilleur score : " + bestPayerLevelScore;
 
         for (int i = 0; i < starsUi.Length; i++)
         {
@@ -43,27 +47,11 @@ public class GameRules : MonoBehaviour
     {
         scoreDisplay.text = "Score : " + playerLevelScore;
 
-        if (playerLevelScore > bestPayerLevelScore)
-        {
-            bestPayerLevelScore = playerLevelScore;
-            bestScoreDisplay.text = "Meilleur score : " + bestPayerLevelScore;
-        }
-
-
-
-        if(playerLevelScore > 1000)
-        {
-            starsUi[0].enabled = true;
-        }
-        else if (playerLevelScore > 2500)
-        {
-            starsUi[1].enabled = true;
-        }
-        else if (playerLevelScore > 5000)
-        {
-            starsUi[2].enabled = true;
-        }
-
+        //if (playerLevelScore > bestPayerLevelScore)
+        //{
+        //    bestPayerLevelScore = playerLevelScore;
+        //    bestScoreDisplay.text = "Meilleur score : " + bestPayerLevelScore;
+        //}
 
 
         if (isDead == false)
@@ -81,6 +69,23 @@ public class GameRules : MonoBehaviour
     {
         Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
         player.SetActive(false);
+
+        levelSaveData.ApplyAndSaveBestScore();
+
+        // GUI
+        if (playerLevelScore > 1000)
+        {
+            starsUi[0].enabled = true;
+        }
+        else if (playerLevelScore > 2500)
+        {
+            starsUi[1].enabled = true;
+        }
+        else if (playerLevelScore > 5000)
+        {
+            starsUi[2].enabled = true;
+        }
+
         gameOverPanel.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
 

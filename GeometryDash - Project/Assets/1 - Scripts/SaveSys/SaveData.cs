@@ -61,7 +61,8 @@ public class SaveData : MonoBehaviour
             playerStat.openSave.ToString(),
 
             skinsString,
-            playerStat.actualSkinId.ToString()
+            playerStat.actualSkinId.ToString(),
+            playerStat.pseudo.ToString()
         };
 
         string saveString = string.Join(saveSeparator, content);
@@ -101,6 +102,7 @@ public class SaveData : MonoBehaviour
             playerStat.possesionId = Array.ConvertAll(skins, bool.Parse);
 
             playerStat.actualSkinId = int.Parse(content[9]);
+            playerStat.pseudo = content[10];
 
             _inventory.saveCall();
 
@@ -111,6 +113,12 @@ public class SaveData : MonoBehaviour
             Debug.Log("Aucune sauvegarde");
         }
     }
+
+    public (string pseudo, int skinId) GetPlayerData()
+    {
+        return (playerStat.pseudo, playerStat.actualSkinId);
+    }
+
 
 
     //-------------------
