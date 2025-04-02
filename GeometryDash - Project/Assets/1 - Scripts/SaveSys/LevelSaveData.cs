@@ -8,8 +8,8 @@ public class LevelSaveData : MonoBehaviour
 {
     public GameRules gameRules;
 
-    string saveSeparator = "%LEVELDATA%";
-    string encryptionKey = "^D_N=G^$SHK6k_1PP#4ocH@=o)2cDaNQ";
+    static string saveSeparator = "%LEVELDATA%";
+    static string encryptionKey = "^D_N=G^$SHK6k_1PP#4ocH@=o)2cDaNQ"; // Clé de 32 caractères
 
     [HideInInspector] public int gloablScore;
 

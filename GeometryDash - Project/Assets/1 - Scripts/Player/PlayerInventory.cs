@@ -22,9 +22,7 @@ public class PlayerInventory : MonoBehaviour
         {
             SO_playerStats.gold += 100;
             SO_playerStats.cash += 200;
-            SO_playerStats.stars += 300;
-            SO_playerStats.starsCoins += 400;
-            Debug.LogError("CHEAT EN COURS");
+            Debug.LogWarning("CHEAT EN COURS");
         }
     }
 

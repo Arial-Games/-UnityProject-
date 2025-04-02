@@ -6,7 +6,7 @@ public class SO_PlayerStat : ScriptableObject
 {
     [HideInInspector] public UnityEvent update;
 
-    [Header("Main data")] public string pseudo = "NewPlayer";
+    [Header("Main data")] public string pseudo = "New-Player";
     public int actualSkinId = 0;
 
     [Header("Ressources")]

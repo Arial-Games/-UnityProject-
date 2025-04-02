@@ -4,6 +4,7 @@ using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
 using TMPro;
+using Unity.Mathematics;
 
 public class SaveData : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class SaveData : MonoBehaviour
     [SerializeField] PlayerInventory _inventory;
     [SerializeField] TMP_InputField pseudoField;
 
-    string saveSeparator = "%DATA%";
-    string encryptionKey = "^D_N=G^$SHK6k_1PP#4ocH@=o)2cDaNQ"; // Clé de 32 caractères
+    static string saveSeparator = "%DATA%";
+    static string encryptionKey = "^D_N=G^$SHK6k_1PP#4ocH@=o)2cDaNQ"; // Clé de 32 caractères
+
+    static readonly string[] prefixes = { "Shadow", "Cyber", "Neo", "Dark", "Sky", "Ghost", "Lunar", "Storm", "Pixel", "Phantom" };
+    static readonly string[] suffixes = { "Wolf", "Ninja", "X", "Eclipse", "Fury", "Hunter", "Knight", "Storm", "Rider", "Fox" };
 
 
     //-------------------
@@ -126,6 +130,12 @@ public class SaveData : MonoBehaviour
     public void OnPseudoChange()
     {
         playerStat.pseudo = pseudoField.text;
+
+        if (string.IsNullOrEmpty(playerStat.pseudo))
+        {
+            string randomPseudo = prefixes[UnityEngine.Random.Range(0, prefixes.Length)] + " " + suffixes[UnityEngine.Random.Range(0, suffixes.Length)];
+            playerStat.pseudo = randomPseudo;
+        }
     }
 
 
