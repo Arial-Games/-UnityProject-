@@ -18,6 +18,8 @@ public class GameRules : MonoBehaviour
     [Header("GUI"), SerializeField] Image[] starsUi;
     public TextMeshProUGUI scoreDisplay, bestScoreDisplay;
 
+    [Header("Audio"), SerializeField] AudioSource deathSound;
+
     // Public
     [Header("Other")] public int playerLevelScore = 0, bestPayerLevelScore = 0;
     [HideInInspector] public float timer = 0f;
@@ -68,6 +70,7 @@ public class GameRules : MonoBehaviour
     public void OnPlayerDeath()
     {
         Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
+        deathSound.Play();
         player.SetActive(false);
 
         levelSaveData.ApplyAndSaveBestScore();
