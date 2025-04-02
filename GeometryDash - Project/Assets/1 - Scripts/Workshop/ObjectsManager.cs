@@ -15,6 +15,8 @@ public class ObjectsManager : MonoBehaviour
     [SerializeField] Sprite interoPoint;
     [SerializeField] Image floatingImage;
 
+    [Header("Sound"), SerializeField] AudioSource placeObjSound;
+
     int levelData = 1000; // Size of the level
     bool isPlacingObject = false;
     SO_WorkshopObjects selectedObject;
@@ -105,6 +107,8 @@ public class ObjectsManager : MonoBehaviour
             buyingButtons[(selectedObject.uniqueId - 1)].GetComponent<Button>().interactable = false;
             CancelPlacement();
         }
+
+        placeObjSound.Play();
     }
 
     void CancelPlacement()
