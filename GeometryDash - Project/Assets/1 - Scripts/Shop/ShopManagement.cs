@@ -62,22 +62,61 @@ public class ShopManagement : MonoBehaviour
 
     public void shopButton(int id)
     {
-        if (id == 0)
-        {
-            Debug.LogWarning("Boutton non renseigné");
-        }
+        float price = so_BasicPlayersSkins[id - 1].price;
 
-        if (sO_PlayerStat.cash < so_BasicPlayersSkins[(id - 1)].price)
+        switch (so_BasicPlayersSkins[id - 1].moneyNeed)
         {
-            Debug.LogWarning("Argent insufisant !");
-        }
-        else
-        {
-            sO_PlayerStat.cash -= so_BasicPlayersSkins[(id - 1)].price;
-            hideButton(id - 1);
-            sO_PlayerStat.possesionId[(id - 1)] = true;
+            case SO_PlayersSkins.MoneyNeed.Gold:
+                if (sO_PlayerStat.gold < price) Debug.LogWarning("Or insuffisant !");
+                else PerformPurchase(id, price, "Gold");
+                break;
+
+            case SO_PlayersSkins.MoneyNeed.Argent:
+                if (sO_PlayerStat.cash < price) Debug.LogWarning("Argent insuffisant !");
+                else PerformPurchase(id, price, "Cash");
+                break;
+
+            case SO_PlayersSkins.MoneyNeed.Stars:
+                if (sO_PlayerStat.stars < price) Debug.LogWarning("Étoiles insuffisantes !");
+                else PerformPurchase(id, price, "Stars");
+                break;
+
+            case SO_PlayersSkins.MoneyNeed.StarsCoins:
+                if (sO_PlayerStat.starsCoins < price) Debug.LogWarning("StarsCoins insuffisants !");
+                else PerformPurchase(id, price, "StarsCoins");
+                break;
+
+            default:
+                Debug.LogWarning("Monnaie non reconnue !");
+                break;
         }
     }
+
+    private void PerformPurchase(int id, float price, string currency)
+    {
+        switch (currency)
+        {
+            case "Gold":
+                sO_PlayerStat.gold -= price;
+                break;
+            case "Cash":
+                sO_PlayerStat.cash -= price;
+                break;
+            case "Stars":
+                sO_PlayerStat.stars -= price;
+                break;
+            case "StarsCoins":
+                sO_PlayerStat.starsCoins -= price;
+                break;
+            default:
+                Debug.LogWarning("Monnaie non reconnue !");
+                return;
+        }
+
+        hideButton(id - 1);
+        sO_PlayerStat.possesionId[id - 1] = true;
+    }
+
 
     //-------------------
     //  METHODES PRIVEE

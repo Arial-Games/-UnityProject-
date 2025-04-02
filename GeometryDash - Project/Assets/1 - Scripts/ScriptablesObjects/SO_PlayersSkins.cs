@@ -8,7 +8,7 @@ public class SO_PlayersSkins : ScriptableObject
 {
     public enum Type {  Basic, Triangle, Navette, Robot, Wheels, Other }
     public enum Rarety { Commun, Atypique, Rare, Legendary, Mytique, Collection };
-    public enum MoneyNeed { Cash, Gold, Stars, StarsCoins};
+    public enum MoneyNeed { Argent, Gold, Stars, StarsCoins};
 
     [Header("Basic info")]
     public string publicName;

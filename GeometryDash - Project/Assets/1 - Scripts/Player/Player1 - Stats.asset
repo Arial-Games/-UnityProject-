@@ -15,13 +15,14 @@ MonoBehaviour:
   update:
     m_PersistentCalls:
       m_Calls: []
-  gold: 600
-  cash: 444
-  stars: 1800
-  starsCoins: 2400
+  pseudo: PlayerDEV
+  actualSkinId: 1
+  cash: 8200
+  gold: 100
+  stars: 15300
+  starsCoins: 20400
   XP: 0
   playerLevel: 0
   storyProgression: 0
   openSave: 1
-  actualSkinId: 5
-  possesionId: 010001010101
+  possesionId: 010100000001

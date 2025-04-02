@@ -10,7 +10,7 @@ public class SO_PlayerStat : ScriptableObject
     public int actualSkinId = 0;
 
     [Header("Ressources")]
-    public float gold = 0, cash = 0, stars = 0, starsCoins = 0;
+    public float cash = 0, gold = 0, stars = 0, starsCoins = 0;
 
     [Header("Other")]
     public int XP = 0, playerLevel = 0, storyProgression = 0;

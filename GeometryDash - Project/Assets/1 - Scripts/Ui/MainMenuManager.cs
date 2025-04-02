@@ -63,8 +63,8 @@ public class UiManager : MonoBehaviour
 
     void TextOnDisplay()
     {
-        inventoryText[0].text = "Argent : " + sO_PlayerStat.gold.ToString();
-        inventoryText[1].text = "Or : " + sO_PlayerStat.cash.ToString();
+        inventoryText[0].text = "Argent : " + sO_PlayerStat.cash.ToString();
+        inventoryText[1].text = "Or : " + sO_PlayerStat.gold.ToString();
         inventoryText[2].text = "Etoile : " + sO_PlayerStat.stars.ToString();
         inventoryText[3].text = "Piece etoiles : " + sO_PlayerStat.starsCoins.ToString();
     }

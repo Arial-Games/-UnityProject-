@@ -18,7 +18,7 @@ MonoBehaviour:
     Dash.
   type: 0
   price: 500
-  moneyNeed: 1
+  moneyNeed: 0
   uniqueId: 5
   rarety: 0
   skinSprite: {fileID: 21300000, guid: 7226d61dc36ebda42a78cf9fbdb74dc7, type: 3}
