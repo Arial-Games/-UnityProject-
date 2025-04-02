@@ -3,11 +3,13 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using UnityEngine;
+using TMPro;
 
 public class SaveData : MonoBehaviour
 {
     public SO_PlayerStat playerStat;
     [SerializeField] PlayerInventory _inventory;
+    [SerializeField] TMP_InputField pseudoField;
 
     string saveSeparator = "%DATA%";
     string encryptionKey = "^D_N=G^$SHK6k_1PP#4ocH@=o)2cDaNQ"; // Clé de 32 caractères
@@ -23,6 +25,8 @@ public class SaveData : MonoBehaviour
         {
             load();
         }
+
+        pseudoField.text = playerStat.pseudo;
     }
 
     void Update()
@@ -117,6 +121,11 @@ public class SaveData : MonoBehaviour
     public (string pseudo, int skinId) GetPlayerData()
     {
         return (playerStat.pseudo, playerStat.actualSkinId);
+    }
+
+    public void OnPseudoChange()
+    {
+        playerStat.pseudo = pseudoField.text;
     }
 
 

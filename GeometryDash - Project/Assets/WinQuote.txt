@@ -1,0 +1,4 @@
+Argent : En game
+Or     : En game rare
+Etoile : Dans event
+Pices etoiles : Money payante
