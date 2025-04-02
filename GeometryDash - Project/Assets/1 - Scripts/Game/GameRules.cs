@@ -9,22 +9,22 @@ using UnityEngine.UI;
 public class GameRules : MonoBehaviour
 {
     [SerializeField, Header("Script")] LevelSaveData levelSaveData;
+    [SerializeField] SaveData saveData;
+    [SerializeField] PlayerInventory playerInventory;
 
-    [SerializeField] GameObject[] particles;
+    [SerializeField, Header("Game objects")] GameObject[] particles;
     [SerializeField] GameObject player, gameOverPanel;
 
-    [SerializeField] Image[] starsUi;
+    [Header("GUI"), SerializeField] Image[] starsUi;
     public TextMeshProUGUI scoreDisplay, bestScoreDisplay;
 
     // Public
-    public int playerLevelScore = 0, bestPayerLevelScore = 0;
+    [Header("Other")] public int playerLevelScore = 0, bestPayerLevelScore = 0;
     [HideInInspector] public float timer = 0f;
 
     private float incrementInterval = 0.5f;
     private bool isDead = false;
 
-
-    //player.SetActive(false); -> desactiver le PlayerController et le stopper
 
     //-------------------
     //  METHODES DEFAULT
@@ -94,21 +94,15 @@ public class GameRules : MonoBehaviour
 
     public void OnTakeCollectibles(Transform objPos)
     {
+        playerInventory.AddMoney(UnityEngine.Random.Range(0, 20), "cash");
+        playerInventory.AddMoney(UnityEngine.Random.Range(0, 5), "gold");
         playerLevelScore += 1000;
+
+        saveData.save();
+
         Vector3 spawnPos = objPos.position + Vector3.down * -0.2f;
         Destroy(Instantiate(particles[2], spawnPos, transform.rotation), 0.4f);
 
-    }
-
-    void OnSecondChange()
-    {
-        timer += Time.deltaTime;
-
-        if (timer >= incrementInterval)
-        {
-            timer = 0f;
-            playerLevelScore++;
-        }
     }
 
     public void OnEndLignePass()
@@ -125,4 +119,15 @@ public class GameRules : MonoBehaviour
     //-------------------
     //  METHODES PRIVEE
     //-------------------
+
+    void OnSecondChange()
+    {
+        timer += Time.deltaTime;
+
+        if (timer >= incrementInterval)
+        {
+            timer = 0f;
+            playerLevelScore++;
+        }
+    }
 }

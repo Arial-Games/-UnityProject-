@@ -36,6 +36,14 @@ public class PlayerInventory : MonoBehaviour
         // Charger les donnés physique si besoin
     }
 
+    public void AddMoney(int ammount, string type)
+    {
+        if (type == "cash")
+            SO_playerStats.cash += ammount;
+        else if (type == "gold")
+            SO_playerStats.gold += ammount;
+    }
+
 
     //-------------------
     //  METHODES PRIVEE
