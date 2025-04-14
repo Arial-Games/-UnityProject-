@@ -8,6 +8,7 @@ public class SkinsManager : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] SO_PlayerStat sO_PlayerStat;
     [SerializeField] SO_PlayersSkins[] so_BasicPlayersSkins;
+    [SerializeField, Header("NOT USED")] SO_PlayersSkins[] so_WheelsPlayersSkins;
 
     [Header("Bouttons / Sprite")]
     [SerializeField] GameObject[] skinButton;

@@ -12,6 +12,8 @@ public class ShopManagement : MonoBehaviour
     [SerializeField] SO_PlayersSkins[] so_BasicPlayersSkins;
     [SerializeField] SO_ShopObjects[] so_ShopObjects;
 
+    [SerializeField, Header("NOT USED")] SO_PlayersSkins[] so_WheelsPlayersSkins;
+
     [Header("Bouttons / Sprite")]
     [SerializeField] GameObject[] buyingButtons;
     [SerializeField] Sprite interoPoint;

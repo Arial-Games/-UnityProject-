@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour
     private bool isOnCeiling = false;
     private bool isMovingUp = true;
 
+
+    //-------------------
+    //  METHODES DEFAULT
+    //-------------------
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -55,7 +60,6 @@ public class PlayerController : MonoBehaviour
             {
                 Jump();
             }
-            targetRotation = Quaternion.Euler(0, 0, 0);
         }
         else if (CurrentMode == Mode.Ship)
         {
@@ -86,6 +90,11 @@ public class PlayerController : MonoBehaviour
         Sprite.rotation = Quaternion.RotateTowards(Sprite.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
+
+    //-------------------
+    //  METHODES PUBLIC
+    //-------------------
+
     public void ToggleMode(int modeId)
     {
         if (modeId == 1)
@@ -112,6 +121,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    //-------------------
+    //  METHODES PRIVEE
+    //-------------------
+
     bool OnGround()
     {
         return Physics2D.OverlapCircle(GroundCheckTransform.position, GroundCheckRadius, GroundMask);
@@ -124,13 +138,14 @@ public class PlayerController : MonoBehaviour
         RotateSprite(-90);
     }
 
-    void FlipGravity()
+    void FlipGravity() // Wheals
     {
         rb.gravityScale *= -1;
         isOnCeiling = !isOnCeiling;
         RotateSprite(180);
     }
 
+    // Triangle
     void ToggleTriangleDirection()
     {
         isMovingUp = !isMovingUp;
