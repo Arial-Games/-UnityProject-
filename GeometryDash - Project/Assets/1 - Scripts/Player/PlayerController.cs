@@ -124,23 +124,31 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+    public bool IsOnCeiling()
+    {
+        return isOnCeiling;
+    }
+
+
+
     //-------------------
     //  METHODES PRIVEE
     //-------------------
 
-    bool OnGround()
+    public bool OnGround()
     {
         return Physics2D.OverlapCircle(GroundCheckTransform.position, GroundCheckRadius, GroundMask);
     }
 
-    void Jump()
+    public void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(Vector2.up * 25, ForceMode2D.Impulse);
         RotateSprite(-90);
     }
 
-    void FlipGravity() // Wheals
+    public void FlipGravity() // Wheals
     {
         rb.gravityScale *= -1;
         isOnCeiling = !isOnCeiling;
@@ -148,7 +156,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Triangle
-    void ToggleTriangleDirection()
+    public void ToggleTriangleDirection()
     {
         isMovingUp = !isMovingUp;
         rb.velocity = new Vector2(12f, isMovingUp ? 12f : -12f);
