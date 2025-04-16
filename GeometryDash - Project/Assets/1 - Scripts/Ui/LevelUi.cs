@@ -8,7 +8,8 @@ using TMPro;
 public class LevelUi : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI gameTimer;
-    public bool isDead = false;
+    [SerializeField] GameObject pauseMenu;
+    public bool isDead = false, isPaused = false;
 
     //-------------------
     //  METHODES DEFAULT
@@ -16,15 +17,41 @@ public class LevelUi : MonoBehaviour
 
     private void Start()
     {
+        pauseMenu.SetActive(false);
+
         Cursor.lockState = CursorLockMode.Locked;
         StartCoroutine(StartGameTimer());
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePauseMenu();
+        }
+    }
 
     //-------------------
     //  METHODES PUBLIC
     //-------------------
 
+    public void TogglePauseMenu()
+    {
+        isPaused = !isPaused;
+
+        if (isPaused)
+        {
+            Time.timeScale = 0f;
+            pauseMenu.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Time.timeScale = 1f;
+            pauseMenu.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+    }
 
 
     //-------------------

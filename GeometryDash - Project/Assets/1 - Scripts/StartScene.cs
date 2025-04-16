@@ -27,6 +27,9 @@ public class StartScene : MonoBehaviour
 
     IEnumerator startSceneAsync(int placeID)
     {
+        Time.timeScale = 1f;
+        Cursor.lockState = CursorLockMode.Locked;
+
         AsyncOperation operation = SceneManager.LoadSceneAsync(placeID);
         loadingScreen.SetActive(true);
 

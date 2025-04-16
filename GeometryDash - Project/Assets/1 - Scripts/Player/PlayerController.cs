@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0f) return;
+
         transform.position += Vector3.right * speedValues[(int)CurrentSpeed] * Time.deltaTime;
         isGrounded = OnGround();
 
