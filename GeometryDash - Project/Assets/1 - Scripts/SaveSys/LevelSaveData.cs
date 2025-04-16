@@ -13,11 +13,21 @@ public class LevelSaveData : MonoBehaviour
 
     [HideInInspector] public int gloablScore;
 
+
+    //-------------------
+    //  METHODES DEFAULT
+    //-------------------
+
     void Start()
     {
         DontDestroyOnLoad(gameObject);
         LoadGlobalScore();
     }
+
+
+    //-------------------
+    //  METHODES PUBLIC
+    //-------------------
 
     public void ApplyAndSaveBestScore()
     {
@@ -95,6 +105,11 @@ public class LevelSaveData : MonoBehaviour
         }
         return loadedGlobalScore;
     }
+
+
+    //-------------------
+    //  METHODES PRIVEE
+    //-------------------
 
     private string Encrypt(string plainText, string key)
     {

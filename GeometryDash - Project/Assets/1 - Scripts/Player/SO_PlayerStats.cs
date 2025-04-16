@@ -17,11 +17,15 @@ public class SO_PlayerStat : ScriptableObject
     public bool openSave = false;
     public bool[] possesionId;
 
+    [Header("Level Stats")]
+    public int currentScore = 0;
+    public int globalScore = 0;
+    public int[] levelScore = new int[5];
+
 
     private void OnEnable()
     {
         // Quand l'instance est activée
-
         if (update == null)
             update = new UnityEvent();
     }
@@ -30,7 +34,6 @@ public class SO_PlayerStat : ScriptableObject
     {
         // Quand l'instance recoit une modif
         // Dans l'inspector
-
         update.Invoke();
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using TMPro;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 
 public class SaveData : MonoBehaviour
 {
@@ -70,8 +71,17 @@ public class SaveData : MonoBehaviour
 
             skinsString,
             playerStat.actualSkinId.ToString(),
-            playerStat.pseudo.ToString()
-        };
+            playerStat.pseudo.ToString(),
+
+            // LevelData ToDO
+            playerStat.currentScore.ToString(),
+            playerStat.globalScore.ToString(),
+            playerStat.levelScore[0].ToString(),
+            playerStat.levelScore[1].ToString(),
+            playerStat.levelScore[2].ToString(),
+            playerStat.levelScore[3].ToString(),
+            playerStat.levelScore[4].ToString()
+    };
 
         string saveString = string.Join(saveSeparator, content);
 
@@ -105,12 +115,20 @@ public class SaveData : MonoBehaviour
             string skinsString = content[8];
             string[] skins = skinsString.Split(',');
 
-
-
             playerStat.possesionId = Array.ConvertAll(skins, bool.Parse);
 
             playerStat.actualSkinId = int.Parse(content[9]);
             playerStat.pseudo = content[10];
+
+            // LevelData ToDo
+            playerStat.currentScore = int.Parse(content[11]);
+            playerStat.globalScore = int.Parse(content[12]);
+            playerStat.levelScore[0] = int.Parse(content[13]);
+            playerStat.levelScore[1] = int.Parse(content[14]);
+            playerStat.levelScore[2] = int.Parse(content[15]);
+            playerStat.levelScore[3] = int.Parse(content[16]);
+            playerStat.levelScore[4] = int.Parse(content[17]);
+
 
             _inventory.saveCall();
 

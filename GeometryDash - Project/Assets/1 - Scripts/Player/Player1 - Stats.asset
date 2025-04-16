@@ -26,3 +26,6 @@ MonoBehaviour:
   storyProgression: 0
   openSave: 1
   possesionId: 010100000100
+  currentScore: 0
+  globalScore: 27965
+  levelScore: 0304000000000000000000000000000000000000

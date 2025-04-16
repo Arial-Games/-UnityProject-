@@ -20,6 +20,8 @@ public class GameRules : MonoBehaviour
 
     [Header("Audio"), SerializeField] AudioSource deathSound;
 
+    [Header("Animation"), SerializeField] Animator deathPanelAnimator;
+
     // Public
     [Header("Other")] public int playerLevelScore = 0, bestPayerLevelScore = 0;
     [HideInInspector] public float timer = 0f;
@@ -90,6 +92,7 @@ public class GameRules : MonoBehaviour
         }
 
         gameOverPanel.SetActive(true);
+        deathPanelAnimator.SetTrigger("Death");
         Cursor.lockState = CursorLockMode.None;
 
         isDead = true;
