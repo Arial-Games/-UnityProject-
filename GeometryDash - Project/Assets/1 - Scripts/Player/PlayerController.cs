@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
     private bool isOnCeiling = false;
     private bool isMovingUp = true;
 
+    [Header("Audio"), SerializeField] AudioSource audioJump;
 
     //-------------------
     //  METHODES DEFAULT
@@ -143,6 +144,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump()
     {
+        audioJump.Play();
         rb.velocity = new Vector2(rb.velocity.x, 0f);
         rb.AddForce(Vector2.up * 25, ForceMode2D.Impulse);
         RotateSprite(-90);
@@ -150,6 +152,7 @@ public class PlayerController : MonoBehaviour
 
     public void FlipGravity() // Wheals
     {
+        audioJump.Play();
         rb.gravityScale *= -1;
         isOnCeiling = !isOnCeiling;
         RotateSprite(180);
@@ -158,6 +161,7 @@ public class PlayerController : MonoBehaviour
     // Triangle
     public void ToggleTriangleDirection()
     {
+        audioJump.Play();
         isMovingUp = !isMovingUp;
         rb.velocity = new Vector2(12f, isMovingUp ? 12f : -12f);
         targetRotation = Quaternion.Euler(0, 0, isMovingUp ? 45 : -45);
