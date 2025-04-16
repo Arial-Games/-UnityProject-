@@ -44,7 +44,8 @@ public class GameRules : MonoBehaviour
             starsUi[i].enabled = false;
         }
 
-        player = GameObject.Find("Basic-player(Clone)");
+        if(player == null)
+            player = GameObject.Find("Basic-player(Clone)");
     }
 
     void Update()

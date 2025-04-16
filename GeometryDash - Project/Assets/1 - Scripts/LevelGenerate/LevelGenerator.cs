@@ -49,9 +49,9 @@ public class LevelGenerator : MonoBehaviour
         Instantiate(endPrefab, endPos, Quaternion.identity, transform);
 
         // Instancier le joueur dans la safe zone (ici, dans le début du niveau)
-        float playerX = Random.Range(0f, safeZone);
-        Vector3 playerPos = new Vector3(playerX, floorY + 0.1f, 0);
-        Instantiate(playerPrefab, playerPos, Quaternion.identity, transform);
+        //float playerX = Random.Range(0f, safeZone);
+        //Vector3 playerPos = new Vector3(playerX, floorY + 0.1f, 0);
+        //Instantiate(playerPrefab, playerPos, Quaternion.identity, transform);
 
         // Placer les pièges sur le sol, dans la safe zone (hors début de niveau si besoin)
         int trapCount = Random.Range(trapCountMin, trapCountMax);
