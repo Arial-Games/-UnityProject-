@@ -24,6 +24,14 @@
         <Zone id="16" type="BasicSPike" minPosition="495,-0.5" maxPosition="500,-0.5" count="2" />
         <Zone id="16" type="BasicSPike" minPosition="510,1.5" maxPosition="514,1.5" count="2" />
         <Zone id="17" type="BasicSPike" minPosition="545,-0.5" maxPosition="547,-0.5" count="2" />
+        <Zone id="18" type="BasicSPike" minPosition="550,0.5" maxPosition="555,0.5" count="2" />
+        <Zone id="19" type="BasicSPike" minPosition="565,0.5" maxPosition="570,0.5" count="2" />
+        <Zone id="20" type="BasicSPike" minPosition="575,0.5" maxPosition="580,0.5" count="2" />
+        <Zone id="21" type="BasicSPike" minPosition="595,4.5" maxPosition="600,4.5" count="2" />
+        <Zone id="22" type="BasicSPike" minPosition="605,4.5" maxPosition="610,4.5" count="2" />
+        <Zone id="23" type="BasicSPike" minPosition="615,4.5" maxPosition="620,4.5" count="2" />  
+        <Zone id="24" type="BasicSPike" minPosition="625,4.5" maxPosition="630,4.5" count="2" />
+        <Zone id="25" type="BasicSPike" minPosition="635,4.5" maxPosition="640,4.5" count="2" />      
     </ObstacleZones>
     
     <Platforms>
@@ -99,21 +107,39 @@
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="17.09,4.0" count="1" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="206.0 , 3.0" count="1" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="208.0 , 3.5" count="1" />
-    <Barrier type="barrierType1" sprite="BarrierSprite1" position="267.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="267.0 , -0.5" count="1" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="270.0 , 3.5" count="1" />
-    <Barrier type="barrierType1" sprite="BarrierSprite1" position="370.0 , 3.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="370.0 , -0.5" count="2" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="375.0 , 3.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="643.0 , -0.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="646.0 , -0.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="650.0 , 3.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="655.0 ,-0.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="660.0 , 3.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="665.0 , -0.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="670.0 , 3.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="675.0 , -0.5" count="2" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="680.0 , 3.5" count="2" />    
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="25.0,4.0" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="139,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="142,3.6" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="145,3.2" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="80,4" count="1" />
-    <Barrier type="barrierType2" sprite="BarrierSprite2" position="90,1.5" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="305,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="310,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="387,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="510,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="520,4" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="685,-0.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="690,3.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="695,-0.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="700,3.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="705,-0.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="710,3.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="715,-0.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="720,3.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="725,-0.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="730,3.5" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="30.0,2.5" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="32.0,2.5" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="34.0,2.5" count="1" />
@@ -145,18 +171,18 @@
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="280.0,-0.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="285.0,1.9" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="350.0,-0.5" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="445.0,-0.5" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="445.0,3.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="450.0,-0.5" count="2" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="452.0,-0.5" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="452.0,3.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="456.0,1.9" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="460.0,-0.5" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="555.0,-0.5" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="555.0,3.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="565.0,-0.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="570.0,1.8" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="575.0,-0.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="578.0,1.8" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="580.0,-0.5" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="595.0,-0.5" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="595.0,3.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="600.0,-0.5" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="605.0,1.9" count="1" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="65,3.3" count="5" />
@@ -169,10 +195,24 @@
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="387,-0.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="395.0,3.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="530,-0.3" count="10" />
-    <Barrier type="barrierType6" sprite="BarrierSprite6" position="743,2.5" count="1" />
-        <Barrier type="barrierType6" sprite="BarrierSprite6" position="743,3.5" count="1" />
-        <Barrier type="barrierType6" sprite="BarrierSprite6" position="743,4.5" count="1" />
-        <Barrier type="barrierType6" sprite="BarrierSprite6" position="743,5.5" count="1" />
+        
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,-0.5" count="1" />
+      
+
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,0.0" count="1" />
+       
+
+
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,0.5" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,1.0" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,1.5" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,2.0" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,2.5" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,3.0" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,3.5" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,4.0" count="1" />
+        <Barrier type="barrierType6" sprite="BarrierSprite6" position="737,4.5" count="1" />
+       
   </Barriers>
  
  
