@@ -20,7 +20,6 @@ public class LevelLoader : MonoBehaviour
     public GameObject bonusPrefab3;
     public GameObject bonusPrefab4;
     public GameObject bonusPrefab5;
-    //public Sprite backgroundSprite; 
     public GameObject barrierPrefab1;
     public GameObject barrierPrefab2;
     public GameObject barrierPrefab3;
@@ -61,7 +60,6 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    public int repeatCount = 7;
     void InstantiateMiddleBackground(Level level)
     {
         if (level.MiddleBackground != null && !string.IsNullOrEmpty(level.MiddleBackground.Image))
@@ -79,14 +77,15 @@ public class LevelLoader : MonoBehaviour
                     startPos = new Vector3(x, y, z);
                 }
                 float spriteWidth = middleSprite.bounds.size.x;
-                for (int i = 0; i < repeatCount; i++)
+                 for (int i = 0; i < level.MiddleBackground.Count; i++)
                 {
-                    GameObject mb = new GameObject("MiddleBackground_" + i);
-                    SpriteRenderer renderer = mb.AddComponent<SpriteRenderer>();
-                    renderer.sprite = middleSprite;
-                    mb.transform.position = startPos + new Vector3(i * spriteWidth, 0, 0);
-                    renderer.sortingOrder = -5;
+                    var mb = new GameObject($"MiddleBackground_{i}");
+                    var rdr = mb.AddComponent<SpriteRenderer>();
+                    rdr.sprite = gateBackgroundSprite;
+                    mb.transform.position = startPos + new Vector3(i * gateBackgroundSprite.bounds.size.x, 0, 0);
+                    rdr.sortingOrder = -5;
                 }
+
             }
             else
             {
@@ -95,24 +94,7 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    /*    void ConfigureCameraFollow(GameObject player)
-        {
-            Camera mainCamera = Camera.main;
-
-            if (mainCamera != null && player != null)
-            {
-
-                CameraFollow cameraFollow = mainCamera.gameObject.AddComponent<CameraFollow>();
-                cameraFollow.player = player.transform;
-
-
-                cameraFollow.offset = new Vector3(0, 0, -10); 
-            }
-            else
-            {
-                Debug.LogError("Impossible de configurer la caméra : caméra principale ou joueur introuvable.");
-            }
-        }*/
+  
     void ResizeBackground(SpriteRenderer renderer)
     {
         Camera mainCamera = Camera.main;
@@ -140,40 +122,20 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    /*    void InstantiateBackground(Level level)
-    {
-        if (backgroundSprite != null)
-        {
-            GameObject backgroundObject = new GameObject("Background");
-            SpriteRenderer renderer = backgroundObject.AddComponent<SpriteRenderer>();
-            renderer.sprite = backgroundSprite;
-            ResizeBackground(renderer);
-            // Positionner le background
-             backgroundObject.transform.position = new Vector3(0, 0, 1); // Z à 1 pour être plus proche
-
-            renderer.sortingOrder = -10; // Ordre de tri pour le placer derrière
-
-            // Faire du background un enfant de la caméra
-            backgroundObject.transform.SetParent(Camera.main.transform);
-        }
-        else
-        {
-            Debug.LogError("Aucun sprite de background assigné dans l'inspecteur !");
-        }
-    }*/
+    
 
 
     void InstantiateLevel(Level level)
     {
 
-        //InstantiateBackground(level);
+
         InstantiateMiddleBackground(level);
-        // Instancier le joueur
+
         Vector2 playerPosition = ParsePosition(level.Player.StartPosition);
         GameObject player = Instantiate(playerPrefab, playerPosition, Quaternion.identity);
 
         // Configurer la caméra pour suivre le joueur
-        //ConfigureCameraFollow(player);
+
 
         foreach (var zone in level.ObstacleZones)
         {
@@ -277,6 +239,9 @@ namespace MyGameNamespace
         public string Image { get; set; }
         [XmlAttribute("position")]
         public string Position { get; set; }
+
+        [XmlAttribute("count")]
+        public int Count { get; set; } = 1;
     }
 
     public class Player
@@ -313,7 +278,10 @@ namespace MyGameNamespace
         public string Image { get; set; }
 
         [XmlAttribute("position")]
-        public string Position { get; set; }  // nouvel attribut
+        public string Position { get; set; }  
+        
+        [XmlAttribute("count")]
+        public int Count { get; set; } = 1;
     }
 
 

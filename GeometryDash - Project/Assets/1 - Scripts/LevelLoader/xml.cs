@@ -29,6 +29,9 @@ public class Background
     public string Image { get; set; }
     [XmlAttribute("position")]
     public string Position { get; set; }
+
+      [XmlAttribute("count")]
+    public int Count { get; set; } = 1;
 }
 public class MiddleBackground
 {
@@ -37,6 +40,9 @@ public class MiddleBackground
 
     [XmlAttribute("position")]
     public string Position { get; set; } 
+
+     [XmlAttribute("count")]
+    public int Count { get; set; } = 1;
 }
 
 public class Player
