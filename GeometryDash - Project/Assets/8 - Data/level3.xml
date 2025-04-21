@@ -3,24 +3,21 @@
     <MiddleBackground image="GateBackground" position="57,2.5" count="9"/>
     <Player startPosition="-4.55,0" sprite="Basic-player.png" />
     <ObstacleZones>
-        <Zone id="1" type="BasicSPike" minPosition="6.6,-0.5" maxPosition="7.5,-0.5" count="2" />
-        <Zone id="2" type="BasicSPike" minPosition="7.5,-0.5" maxPosition="8.4,-0.5" count="2" />
-        <Zone id="3" type="BasicSPike" minPosition="12.4,-0.5" maxPosition="16.5,-0.5" count="2" />
-        <Zone id="4" type="BasicSPike" minPosition="20.5,-0.5" maxPosition="24.5,-0.5" count="2" />
-        <Zone id="5" type="BasicSPike" minPosition="29.0,-0.5" maxPosition="33.0,-0.5" count="2" />  
-        <Zone id="6" type="BasicSPike" minPosition="210,-0.5" maxPosition="212,-0.5" count="3" />
-        <Zone id="7" type="BasicSPike" minPosition="223,-0.5" maxPosition="240,-0.5" count="5" />
-        <Zone id="8" type="BasicSPike" minPosition="255,-0.5" maxPosition="255,-0.5" count="1" />
-        <Zone id="9" type="BasicSPike" minPosition="257,-0.5" maxPosition="257,-0.5" count="1" />
-        <Zone id="11" type="BasicSPike" minPosition="261,-0.5" maxPosition="263,-0.5" count="2" />
-        <Zone id="13" type="BasicSPike" minPosition="355,-0.5" maxPosition="365,-0.5" count="2" />
-        <Zone id="15" type="BasicSPike" minPosition="480,-0.5" maxPosition="485,-0.5" count="2" />
-        <Zone id="16" type="BasicSPike" minPosition="495,-0.5" maxPosition="500,-0.5" count="2" />
-        <Zone id="17" type="BasicSPike" minPosition="545,-0.5" maxPosition="547,-0.5" count="2" />
-        <Zone id="18" type="BasicSPike" minPosition="680,-0.5" maxPosition="700,-0.5" count="2" />
-        <Zone id="19" type="BasicSPike" minPosition="720,-0.5" maxPosition="740,-0.5" count="2" />
-        <Zone id="20" type="BasicSPike" minPosition="760,-0.5" maxPosition="780,-0.5" count="2" /> 
-        <Zone id="21" type="BasicSPike" minPosition="800,-0.5" maxPosition="820,-0.5" count="3" /> 
+        <Zone id="1" type="BasicSPike" minPosition="6.6,-0.8" maxPosition="7.5,-0.8" count="2" />
+        <Zone id="5" type="BasicSPike" minPosition="29.0,-0.8" maxPosition="33.0,-0.8" count="1" />  
+        <Zone id="6" type="BasicSPike" minPosition="210,-0.8" maxPosition="212,-0.8" count="3" />
+        <Zone id="7" type="BasicSPike" minPosition="223,-0.8" maxPosition="240,-0.8" count="5" />
+        <Zone id="8" type="BasicSPike" minPosition="255,-0.8" maxPosition="255,-0.8" count="1" />
+        <Zone id="9" type="BasicSPike" minPosition="257,-0.8" maxPosition="257,-0.8" count="1" />
+        <Zone id="11" type="BasicSPike" minPosition="261,-0.8" maxPosition="263,-0.8" count="2" />
+        <Zone id="13" type="BasicSPike" minPosition="355,-0.8" maxPosition="365,-0.8" count="2" />
+        <Zone id="15" type="BasicSPike" minPosition="480,-0.8" maxPosition="485,-0.8" count="2" />
+        <Zone id="16" type="BasicSPike" minPosition="495,-0.8" maxPosition="500,-0.8" count="2" />
+        <Zone id="17" type="BasicSPike" minPosition="545,-0.8" maxPosition="547,-0.8" count="2" />
+        <Zone id="18" type="BasicSPike" minPosition="680,-0.8" maxPosition="700,-0.8" count="2" />
+        <Zone id="19" type="BasicSPike" minPosition="720,-0.8" maxPosition="740,-0.8" count="2" />
+        <Zone id="20" type="BasicSPike" minPosition="760,-0.8" maxPosition="780,-0.8" count="2" /> 
+        <Zone id="21" type="BasicSPike" minPosition="800,-0.8" maxPosition="820,-0.8" count="3" /> 
     </ObstacleZones>
     
     <Platforms>
@@ -46,7 +43,6 @@
         <Bonus type="bonusType1" position="836.0 , 2.5" />
         <Bonus type="bonusType2" position="6.6,0.5" />
         <Bonus type="bonusType2" position="7.5,0.2" />
-        <Bonus type="bonusType2" position="8.8,0.0" />
         <Bonus type="bonusType2" position="168.0,1.6" />
         <Bonus type="bonusType2" position="169.0,2.1" />
         <Bonus type="bonusType2" position="170.0,2.6" />
@@ -54,10 +50,10 @@
         <Bonus type="bonusType2" position="223.0,2.2" />
         <Bonus type="bonusType2" position="210.5,2.2" />
         <Bonus type="bonusType2" position="212.0,2.2" />
- 	      <Bonus type="bonusType2" position="255,2.3" />
+ 	    <Bonus type="bonusType2" position="255,2.3" />
       	<Bonus type="bonusType2" position="257,2.6" />
- 	      <Bonus type="bonusType2" position="259,2.4" />
- 	      <Bonus type="bonusType2" position="261,2.5" />
+ 	    <Bonus type="bonusType2" position="259,2.4" />
+ 	    <Bonus type="bonusType2" position="261,2.5" />
       	<Bonus type="bonusType2" position="263,2.6" />
         <Bonus type="bonusType2" position="275,2.4" />
         <Bonus type="bonusType2" position="280,2.3" />
@@ -190,4 +186,3 @@
 
 
 </Level>
-

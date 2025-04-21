@@ -1,6 +1,6 @@
 <Level id="2" name="second Niveau" difficulty="Facile">
     <Background image="background-cam"  />
-    <MiddleBackground image="GateBackground" position="57,2.5" />
+    <MiddleBackground image="GateBackground" position="57,2.5" count="6" />
     <Player startPosition="-4.55,0" sprite="Basic-player.png" />
     
     <ObstacleZones>

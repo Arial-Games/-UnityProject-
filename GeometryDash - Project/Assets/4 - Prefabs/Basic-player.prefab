@@ -624,10 +624,10 @@ MonoBehaviour:
   CurrentSpeed: 0
   CurrentMode: 0
   GroundCheckTransform: {fileID: 7296028731407550158}
-  GroundCheckRadius: 0
+  GroundCheckRadius: 0.1
   GroundMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   Sprite: {fileID: 5542012769728246053}
   audioJump: {fileID: 72729795751294206}
 --- !u!61 &1013779652611284819

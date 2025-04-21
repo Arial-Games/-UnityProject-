@@ -343,13 +343,12 @@ MonoBehaviour:
   bonusPrefab3: {fileID: 5990123378777800747, guid: 0faf5d0ee7ddc1c9783d9d8f32eb16cd, type: 3}
   bonusPrefab4: {fileID: 5006935819916161253, guid: 32057ace2ed974a439e72b166acf3bc3, type: 3}
   bonusPrefab5: {fileID: 108444043979753342, guid: 673e6d52eee74f34c8c0bc19f211859d, type: 3}
-  barrierPrefab1: {fileID: 1146121251408484062, guid: 6f41dfbdfab91e3c6a9ca9aab7329529, type: 3}
+  barrierPrefab1: {fileID: 2688106452651545885, guid: cbe3477a2693ddd1e831c4d3e3e12b05, type: 3}
   barrierPrefab2: {fileID: 4959463357881445045, guid: db0d311e183e1b6f1bf4754809dd0171, type: 3}
-  barrierPrefab3: {fileID: 987172720876777303, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
-  barrierPrefab4: {fileID: 1916989259392158241, guid: dbb7349534e1b33eaa513b615fe9b126, type: 3}
+  barrierPrefab3: {fileID: 9144546242948484744, guid: 65579cead6d5c92e5b6848dd40c1150f, type: 3}
+  barrierPrefab4: {fileID: 3024077233883792783, guid: 3c9344d992d940345adf792e686a2a3b, type: 3}
   barrierPrefab5: {fileID: 4128105570033395390, guid: 57f42dd6700e2abbebae443e55fd6273, type: 3}
   barrierPrefab6: {fileID: 1105840543878199353, guid: c56cdd3037fd139dcbaa90a10aaf8065, type: 3}
-  repeatCount: 5
 --- !u!4 &578276213
 Transform:
   m_ObjectHideFlags: 0
@@ -1928,6 +1927,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 204584864}
+    - target: {fileID: 6537301503793563370, guid: 86354f2985e340948896183907c5f070, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7144311872973967248, guid: 86354f2985e340948896183907c5f070, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
