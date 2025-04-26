@@ -1,144 +1,189 @@
-<Level id="1" name="Premier Niveau" difficulty="Facile">
+<Level id="4" name="Quatrième Niveau" difficulty="Difficile">
     <Background image="background-cam"  />
-    <MiddleBackground image="GateBackground" position="57,2.5" />
+     <MiddleBackground image="GateBackground" position="57,2.5" count="9" />
+    <MiddleBackground image="GateBackground" position="467.00131,2.5" count="9" />
     <Player startPosition="-4.55,0" sprite="Basic-player.png" />
     
     <ObstacleZones>
-        <Zone id="1" type="BasicSPike" minPosition="6.6,1.3" maxPosition="7.5,1.3" count="2" />
-        <Zone id="2" type="BasicSPike" minPosition="7.5,1.3" maxPosition="8.4,1.3" count="2" />
-        <Zone id="3" type="BasicSPike" minPosition="118,1.3" maxPosition="120,1.3" count="2" />
-        <Zone id="4" type="BasicSPike" minPosition="121,1.3" maxPosition="122,1.3" count="2" />
-        <Zone id="5" type="BasicSPike" minPosition="121,1.3" maxPosition="122,1.3" count="2" />
-        <Zone id="6" type="BasicSPike" minPosition="210,1.3" maxPosition="212,1.3" count="3" />
-        <Zone id="7" type="BasicSPike" minPosition="223,1.3" maxPosition="240,1.3" count="5" />
-        <Zone id="8" type="BasicSPike" minPosition="255,1.3" maxPosition="255,1.3" count="1" />
-        <Zone id="9" type="BasicSPike" minPosition="257,1.3" maxPosition="257,1.3" count="1" />
-        <Zone id="10" type="BasicSPike" minPosition="259,1.3" maxPosition="259,1.3" count="1" />
-        <Zone id="11" type="BasicSPike" minPosition="261,1.3" maxPosition="263,1.3" count="2" />
-        <Zone id="12" type="BasicSPike" minPosition="320,1.3" maxPosition="328,1.3" count="2" />
-        <Zone id="13" type="BasicSPike" minPosition="355,1.3" maxPosition="365,1.3" count="2" />
-        <Zone id="14" type="BasicSPike" minPosition="410,1.3" maxPosition="420,1.3" count="2" />
-        <Zone id="15" type="BasicSPike" minPosition="480,1.3" maxPosition="485,1.3" count="2" />
-        <Zone id="16" type="BasicSPike" minPosition="495,1.3" maxPosition="500,1.3" count="2" />
-        <Zone id="17" type="BasicSPike" minPosition="545,1.3" maxPosition="547,1.3" count="2" />
+        <Zone id="1" type="BasicSPike" minPosition="6.6,-0.6" maxPosition="7.5,-0.6" count="2" />
+        <Zone id="2" type="BasicSPike" minPosition="7.5,-0.6" maxPosition="8.4,-0.6" count="2" />
+        <Zone id="3" type="BasicSPike" minPosition="130,-0.6" maxPosition="136,-0.6" count="2" />
+        <Zone id="6" type="BasicSPike" minPosition="210,-0.6" maxPosition="212,-0.6" count="3" />
+        <Zone id="7" type="BasicSPike" minPosition="223,-0.6" maxPosition="240,-0.6" count="5" />
+        <Zone id="8" type="BasicSPike" minPosition="255,-0.6" maxPosition="255,-0.6" count="1" />
+        <Zone id="9" type="BasicSPike" minPosition="257,-0.6" maxPosition="257,-0.6" count="1" />
+        <Zone id="10" type="BasicSPike" minPosition="259,-0.6" maxPosition="259,-0.6" count="1" />
+        <Zone id="11" type="BasicSPike" minPosition="261,-0.6" maxPosition="263,-0.6" count="2" />
+        <Zone id="12" type="BasicSPike" minPosition="320,-0.6" maxPosition="328,-0.6" count="2" />
+        <Zone id="13" type="BasicSPike" minPosition="355,-0.6" maxPosition="365,-0.6" count="2" />
+        <Zone id="14" type="BasicSPike" minPosition="410,-0.6" maxPosition="420,-0.6" count="2" />
+        <Zone id="15" type="BasicSPike" minPosition="480,-0.6" maxPosition="485,-0.6" count="2" />
+        <Zone id="16" type="BasicSPike" minPosition="495,-0.6" maxPosition="500,-0.6" count="2" />
+        <Zone id="17" type="BasicSPike" minPosition="545,-0.6" maxPosition="547,-0.6" count="2" />
+        <Zone id="18" type="BasicSPike" minPosition="600,-0.6" maxPosition="630,-0.6" count="2" />
+        <Zone id="19" type="BasicSPike" minPosition="660,-0.6" maxPosition="690,-0.6" count="2" />
+        <Zone id="20" type="BasicSPike" minPosition="740,-0.6" maxPosition="780,-0.6" count="2" />
+        <Zone id="21" type="BasicSPike" minPosition="800,-0.6" maxPosition="850,-0.6" count="2" />
+        <Zone id="22" type="BasicSPike" minPosition="865,-0.6" maxPosition="895,-0.6" count="2" />
+        <Zone id="23" type="BasicSPike" minPosition="900,-0.6" maxPosition="910,-0.6" count="2" />
+        <Zone id="24" type="BasicSPike" minPosition="915,-0.6" maxPosition="930,-0.6" count="2" />
+        <Zone id="25" type="BasicSPike" minPosition="935,-0.6" maxPosition="950,-0.6" count="2" />
+        <Zone id="26" type="BasicSPike" minPosition="955,-0.6" maxPosition="970,-0.6" count="2" />
     </ObstacleZones>
     
     <Platforms>
-        <Platform sprite="GreenBigWall" position="-10.00137,5.661232" count="620" />
-        <Platform sprite="GreenBigWall" position="-10.00131,-0.08885813"  count="620" />
-        <Platform sprite="GreenBigWall" position="14.00131,4.6"  count="10" />
+        <Platform sprite="GreenBigWall" position="-10.00137,5.8" count="1000" />
+        <Platform sprite="GreenBigWall" position="-10.00131,-1.9"  count="1000" />
         <Platform sprite="GreenBigWall" position="40.00131,4.6"  count="10" />
-        <Platform sprite="GreenBigWall" position="40.00131,0.8"  count="10" />
-        <Platform sprite="GreenBigWall" position="107.00131,0.8"  count="5" />
-        <Platform sprite="GreenBigWall" position="107.00131,4.6"  count="5" />
-        <Platform sprite="GreenBigWall" position="335.00131,0.8"  count="5" />
+        <Platform sprite="GreenBigWall" position="40.00131,-0.8"  count="10" />
+        <Platform sprite="GreenBigWall" position="140.00131,-0.8"  count="5" />
+        <Platform sprite="GreenBigWall" position="140.00131,4.6"  count="5" />
+        <Platform sprite="GreenBigWall" position="335.00131,-0.8"  count="5" />
         <Platform sprite="GreenBigWall" position="335.00131,4.6"  count="5" />
+        <Platform sprite="GreenBigWall" position="450.00131,-0.8"  count="10" />
+        <Platform sprite="GreenBigWall" position="450.00131,4.6"  count="10" />
+        <Platform sprite="GreenBigWall" position="550.00131,-0.8"  count="10" />
+        <Platform sprite="GreenBigWall" position="550.00131,4.6"  count="10" />
+
     </Platforms>
     
-    <Bonuses>
-        <Bonus type="bonusType1" position="13.919949,2.5656171" />
+  <Bonuses>
+        <Bonus type="bonusType1" position="13.919949,1.5" />
+        <Bonus type="bonusType1" position="93,2.4" />
         <Bonus type="bonusType1" position="127,2.5656171" />
         <Bonus type="bonusType1" position="250.0 , 2.7" />
         <Bonus type="bonusType1" position="345.0 , 2.7" />
         <Bonus type="bonusType1" position="465.0 , 2.7" />
         <Bonus type="bonusType1" position="475.0 , 2.7" />
-        <Bonus type="bonusType2" position="6.6,2.3" />
-        <Bonus type="bonusType2" position="7.5,2.3" />
-        <Bonus type="bonusType2" position="8.8,2.3" />
-        <Bonus type="bonusType2" position="118,2.3" />
-        <Bonus type="bonusType2" position="120,2.3" />
-        <Bonus type="bonusType2" position="122,2.3" />
+        <Bonus type="bonusType1" position="826.0 , 2.5" />
+        <Bonus type="bonusType1" position="836.0 , 2.5" />
+        <Bonus type="bonusType2" position="6.6,0.5" />
+        <Bonus type="bonusType2" position="7.5,0.2" />
+        <Bonus type="bonusType2" position="8.5,0.1" />
         <Bonus type="bonusType2" position="168.0,1.6" />
         <Bonus type="bonusType2" position="169.0,2.1" />
         <Bonus type="bonusType2" position="170.0,2.6" />
         <Bonus type="bonusType2" position="171.0,3.1" />
         <Bonus type="bonusType2" position="223.0,2.2" />
-        <Bonus type="bonusType2" position="240.0,2.2" />
         <Bonus type="bonusType2" position="210.5,2.2" />
         <Bonus type="bonusType2" position="212.0,2.2" />
-        <Bonus type="bonusType2" position="242.0,2.2" />
-        <Bonus type="bonusType2" position="244.0,2.2" />	
-        <Bonus type="bonusType2" position="246.0,2.2" />
- 	<Bonus type="bonusType2" position="255,2.3" />
- 	<Bonus type="bonusType2" position="257,2.6" />
- 	<Bonus type="bonusType2" position="259,2.4" />
- 	<Bonus type="bonusType2" position="261,2.5" />
- 	<Bonus type="bonusType2" position="263,2.6" />
- 	<Bonus type="bonusType2" position="275,2.4" />
- 	<Bonus type="bonusType2" position="280,2.3" />
- 	<Bonus type="bonusType2" position="320,2.3" />
- 	<Bonus type="bonusType2" position="328,2.3" />
- 	<Bonus type="bonusType2" position="350,2.3" />
- 	<Bonus type="bonusType2" position="355,2.3" />
- 	<Bonus type="bonusType2" position="365,2.3" />
- 	<Bonus type="bonusType2" position="410,2.3" /> 
- 	<Bonus type="bonusType2" position="420,2.3" />
- 	<Bonus type="bonusType2" position="430,2.3" />
- 	<Bonus type="bonusType2" position="435,2.3" />
- 	<Bonus type="bonusType2" position="440,2.3" />
- 	<Bonus type="bonusType2" position="445,2.3" />
- 	<Bonus type="bonusType2" position="452,2.3" />
- 	<Bonus type="bonusType2" position="460,2.3" />
- 	<Bonus type="bonusType2" position="480,2.2" />
- 	<Bonus type="bonusType2" position="485,2.2" />
- 	<Bonus type="bonusType2" position="495,2.2" />
- 	<Bonus type="bonusType2" position="500,2.2" />
- 	<Bonus type="bonusType2" position="545,2.1" />
- 	<Bonus type="bonusType2" position="547, 2.1" />
-        <Bonus type="bonusType3" position="21.9,1.3" />
+ 	      <Bonus type="bonusType2" position="255,2.3" />
+      	<Bonus type="bonusType2" position="257,2.6" />
+ 	      <Bonus type="bonusType2" position="259,2.4" />
+ 	      <Bonus type="bonusType2" position="261,2.5" />
+      	<Bonus type="bonusType2" position="263,2.6" />
+        <Bonus type="bonusType2" position="275,2.4" />
+        <Bonus type="bonusType2" position="280,2.3" />
+        <Bonus type="bonusType2" position="350,2.3" />
+        <Bonus type="bonusType2" position="355,2.3" />
+        <Bonus type="bonusType2" position="365,2.3" />
+        <Bonus type="bonusType2" position="410,2.3" /> 
+        <Bonus type="bonusType2" position="420,2.3" />
+        <Bonus type="bonusType2" position="430,2.3" />
+        <Bonus type="bonusType2" position="435,2.3" />
+        <Bonus type="bonusType2" position="440,2.3" />
+        <Bonus type="bonusType2" position="445,2.3" />
+        <Bonus type="bonusType2" position="480,2.2" />
+        <Bonus type="bonusType2" position="485,2.2" />
+        <Bonus type="bonusType2" position="495,2.2" />
+        <Bonus type="bonusType2" position="500,2.2" />
+        <Bonus type="bonusType2" position="547, 2.1" />
+        <Bonus type="bonusType3" position="21.9,3.0" />
         <Bonus type="bonusType3" position="265.4,3.3" />
         <Bonus type="bonusType3" position="405,3.3" />
-        <Bonus type="bonusType4" position="50.9,2.6" />
-        <Bonus type="bonusType5" position="113.0,2.6" />
+        <Bonus type="bonusType4" position="49.9,1.5" />
+        <Bonus type="bonusType5" position="146.0,1.5" />
+        <Bonus type="bonusType4" position="461.0,1.5" />
+        <Bonus type="bonusType5" position="560.0,1.5" />
     </Bonuses>
     
   <Barriers>
-    <Barrier type="barrierType1" sprite="BarrierSprite1" position="17.09,3.00000" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="17.09,-0.6" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="162.0,4.0" count="1" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="206.0 , 3.0" count="1" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="208.0 , 3.5" count="1" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="267.0 , 3.5" count="1" />
-    <Barrier type="barrierType1" sprite="BarrierSprite1" position="270.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="290.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="300.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="305.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="310.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="315.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="320.0 , 3.5" count="1" />    
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="370.0 , 3.5" count="2" />
     <Barrier type="barrierType1" sprite="BarrierSprite1" position="375.0 , 3.5" count="2" />
-    <Barrier type="barrierType2" sprite="BarrierSprite2" position="25.0,2.98" count="1" />
-    <Barrier type="barrierType2" sprite="BarrierSprite2" position="139,4" count="1" />
-    <Barrier type="barrierType2" sprite="BarrierSprite2" position="305,4" count="1" />
-    <Barrier type="barrierType2" sprite="BarrierSprite2" position="310,4" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="568.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="570.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="575.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="578.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="620.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="640.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="660.0 , 3.5" count="1" />
+    <Barrier type="barrierType1" sprite="BarrierSprite1" position="700.0 , -0.3" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="25.0,-0.6" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="55.0,1.4" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="60.0,1.4" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="80.0,2.0" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="100.0,2.7" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="130.0,2.8" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="155.0,-0.6" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="160.0,-0.6" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="165.0,-0.6" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="170.0,1.5" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="185.0,2.0" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="200.0,2.0" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="220.0,2.0" count="1" />
+    <Barrier type="barrierType2" sprite="BarrierSprite2" position="235.0,2.0" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="387,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="510,4" count="1" />
     <Barrier type="barrierType2" sprite="BarrierSprite2" position="520,4" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="30.0,2.5" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="30.0,-0.6" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="32.0,2.5" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="34.0,2.5" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="133.0,2.9" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="135.0,2.9" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="150.0,2.9" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="155.0,2.5" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="158.0,3.0" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="150.0,4.0" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="153.0,4.0" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="156.0,4.0" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="158.0,4.0" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="196.0,2.8" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="199.0,2.5" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="202.0,2.9" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="246.0,1.3" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="242.0,1.3" count="1" />
-    <Barrier type="barrierType3" sprite="BarrierSprite3" position="244.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="250.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="260.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="275.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="280.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="315.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="330.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="345.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="360.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="380.0,1.3" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="430.0,1.3" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="435.0,1.3" count="1" />
     <Barrier type="barrierType3" sprite="BarrierSprite3" position="440.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="36.5,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="146.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="275.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="280.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="690.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="720.0,-0.8" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="795.0,1.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="840.0,-0.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="855.0,-0.3" count="1" />
+    <Barrier type="barrierType3" sprite="BarrierSprite3" position="885.0,-0.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="36.5,2.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="130.0,-0.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="135.0,-0.3" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="350.0,1.3" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="445.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="452.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="460.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="555.0,1.3" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="575.0,1.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="580.0,-0.3" count="1" />
     <Barrier type="barrierType4" sprite="BarrierSprite4" position="595.0,1.3" count="1" />
-    <Barrier type="barrierType4" sprite="BarrierSprite4" position="600.0,1.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="730.0,1.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="730.0,2.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="750.0,1.3" count="1" />
+    <Barrier type="barrierType4" sprite="BarrierSprite4" position="786.0,1.3" count="1" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="65,3.3" count="5" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="80,-0.3" count="3" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="88,3.3" count="3" />
+    <Barrier type="barrierType5" sprite="BarrierSprite5" position="80,-0.4" count="3" />
+    <Barrier type="barrierType5" sprite="BarrierSprite5" position="88,3.5" count="3" />
+    <Barrier type="barrierType5" sprite="BarrierSprite5" position="98,-0.4" count="3" />
+    <Barrier type="barrierType5" sprite="BarrierSprite5" position="110,3.5" count="3" />
+    <Barrier type="barrierType5" sprite="BarrierSprite5" position="120,-0.4" count="3" />
+    <Barrier type="barrierType5" sprite="BarrierSprite5" position="133,3.5" count="3" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="173.0,1.1" count="3" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="178.0,0.6" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="183.0,0.1" count="10" />
@@ -146,13 +191,21 @@
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="387,-0.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="395.0,3.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="530,-0.3" count="10" />
-    <Barrier type="barrierType6" sprite="BarrierSprite6" position="611,2.5" count="1" />
-  </Barriers>
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,-0.5" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,0.0" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,0.5" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,1.0" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,1.5" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,2.0" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,2.5" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,3.0" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,3.5" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,4.0" count="1" />
+    <Barrier type="barrierType6" sprite="BarrierSprite6" position="985,4.5" count="1" />
+    </Barriers>
  
  
-   
-  
-  
+
   
   
   

@@ -60,39 +60,35 @@ public class LevelLoader : MonoBehaviour
         }
     }
 
-    void InstantiateMiddleBackground(Level level)
+   void InstantiateMiddleBackgrounds(Level level)
+{
+    if (level.MiddleBackgrounds == null) return;
+
+    foreach (var middleBackground in level.MiddleBackgrounds)
     {
-        if (level.MiddleBackground != null && !string.IsNullOrEmpty(level.MiddleBackground.Image))
+        if (!string.IsNullOrEmpty(middleBackground.Image))
         {
-            Sprite middleSprite = gateBackgroundSprite;
+            Sprite middleSprite = gateBackgroundSprite; 
             if (middleSprite != null)
             {
-                Vector3 startPos = Vector3.zero;
-                if (!string.IsNullOrEmpty(level.MiddleBackground.Position))
-                {
-                    string[] coords = level.MiddleBackground.Position.Split(',');
-                    float x = float.Parse(coords[0], CultureInfo.InvariantCulture);
-                    float y = float.Parse(coords[1], CultureInfo.InvariantCulture);
-                    float z = (coords.Length > 2) ? float.Parse(coords[2], CultureInfo.InvariantCulture) : 0f;
-                    startPos = new Vector3(x, y, z);
-                }
-                float spriteWidth = middleSprite.bounds.size.x;
-                 for (int i = 0; i < level.MiddleBackground.Count; i++)
+                string[] coords = middleBackground.Position.Split(',');
+                float x = float.Parse(coords[0], CultureInfo.InvariantCulture);
+                float y = float.Parse(coords[1], CultureInfo.InvariantCulture);
+                float z = (coords.Length > 2) ? float.Parse(coords[2], CultureInfo.InvariantCulture) : 0f;
+                Vector3 startPos = new Vector3(x, y, z);
+
+                for (int i = 0; i < middleBackground.Count; i++)
                 {
                     var mb = new GameObject($"MiddleBackground_{i}");
                     var rdr = mb.AddComponent<SpriteRenderer>();
-                    rdr.sprite = gateBackgroundSprite;
-                    mb.transform.position = startPos + new Vector3(i * gateBackgroundSprite.bounds.size.x, 0, 0);
+                    rdr.sprite = middleSprite;
+                    mb.transform.position = startPos + new Vector3(i * middleSprite.bounds.size.x, 0, 0);
                     rdr.sortingOrder = -5;
                 }
-
-            }
-            else
-            {
-                Debug.LogError("Sprite MiddleBackground non trouvé : " + level.MiddleBackground.Image);
             }
         }
     }
+}
 
   
     void ResizeBackground(SpriteRenderer renderer)
@@ -128,8 +124,8 @@ public class LevelLoader : MonoBehaviour
     void InstantiateLevel(Level level)
     {
 
+        InstantiateMiddleBackgrounds(level);
 
-        InstantiateMiddleBackground(level);
 
         Vector2 playerPosition = ParsePosition(level.Player.StartPosition);
         GameObject player = Instantiate(playerPrefab, playerPosition, Quaternion.identity);
@@ -224,7 +220,9 @@ namespace MyGameNamespace
 
         [XmlAttribute("difficulty")]
         public string Difficulty { get; set; }
-        public Background MiddleBackground { get; set; }
+        
+         [XmlElement("MiddleBackground")]
+        public List<Background> MiddleBackgrounds { get; set; }
         public Background Background { get; set; }
         public Player Player { get; set; }
         public List<Zone> ObstacleZones { get; set; }

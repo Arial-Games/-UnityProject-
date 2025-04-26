@@ -15,7 +15,9 @@ public class Level
     [XmlAttribute("difficulty")]
     public string Difficulty { get; set; }
 public List<Barrier> Barriers { get; set; }
-    public Background MiddleBackground { get; set; }  
+
+  [XmlElement("MiddleBackground")]
+    public List<Background> MiddleBackgrounds { get; set; }
     public Background Background { get; set; }
     public Player Player { get; set; }
     public List<Zone> ObstacleZones { get; set; }
