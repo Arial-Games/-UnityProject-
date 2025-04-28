@@ -277,7 +277,7 @@ Transform:
   m_GameObject: {fileID: 4266123976616329621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.39, z: -10}
+  m_LocalPosition: {x: 0, y: -0.381, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -627,7 +627,7 @@ MonoBehaviour:
   GroundCheckRadius: 0.1
   GroundMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 8
   Sprite: {fileID: 5542012769728246053}
   audioJump: {fileID: 72729795751294206}
 --- !u!61 &1013779652611284819

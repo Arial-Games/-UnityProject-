@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7422777184229313241}
   - component: {fileID: 5108745232160054373}
   - component: {fileID: -7889371218720462851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Red-sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}

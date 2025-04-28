@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2576265640279483283}
   - component: {fileID: 6332840143488814862}
   - component: {fileID: 7297286743386515233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Vert-Kill-Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

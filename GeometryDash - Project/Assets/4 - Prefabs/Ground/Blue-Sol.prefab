@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7472353437973714012}
   - component: {fileID: 5884026006515154622}
   - component: {fileID: -5708772945092610335}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Blue-Sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
