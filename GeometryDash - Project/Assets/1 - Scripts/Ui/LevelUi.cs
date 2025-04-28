@@ -7,7 +7,6 @@ using TMPro;
 
 public class LevelUi : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI gameTimer;
     [SerializeField] GameObject pauseMenu;
     public bool isDead = false, isPaused = false;
 
@@ -20,7 +19,6 @@ public class LevelUi : MonoBehaviour
         pauseMenu.SetActive(false);
 
         Cursor.lockState = CursorLockMode.Locked;
-        StartCoroutine(StartGameTimer());
     }
 
     private void Update()
@@ -58,20 +56,18 @@ public class LevelUi : MonoBehaviour
     //  METHODES PRIVEE
     //-------------------
 
-    private IEnumerator StartGameTimer()
-    {
-        int timeElapsed = 0;
+    //private IEnumerator StartGameTimer()
+    //{
+    //    int timeElapsed = 0;
 
-        while (isDead == false)
-        {
-            int minutes = timeElapsed / 60;
-            int seconds = timeElapsed % 60;
-            gameTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    //    while (isDead == false)
+    //    {
+    //        int minutes = timeElapsed / 60;
+    //        int seconds = timeElapsed % 60;
+    //        gameTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-            yield return new WaitForSeconds(1f);
-            timeElapsed++;
-        }
-    }
-
-
+    //        yield return new WaitForSeconds(1f);
+    //        timeElapsed++;
+    //    }
+    //}
 }

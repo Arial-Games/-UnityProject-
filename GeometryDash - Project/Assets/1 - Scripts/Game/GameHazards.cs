@@ -61,7 +61,6 @@ public class GameHazards : MonoBehaviour
         }
     }
 
-
     void TrapMoveement()
     {
         if (so_GameHazards.canRotate)
@@ -75,12 +74,12 @@ public class GameHazards : MonoBehaviour
         gameRules.OnPlayerDeath();
     }
 
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
+            DisableAllVisu();
+            playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
             OnPlayerDeathInit();
         }
     }
@@ -97,7 +96,6 @@ public class GameHazards : MonoBehaviour
 
             if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
             {
-                // TEMP
                 gameRules.OnTakeCollectibles(this.transform);
                 Destroy(gameObject);
             }
@@ -107,7 +105,7 @@ public class GameHazards : MonoBehaviour
                 int modeID = 0;
                 DisableAllVisu();
                 if (so_GameHazards.transformTo == SO_GameHazards.TransformTo.Basic)
-                { 
+                {
                     playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
                     modeID = 1;
                 }

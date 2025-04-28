@@ -124,13 +124,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
-
     public bool IsOnCeiling()
     {
         return isOnCeiling;
     }
-
 
 
     //-------------------

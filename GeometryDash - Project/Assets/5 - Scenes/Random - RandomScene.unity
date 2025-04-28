@@ -632,7 +632,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8337887fa2a89c543a1bee1bb8e29a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTimer: {fileID: 2288281695638991177}
   pauseMenu: {fileID: 1436326404}
   isDead: 0
   isPaused: 0
@@ -1875,11 +1874,25 @@ MonoBehaviour:
   - {fileID: 1436326407}
   scoreDisplay: {fileID: 1436326406}
   bestScoreDisplay: {fileID: 1436326405}
+  tryNumberTxt: {fileID: 1702479015}
+  gameTimerTxt: {fileID: 2288281695638991177}
   deathSound: {fileID: 1524871241}
   deathPanelAnimator: {fileID: 1436326411}
   playerLevelScore: 0
   bestPayerLevelScore: 0
+  tryNumber: 0
   timer: 0
+--- !u!114 &1702479015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 760217319920810053, guid: 86354f2985e340948896183907c5f070, type: 3}
+  m_PrefabInstance: {fileID: 1436326402}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2050502804
 PrefabInstance:
   m_ObjectHideFlags: 0

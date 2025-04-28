@@ -583,7 +583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8337887fa2a89c543a1bee1bb8e29a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameTimer: {fileID: 2288281695638991177}
   pauseMenu: {fileID: 1550104891}
   isDead: 0
   isPaused: 0
@@ -1153,7 +1152,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 296196425085118386, guid: 98f3b2f3e16db6444a55beecb77d9be3, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b3a93e2e1375ec44191738a965e902ca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4efd19834e364794b8032cc948c40d84, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1354,10 +1353,13 @@ MonoBehaviour:
   - {fileID: 1955541309}
   scoreDisplay: {fileID: 1720330677}
   bestScoreDisplay: {fileID: 30257667}
+  tryNumberTxt: {fileID: 745894311435946553}
+  gameTimerTxt: {fileID: 2288281695638991177}
   deathSound: {fileID: 1280762078}
   deathPanelAnimator: {fileID: 1020613778}
   playerLevelScore: 0
   bestPayerLevelScore: 0
+  tryNumber: 0
   timer: 0
 --- !u!1001 &1658560586
 PrefabInstance:
@@ -2072,6 +2074,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86354f2985e340948896183907c5f070, type: 3}
+--- !u!114 &745894311435946553 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 760217319920810053, guid: 86354f2985e340948896183907c5f070, type: 3}
+  m_PrefabInstance: {fileID: 745894311435946552}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &821632188543484672
 GameObject:
   m_ObjectHideFlags: 0
