@@ -78,6 +78,7 @@ public class GameHazards : MonoBehaviour
     {
         if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
+            collision.gameObject.GetComponent<PlayerController>().ToggleMode(1);
             DisableAllVisu();
             playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
             OnPlayerDeathInit();

@@ -2013,7 +2013,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 9005473948018729976, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
   endPrefab: {fileID: 2494936945778836599, guid: 2080b212d8d79d2f3ad54257230ea754, type: 3}
   trapPrefab: {fileID: 515237706601078655, guid: 93019949d5006c745b9dc3f8f610f90d, type: 3}
-  portalPrefab: {fileID: 6929345405247783513, guid: e4bcf5493aca9b7d7b0dd662e1d1930e, type: 3}
+  portalPrefab: {fileID: 2502413287461187021, guid: e228ddb310c19aef6b3f2c2c2c8387e1, type: 3}
   starPrefab: {fileID: 3059472027613981348, guid: 9004e6e87f36b164bac0ac3c4ca2309e, type: 3}
   floorPrefab: {fileID: 6921699821149384227, guid: bfba587c21a0e0f46bc8864ca284fa64, type: 3}
   ceilingPrefab: {fileID: 6921699821149384227, guid: bfba587c21a0e0f46bc8864ca284fa64, type: 3}

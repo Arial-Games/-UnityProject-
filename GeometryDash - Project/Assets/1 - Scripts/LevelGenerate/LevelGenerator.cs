@@ -45,8 +45,9 @@ public class LevelGenerator : MonoBehaviour
         // Départ et Fin sur le sol
         //Vector3 startPos = new Vector3(0, floorY, 0);
         //Instantiate(startPrefab, startPos, Quaternion.identity, transform);
-        Vector3 endPos = new Vector3(levelLength, floorY+1.3f, 0);
-        Instantiate(endPrefab, endPos, Quaternion.identity, transform);
+        Vector3 endPos = new Vector3(levelLength, floorY + 2.8f, 0);
+        Quaternion rotation = Quaternion.Euler(0, 0, 90);
+        Instantiate(endPrefab, endPos, rotation, transform);
 
         // Instancier le joueur dans la safe zone (ici, dans le début du niveau)
         //float playerX = Random.Range(0f, safeZone);
