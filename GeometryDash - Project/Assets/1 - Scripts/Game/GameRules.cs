@@ -48,7 +48,23 @@ public class GameRules : MonoBehaviour
             player = GameObject.Find("Basic-player(Clone)");
         RestartGameTimer();
     }
-
+public void OnPlayerJump(GameObject player, float jumpStrength)
+{
+    if (isDead) return;
+    
+    Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+    if (rb != null)
+    {
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+        rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
+        
+        // Effet visuel optionnel
+        if (particles.Length > 0)
+        {
+            Destroy(Instantiate(particles[0], player.transform.position, Quaternion.identity), 0.2f);
+        }
+    }
+}
     void Update()
     {
         scoreDisplay.text = "Score : " + playerLevelScore;
@@ -70,7 +86,7 @@ public class GameRules : MonoBehaviour
     //  METHODES PUBLIC
     //-------------------
 
-    public void OnPlayerDeath()
+    /*public void OnPlayerDeath()
     {
         tryNumber++;
         deathSound.Play();
@@ -79,7 +95,49 @@ public class GameRules : MonoBehaviour
         timer = 0f;
         RestartGameTimer();
         tryNumberTxt.text = "Essai : " + tryNumber;
+    }*/
+public void OnPlayerDeath()
+{
+    if (isDead) return;
+    GameOver();
+}
+
+public void OnEndLignePass()
+{
+    if (isDead) return;
+    GameOver();
+}
+
+void GameOver()
+{
+    isDead = true;
+    levelSaveData.ApplyAndSaveBestScore();
+
+    // GUI
+    if (playerLevelScore > 1000)
+    {
+        starsUi[0].enabled = true;
     }
+    else if (playerLevelScore > 2500)
+    {
+        starsUi[1].enabled = true;
+    }
+    else if (playerLevelScore > 5000)
+    {
+        starsUi[2].enabled = true;
+    }
+
+    tryNumber++;
+    deathSound.Play();
+    player.SetActive(false);
+    gameOverPanel.SetActive(true);
+    deathPanelAnimator.SetTrigger("Death");
+    Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
+    Cursor.lockState = CursorLockMode.None;
+    RestartGameTimer();
+}
+
+
 
     public void OnTakeCollectibles(Transform objPos)
     {
@@ -93,43 +151,12 @@ public class GameRules : MonoBehaviour
         Destroy(Instantiate(particles[2], spawnPos, transform.rotation), 0.4f);
     }
 
-    public void OnEndLignePass()
-    {
-        GameOver();
-    }
-
 
     //-------------------
     //  METHODES PRIVEE
     //-------------------
 
-    void GameOver()
-    {
-        levelSaveData.ApplyAndSaveBestScore();
-
-        // GUI
-        if (playerLevelScore > 1000)
-        {
-            starsUi[0].enabled = true;
-        }
-        else if (playerLevelScore > 2500)
-        {
-            starsUi[1].enabled = true;
-        }
-        else if (playerLevelScore > 5000)
-        {
-            starsUi[2].enabled = true;
-        }
-
-        deathSound.Play();
-        Destroy(Instantiate(particles[0], player.transform.position, transform.rotation), 0.4f);
-        player.SetActive(false);
-        gameOverPanel.SetActive(true);
-        deathPanelAnimator.SetTrigger("Death");
-        Cursor.lockState = CursorLockMode.None;
-
-        isDead = true;
-    }
+  
 
     void OnSecondChange()
     {

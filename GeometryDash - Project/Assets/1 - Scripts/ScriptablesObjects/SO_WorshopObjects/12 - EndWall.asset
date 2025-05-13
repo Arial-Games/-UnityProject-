@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: 12 - EndWall
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: c77b20444d5d80a13bcd3db440a34ab7, type: 3}
-  publicName: EndWall
-  description: Basic - NavetGate
-  type: 5
-  dataSize: 0
   uniqueId: 12
+  typeName: EndWall
+  objSprite: {fileID: 21300000, guid: 7bdb1d9d9a0323846b1ea143d711b5f0, type: 3}
+  prefab: {fileID: 2494936945778836599, guid: 2080b212d8d79d2f3ad54257230ea754, type: 3}
+  dataSize: 0

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: Basic - FlyingTrap4
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: 7bf0570c3fcdb0241a38a70b7d2d22b7, type: 3}
-  publicName: Basic - Flying Spike Trap 4
-  description: "Basic - Flying \nSpikeTrap"
-  type: 2
-  dataSize: 5
   uniqueId: 9
+  typeName: FlyingSpike3
+  objSprite: {fileID: 21300000, guid: 7bf0570c3fcdb0241a38a70b7d2d22b7, type: 3}
+  prefab: {fileID: 987172720876777303, guid: 202e5266dad6cd547aac3a29bcc8672b, type: 3}
+  dataSize: 5

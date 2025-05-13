@@ -21,6 +21,8 @@ public List<Barrier> Barriers { get; set; }
     public Background Background { get; set; }
     public Player Player { get; set; }
     public List<Zone> ObstacleZones { get; set; }
+            public List<Bumper> Bumpers { get; set; }
+
     public List<Platform> Platforms { get; set; }
     public List<Bonus> Bonuses { get; set; }
 }
@@ -85,6 +87,17 @@ public class Platform
     [XmlAttribute("count")]
     public int Count { get; set; }
 }
+ public class Bumper
+    {
+        [XmlAttribute("type")]
+        public string Type { get; set; }
+
+        [XmlAttribute("position")]
+        public string Position { get; set; }
+
+        [XmlAttribute("count")]
+        public int Count { get; set; }
+    }
 
 public class Bonus
 {

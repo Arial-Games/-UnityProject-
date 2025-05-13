@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: Basic - FlyingTrap3
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: 5e7b6576f92c5e5429a85fa14ec0f23b, type: 3}
-  publicName: Basic - Flying Spike Trap 3
-  description: Basic - SpikeTrap
-  type: 2
-  dataSize: 5
   uniqueId: 7
+  typeName: BasicSaw
+  objSprite: {fileID: 21300000, guid: 5e7b6576f92c5e5429a85fa14ec0f23b, type: 3}
+  prefab: {fileID: 8239037968559558844, guid: 1ddcd0e34188b924faf62542a348a430, type: 3}
+  dataSize: 5

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: 11 - Basic - NavetGate
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: 4b805bc24ef713deb93213f5285b1d09, type: 3}
-  publicName: Basic - NavetGate
-  description: Basic - NavetGate
-  type: 3
-  dataSize: 20
   uniqueId: 11
+  typeName: Basic-SpaceShipGate 1
+  objSprite: {fileID: 21300000, guid: 4b805bc24ef713deb93213f5285b1d09, type: 3}
+  prefab: {fileID: 2502413287461187021, guid: e228ddb310c19aef6b3f2c2c2c8387e1, type: 3}
+  dataSize: 20

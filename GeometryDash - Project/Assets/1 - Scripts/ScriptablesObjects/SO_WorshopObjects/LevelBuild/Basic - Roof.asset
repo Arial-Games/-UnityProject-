@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: Basic - Roof
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: 02da5f2e4fc56ca4385a66d2f00e8eed, type: 3}
-  publicName: Basic roof
-  description: "Sol par d\xE9faut"
-  type: 1
-  dataSize: 10
   uniqueId: 2
+  typeName: Roof
+  objSprite: {fileID: 21300000, guid: 02da5f2e4fc56ca4385a66d2f00e8eed, type: 3}
+  prefab: {fileID: 6921699821149384227, guid: bfba587c21a0e0f46bc8864ca284fa64, type: 3}
+  dataSize: 10

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: 13 - Stars
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: 1cb7a108f4e8c76479edddf164832940, type: 3}
-  publicName: Stars
-  description: Stars
-  type: 5
-  dataSize: 50
   uniqueId: 13
+  typeName: StartCollectibles
+  objSprite: {fileID: 21300000, guid: 1cb7a108f4e8c76479edddf164832940, type: 3}
+  prefab: {fileID: 3059472027613981348, guid: 9004e6e87f36b164bac0ac3c4ca2309e, type: 3}
+  dataSize: 50

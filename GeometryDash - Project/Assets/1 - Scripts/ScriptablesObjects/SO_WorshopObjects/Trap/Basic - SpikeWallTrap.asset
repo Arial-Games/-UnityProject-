@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: Basic - SpikeWallTrap
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: 627344becfa6e364baae811d82d34e82, type: 3}
-  publicName: Basic - Spike Wall Trap
-  description: Basic - SpikeTrap
-  type: 2
-  dataSize: 5
   uniqueId: 8
+  typeName: BasicSpike2
+  objSprite: {fileID: 21300000, guid: 627344becfa6e364baae811d82d34e82, type: 3}
+  prefab: {fileID: 4240191017359774089, guid: 3f57f661beb921e438aa5d7ffa56885e, type: 3}
+  dataSize: 5

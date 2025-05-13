@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27014d73995a23f4ba78b5c1c4f5d69d, type: 3}
   m_Name: Basic - FlyingRoof
   m_EditorClassIdentifier: 
-  objSprite: {fileID: 21300000, guid: c5479b888ba997944b8daec929d8c702, type: 3}
-  publicName: Basic flying roof
-  description: Sol volant
-  type: 1
-  dataSize: 5
   uniqueId: 3
+  typeName: Green-Sol-TinySmall
+  objSprite: {fileID: 21300000, guid: c5479b888ba997944b8daec929d8c702, type: 3}
+  prefab: {fileID: 2027630971487851396, guid: b3d57eb7d7a0ee34b9c3f23261be1372, type: 3}
+  dataSize: 5

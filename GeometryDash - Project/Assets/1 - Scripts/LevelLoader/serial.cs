@@ -26,6 +26,8 @@ public class LevelLoader : MonoBehaviour
     public GameObject barrierPrefab4;
     public GameObject barrierPrefab5;
     public GameObject barrierPrefab6;
+    public GameObject bumperPrefab; // Nouveau prefab pour le bumper
+    public Dictionary<string, GameObject> bumperPrefabs; 
     public Dictionary<string, GameObject> barrierPrefabs;
 
     public Dictionary<string, GameObject> bonusPrefabs;
@@ -51,7 +53,10 @@ public class LevelLoader : MonoBehaviour
            { "barrierType5", barrierPrefab5 },
            { "barrierType6", barrierPrefab6 },
          };
-
+ bumperPrefabs = new Dictionary<string, GameObject>
+    {
+        {"bumperType1", bumperPrefab}
+    };
         XmlSerializer serializer = new XmlSerializer(typeof(Level));
         using (StringReader reader = new StringReader(level.text))
         {
@@ -181,7 +186,26 @@ public class LevelLoader : MonoBehaviour
             }
         }
 
-
+        if (level.Bumpers != null)
+    {
+        foreach (var bumper in level.Bumpers)
+        {
+            Vector2 startPos = ParsePosition(bumper.Position);
+            if (bumperPrefabs.ContainsKey(bumper.Type))
+            {
+                GameObject prefab = bumperPrefabs[bumper.Type];
+                for (int i = 0; i < bumper.Count; i++)
+                {
+                    Vector2 pos = startPos + new Vector2(i * 1.0f, 0);
+                    Instantiate(prefab, pos, Quaternion.identity);
+                }
+            }
+            else
+            {
+                Debug.LogError("Préfabriqué pour bumper non trouvé : " + bumper.Type);
+            }
+        }
+        }
 
         foreach (var bonus in level.Bonuses)
         {
@@ -228,6 +252,7 @@ namespace MyGameNamespace
         public List<Zone> ObstacleZones { get; set; }
         public List<Platform> Platforms { get; set; }
         public List<Bonus> Bonuses { get; set; }
+        public List<Bumper> Bumpers { get; set; }
 
         public List<Barrier> Barriers { get; set; }
     }
@@ -268,7 +293,17 @@ namespace MyGameNamespace
         [XmlAttribute("count")]
         public int Count { get; set; }
     }
+ public class Bumper
+    {
+        [XmlAttribute("type")]
+        public string Type { get; set; }
 
+        [XmlAttribute("position")]
+        public string Position { get; set; }
+
+        [XmlAttribute("count")]
+        public int Count { get; set; }
+    }
 
     public class MiddleBackground
     {

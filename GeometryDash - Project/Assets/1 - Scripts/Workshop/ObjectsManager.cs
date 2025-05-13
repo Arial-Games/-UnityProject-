@@ -9,7 +9,8 @@ public class ObjectsManager : MonoBehaviour
 {
     [Header("Scripts")]
     [SerializeField] SO_WorkshopObjects[] so_WorkshopObjects;
-
+[Header("References")]
+[SerializeField] private LevelEditor levelEditor;  // Make sure this is serialized
     [Header("Bouttons / Sprite")]
     [SerializeField] GameObject[] buyingButtons;
     [SerializeField] Sprite interoPoint;
@@ -43,7 +44,9 @@ public class ObjectsManager : MonoBehaviour
     }
 
     private void Start()
-    {
+    { 
+
+        
         HideFloatingImage();
 
         System.Array.Sort(so_WorkshopObjects, (a, b) => a.uniqueId.CompareTo(b.uniqueId));
@@ -62,27 +65,38 @@ public class ObjectsManager : MonoBehaviour
         }
     }
 
-    public void workshopButton(int id)
+  public void workshopButton(int id)
+{
+    int realId = id - 1;
+    if (id == 0)
     {
-        int realId = id - 1;
-        if (id == 0)
-        {
-            Debug.LogWarning("Boutton non renseigné");
-            return;
-        }
-
-        if (so_WorkshopObjects[realId].dataSize > levelData)
-        {
-            Debug.LogWarning("Taille insufisante !");
-            return;
-        }
-
-        selectedObject = so_WorkshopObjects[realId];
-        floatingImage.sprite = selectedObject.objSprite;
-        floatingImage.enabled = true;
-        floatingImage.SetNativeSize();
-        isPlacingObject = true;
+        Debug.LogWarning("Boutton non renseigné");
+        return;
     }
+
+    if (so_WorkshopObjects[realId].dataSize > levelData)
+    {
+        Debug.LogWarning("Taille insufisante !");
+        return;
+    }
+
+    selectedObject = so_WorkshopObjects[realId];
+    
+    // Appeler SelectObject du LevelEditor
+    if (levelEditor != null)
+    {
+        levelEditor.SelectObject(realId);
+    }
+    else
+    {
+        Debug.LogError("LevelEditor reference manquante!");
+    }
+
+    floatingImage.sprite = selectedObject.objSprite;
+    floatingImage.enabled = true;
+    floatingImage.SetNativeSize();
+    isPlacingObject = true;
+}
 
     void PlaceObject()
     {
