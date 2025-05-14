@@ -31,7 +31,7 @@ private List<Coroutine> activeCoroutines = new List<Coroutine>();
         if (playerController != null)
         {
             ActivatePowerUp(effect, duration);
-              // ← fait disparaître le power-up au toucher
+
         }
     }
 
@@ -46,25 +46,35 @@ private List<Coroutine> activeCoroutines = new List<Coroutine>();
 
 public void ActivatePowerUp(string effectType, float powerUpDuration)
     {
-        Debug.Log($"Démarrage du power-up {effectType} pour {powerUpDuration} secondes");
-        Coroutine powerUpCoroutine = null;
+         Debug.Log($"Démarrage du power-up {effectType} pour {powerUpDuration} secondes");
+    Coroutine powerUpCoroutine = null;
 
-        switch (effectType)
-        {
-            case "speed_2x":
-                powerUpCoroutine = StartCoroutine(SpeedBoost(powerUpDuration));
-                break;
-            case "invincible":
-                powerUpCoroutine = StartCoroutine(Invincibility(powerUpDuration));
-                break;
-            case "ghost":
-                powerUpCoroutine = StartCoroutine(GhostMode(powerUpDuration));
-                break;
-            case "monster":
-                powerUpCoroutine = StartCoroutine(MonsterMode(powerUpDuration));
-                break;
-            // ...existing cases...
-        }
+    switch (effectType)
+    {
+        case "explode":
+            Debug.Log("Tentative d'explosion");
+            if (playerController != null)
+            {
+                playerController.Explode();
+                Destroy(gameObject); // Détruire le power-up après utilisation
+            }
+            break;
+        case "speed_2x":
+            powerUpCoroutine = StartCoroutine(SpeedBoost(powerUpDuration));
+            break;
+        case "invincible":
+            powerUpCoroutine = StartCoroutine(Invincibility(powerUpDuration));
+            break;
+        case "ghost":
+            powerUpCoroutine = StartCoroutine(GhostMode(powerUpDuration));
+            break;
+        case "monster":
+            powerUpCoroutine = StartCoroutine(MonsterMode(powerUpDuration));
+            break;
+        default:
+            Debug.LogWarning($"Type de power-up non reconnu: {effectType}");
+            break;
+    }
 
         if (powerUpCoroutine != null)
         {
@@ -87,7 +97,7 @@ private IEnumerator SpeedBoost(float duration)
         
         Debug.Log("Désactivation speed boost");
         playerController.CurrentSpeed = (Speed)originalSpeedIndex;
-        Destroy(gameObject); // Détruire le power-up après utilisation
+        //Destroy(gameObject);
     }
 }
 
@@ -117,7 +127,7 @@ private IEnumerator GhostMode(float duration)
         
         Debug.Log("Désactivation ghost mode");
         playerController.SetGhostMode(false);
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
 
@@ -132,7 +142,7 @@ private IEnumerator Invincibility(float duration)
         
         Debug.Log("Désactivation invincibility");
         playerController.SetInvincible(false);
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }
    

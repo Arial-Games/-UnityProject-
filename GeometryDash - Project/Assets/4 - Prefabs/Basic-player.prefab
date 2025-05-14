@@ -628,9 +628,13 @@ MonoBehaviour:
   GroundCheckRadius: 0.1
   GroundMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 1
   Sprite: {fileID: 5542012769728246053}
   audioJump: {fileID: 72729795751294206}
+  explosionRadius: 5
+  explosionMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &1013779652611284819
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -286,20 +286,26 @@ public class PlayerController : MonoBehaviour
     {
         return isOnCeiling;
     }
-    public void SetGhostMode(bool enabled)
+  public void SetGhostMode(bool enabled)
+{
+    isGhost = enabled;
+    
+    // Use a constant for the layer numbers
+    const int GHOST_LAYER = 8;  // Use whatever number you assigned in Unity
+    const int PLAYER_LAYER = 0; // Default layer
+    
+    // Set the layer
+    gameObject.layer = enabled ? GHOST_LAYER : PLAYER_LAYER;
+    
+    // Visual effect
+    var sprite = GetComponentInChildren<SpriteRenderer>();
+    if (sprite != null)
     {
-        isGhost = enabled;
-        // Change layer pour traverser les obstacles
-        gameObject.layer = enabled ? LayerMask.NameToLayer("Ghost") : LayerMask.NameToLayer("Player");
-        // Effet visuel transparent bleuté
-        var sprite = GetComponentInChildren<SpriteRenderer>();
-        if (sprite != null)
-        {
-            sprite.color = enabled ? new Color(0.5f, 0.5f, 1f, 0.3f) : Color.white;
-        }
-        Debug.Log($"Ghost mode: {(enabled ? "activated" : "deactivated")}");
+        sprite.color = enabled ? new Color(0.5f, 0.5f, 1f, 0.5f) : Color.white;
     }
-
+    
+    Debug.Log($"Ghost mode {(enabled ? "enabled" : "disabled")} on layer {gameObject.layer}");
+}
     //-------------------
     //  METHODES PRIVEE
     //-------------------
