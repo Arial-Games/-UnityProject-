@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class GameHazards : MonoBehaviour
 {
     [SerializeField] SO_GameHazards so_GameHazards;
-    [SerializeField] GameRules gameRules;
+    GameRules gameRules;
 
     GameObject[] playerVisu = new GameObject[4];
 
@@ -17,14 +17,6 @@ public class GameHazards : MonoBehaviour
     void Start()
     {
         gameRules = GameObject.Find("GameRules").GetComponent<GameRules>();
-        if (gameRules == null)
-        {
-            gameRules = FindObjectOfType<GameRules>();
-            if (gameRules == null)
-            {
-                Debug.LogError("GameRules non trouvé! Assurez-vous qu'il existe dans la scène.");
-            }
-        }
         playerVisu[0] = GameObject.Find("PlayerVisual");
         playerVisu[1] = GameObject.Find("SpaceShipVisu");
         playerVisu[2] = GameObject.Find("WheelsVisu");
@@ -79,24 +71,14 @@ public class GameHazards : MonoBehaviour
 
     void OnPlayerDeathInit()
     {
-        if (gameRules == null)
-        {
-            Debug.LogError("gameRules est null dans OnPlayerDeathInit!");
-            return;
-        }
-        Debug.Log("Appel de OnPlayerDeath sur gameRules");
         gameRules.OnPlayerDeath();
-
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log($"SO_GameHazards - isTrap: {so_GameHazards.isTrap}, canKill: {so_GameHazards.canKill}");
-        Debug.Log($"Collision Tag: {collision.gameObject.tag}");
-
-        if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.CompareTag("Player"))
+        if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
-            Debug.Log("Conditions de mort remplies - Appel de OnPlayerDeathInit()");
+            collision.gameObject.GetComponent<PlayerController>().ToggleMode(1);
             DisableAllVisu();
             playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
             OnPlayerDeathInit();
@@ -105,9 +87,6 @@ public class GameHazards : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Player")) return;
-        Debug.Log($"→ touché {name} / type:{so_GameHazards.name}");
-        Debug.Log("Touché : " + collision.name);   // doit apparaître
         if (collision.gameObject.tag == "Player")
         {
             if (so_GameHazards.isCollectibles && so_GameHazards.isStars)
@@ -163,14 +142,17 @@ public class GameHazards : MonoBehaviour
         {
             gameRules.OnEndLignePass();
         }
+
         if (so_GameHazards.isJumper)
-{
-    var rb = collision.attachedRigidbody;   // prend le RB même si sur le parent
-    if (!rb) return;
+        {
+            Rigidbody2D rb = collision.gameObject.GetComponent<Rigidbody2D>();
 
-    rb.velocity = Vector2.zero;                         // reset Y
-    rb.AddForce(Vector2.up * 10f, ForceMode2D.Impulse); // 25 comme ton Jump()
-}
+            rb.velocity = Vector2.zero;
+            rb.AddForce(Vector2.up * so_GameHazards.jumpStrenght, ForceMode2D.Impulse);
+            //Transform Sprite = collision.gameObject.GetComponent<Transform>();
+            //Sprite.Rotate(Vector3.back * 5);
 
+            // Revoir la rotation
+        }
     }
 }
