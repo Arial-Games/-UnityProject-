@@ -108,7 +108,7 @@ public class ObjectsManager : MonoBehaviour
         renderer.sprite = selectedObject.objSprite;
         newObject.transform.position = worldPosition;
 
-        placedObjects.Add(newObject);
+
         levelData -= selectedObject.dataSize;
 
         if (levelData <= 0)
@@ -120,15 +120,18 @@ public class ObjectsManager : MonoBehaviour
         {
             buyingButtons[(selectedObject.uniqueId - 1)].GetComponent<Button>().interactable = false;
             CancelPlacement();
+            Debug.Log("Bouton désactivé");
+            return;
         }
 
+        placedObjects.Add(newObject);
         placeObjSound.Play();
     }
 
     void CancelPlacement()
     {
-        HideFloatingImage();
         isPlacingObject = false;
+        HideFloatingImage();
     }
 
     public void HideFloatingImage()

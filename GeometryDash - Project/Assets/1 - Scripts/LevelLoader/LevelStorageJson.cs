@@ -92,7 +92,7 @@ public class LevelEditor : MonoBehaviour
 
         if (currentSO != null)
         {
-            Debug.Log($"🎯 Objet sélectionné: {currentSO.typeName}");
+            //Debug.Log($"🎯 Objet sélectionné: {currentSO.typeName}");
         }
 
         if (currentSO != null && Input.GetMouseButtonDown(0))
