@@ -349,7 +349,10 @@ MonoBehaviour:
   barrierPrefab4: {fileID: 3024077233883792783, guid: 3c9344d992d940345adf792e686a2a3b, type: 3}
   barrierPrefab5: {fileID: 4128105570033395390, guid: 57f42dd6700e2abbebae443e55fd6273, type: 3}
   barrierPrefab6: {fileID: 1105840543878199353, guid: c56cdd3037fd139dcbaa90a10aaf8065, type: 3}
-  bumperPrefab: {fileID: 4008742727829054579, guid: 81e4c47d5ce29d84ab87a2f2e5b84ecc, type: 3}
+  speedBoostPrefab: {fileID: 0}
+  explodePrefab: {fileID: 0}
+  invincibilityPrefab: {fileID: 0}
+  ghostPrefab: {fileID: 0}
 --- !u!4 &578276213
 Transform:
   m_ObjectHideFlags: 0
@@ -649,6 +652,22 @@ PrefabInstance:
     - target: {fileID: 6823667771154644683, guid: 6d69642272fd8ad4fad556c0159267f3, type: 3}
       propertyPath: m_Name
       value: Main-PlayerCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538928026265194593, guid: 6d69642272fd8ad4fad556c0159267f3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a093780a76b8e8c4c8b121e123d21a82, type: 3}
+    - target: {fileID: 7538928026265194593, guid: 6d69642272fd8ad4fad556c0159267f3, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538928026265194593, guid: 6d69642272fd8ad4fad556c0159267f3, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538928026265194593, guid: 6d69642272fd8ad4fad556c0159267f3, type: 3}
+      propertyPath: m_Color.r
+      value: 0.39999986
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1249,6 +1268,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1540086899}
   - component: {fileID: 1540086898}
+  - component: {fileID: 1540086900}
   m_Layer: 0
   m_Name: 0 - GameManager
   m_TagString: GameController
@@ -1290,6 +1310,18 @@ Transform:
   - {fileID: 171902417}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1540086900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540086897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cc5036e470d0d42a79714b51556783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550104891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 686068836407397606, guid: 86354f2985e340948896183907c5f070, type: 3}
