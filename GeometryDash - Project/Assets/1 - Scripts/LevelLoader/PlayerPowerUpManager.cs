@@ -24,24 +24,19 @@ private List<Coroutine> activeCoroutines = new List<Coroutine>();
         activeCoroutines.Clear();
     }
  private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Player"))
     {
-        if (collision.CompareTag("Player"))
+        playerController = collision.GetComponent<PlayerController>();
+        if (playerController != null)
         {
-            Debug.Log("Power-up touché par le joueur");
-            // Cette ligne est correcte - garde-la
-            playerController = collision.gameObject.GetComponent<PlayerController>();
-            
-            if (playerController != null)
-            {
-                Debug.Log($"Activation du power-up: {effect} pour {duration} secondes");
-                ActivatePowerUp(effect, duration);
-            }
-            else
-            {
-                Debug.LogError("PlayerController non trouvé sur le joueur!");
-            }
+            ActivatePowerUp(effect, duration);
+              // ← fait disparaître le power-up au toucher
         }
     }
+
+}
+
 
 
     
@@ -82,12 +77,13 @@ private IEnumerator SpeedBoost(float duration)
 {
     if (playerController != null)
     {
+            float d = Mathf.Min(duration, 2f);
         Debug.Log($"Activation speed boost pour {duration} secondes");
         originalSpeedIndex = (int)playerController.CurrentSpeed;
         int newSpeedIndex = Mathf.Min(originalSpeedIndex + 2, (int)Speed.SuperFast);
         playerController.CurrentSpeed = (Speed)newSpeedIndex;
         
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(d);
         
         Debug.Log("Désactivation speed boost");
         playerController.CurrentSpeed = (Speed)originalSpeedIndex;

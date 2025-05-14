@@ -139,12 +139,6 @@
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="65,3.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="80,-0.3" count="3" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="88,3.3" count="3" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="173.0,1.1" count="3" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="178.0,0.6" count="5" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="183.0,0.1" count="10" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="287.0,0.0" count="10" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="387,-0.3" count="5" />
-    <Barrier type="barrierType5" sprite="BarrierSprite5" position="395.0,3.3" count="5" />
     <Barrier type="barrierType5" sprite="BarrierSprite5" position="530,-0.3" count="10" />
     <Barrier type="barrierType6" sprite="BarrierSprite6" position="611,2.5" count="1" />
   </Barriers>
