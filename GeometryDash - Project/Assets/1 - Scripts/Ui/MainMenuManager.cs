@@ -10,7 +10,7 @@ using TMPro;
 
 public class UiManager : MonoBehaviour
 {
-    [SerializeField] GameObject shopScreen;
+    [SerializeField] GameObject[] screenToSwitch;
     [SerializeField] TextMeshProUGUI[] inventoryText;
 
     [Header("Scripts")]
@@ -23,10 +23,7 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
-        shopScreen.SetActive(false);
 
-        // Placement à revoir
-        TextOnDisplay();
     }
 
     void Update()
@@ -39,15 +36,15 @@ public class UiManager : MonoBehaviour
     //  METHODES PUBLIC
     //-------------------
 
-    public void OnClickBackButton()
-    {
-        shopScreen.SetActive(false);
-    }
+    //public void OnClickBackButton()
+    //{
+    //    screenToSwitch[0].SetActive(false);
+    //}
 
-    public void OnClickOpenShop()
-    {
-        shopScreen.SetActive(true);
-    }
+    //public void OnClickOpenShop()
+    //{
+    //    screenToSwitch[0].SetActive(true);
+    //}
 
     //-------------------
     //  METHODES PRIVEE
@@ -57,7 +54,10 @@ public class UiManager : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Escape))
         {
-            shopScreen.SetActive(false);
+            for (int i = 0; i < screenToSwitch.Length; i++)
+            {
+                screenToSwitch[i].SetActive(false);
+            }
         }
     }
 
