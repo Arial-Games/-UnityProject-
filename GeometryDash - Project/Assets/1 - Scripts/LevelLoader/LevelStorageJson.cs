@@ -181,7 +181,7 @@ public void TestLevel()
     
     // On utilise currentFileIndex qui correspond au dernier niveau sauvegardé (ou à sauvegarder)
     GameJson.Instance.SetLevelToLoad(currentFileIndex);
-    UnityEngine.SceneManagement.SceneManager.LoadScene(8); 
+    UnityEngine.SceneManagement.SceneManager.LoadScene(12); 
 }
 }
 
