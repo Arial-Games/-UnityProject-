@@ -250,6 +250,7 @@ public class PlayerController : MonoBehaviour
         {
             CurrentMode = Mode.Normal;
             rb.gravityScale = 12.41067f;
+            targetRotation = Quaternion.Euler(0, 0, 0);
         }
         else if (modeId == 2)
         {

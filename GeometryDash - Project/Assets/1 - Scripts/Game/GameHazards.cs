@@ -95,27 +95,27 @@ public class GameHazards : MonoBehaviour
                 Destroy(gameObject);
             }
 
-         if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
-        {
-            var powerUpManager = collision.GetComponent<PowerUpBehaviour>();
-            if (powerUpManager != null)
+            if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
             {
-                string effectType = so_GameHazards.powerOrbEffects switch
+                var powerUpManager = collision.GetComponent<PowerUpBehaviour>();
+                if (powerUpManager != null)
                 {
-                    PowerOrbEffects.Speed => "speed_2x",
-                    PowerOrbEffects.Invincibility => "invincible",
-                    PowerOrbEffects.Jump => "jump_2x",
-                    _ => "none"
-                };
-                
-                if (effectType != "none")
-                {
-                    powerUpManager.ActivatePowerUp(effectType, so_GameHazards.powerUpDuration);
-                    gameRules.OnTakeCollectibles(this.transform);
-                    Destroy(gameObject);
+                    string effectType = so_GameHazards.powerOrbEffects switch
+                    {
+                        PowerOrbEffects.Speed => "speed_2x",
+                        PowerOrbEffects.Invincibility => "invincible",
+                        PowerOrbEffects.Jump => "jump_2x",
+                        _ => "none"
+                    };
+
+                    if (effectType != "none")
+                    {
+                        powerUpManager.ActivatePowerUp(effectType, so_GameHazards.powerUpDuration);
+                        gameRules.OnTakeCollectibles(this.transform);
+                        Destroy(gameObject);
+                    }
                 }
             }
-        }
 
             if (so_GameHazards.isGate)
             {
