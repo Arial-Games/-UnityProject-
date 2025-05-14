@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1675907601741816979}
   - component: {fileID: 6715878974842653663}
   - component: {fileID: 6720775018906521662}
+  - component: {fileID: 7740299452473716249}
   m_Layer: 0
   m_Name: MonsterCollectibles
   m_TagString: Untagged
@@ -144,3 +145,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2487888, y: 1.4198053}
   m_EdgeRadius: 0
+--- !u!114 &7740299452473716249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3059472027613981348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd69d663b2b6b4705b06665dc64a444d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 0
+  effect: 

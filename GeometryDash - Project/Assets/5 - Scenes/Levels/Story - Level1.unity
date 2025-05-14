@@ -479,7 +479,10 @@ MonoBehaviour:
   barrierPrefab4: {fileID: 4240191017359774089, guid: 3f57f661beb921e438aa5d7ffa56885e, type: 3}
   barrierPrefab5: {fileID: 6722381813643366191, guid: 1756802ef6b85a34785982b533f88900, type: 3}
   barrierPrefab6: {fileID: 2494936945778836599, guid: 2080b212d8d79d2f3ad54257230ea754, type: 3}
-  bumperPrefab: {fileID: 0}
+  speedBoostPrefab: {fileID: 3059472027613981348, guid: 29ce64559887e354bb1293fa3d8ca42a, type: 3}
+  explodePrefab: {fileID: 3059472027613981348, guid: e4804737ca9aa414ab27bd1ce1127c1c, type: 3}
+  invincibilityPrefab: {fileID: 3059472027613981348, guid: c0244dabf4f6fbf46b3c53433afb0f5a, type: 3}
+  ghostPrefab: {fileID: 3059472027613981348, guid: 81a55ca084bc8d94a95d489a51b4e174, type: 3}
 --- !u!4 &578276213
 Transform:
   m_ObjectHideFlags: 0

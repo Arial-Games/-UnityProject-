@@ -1,7 +1,7 @@
 <Level id="2" name="second Niveau" difficulty="Facile">
     <Background image="background-cam"  />
     <MiddleBackground image="GateBackground" position="57,2.5" count="6" />
-    <Player startPosition="-4.55,0" sprite="Basic-player.png" />
+    <Player startPosition="-10.55,0" sprite="Basic-player.png" />
     
     <ObstacleZones>
         <Zone id="1" type="BasicSPike" minPosition="6.6,-0.5" maxPosition="7.5,-0.5" count="2" />
@@ -35,8 +35,8 @@
     </ObstacleZones>
     
     <Platforms>
-        <Platform sprite="GreenBigWall" position="-10.00137,5.8" count="750" />
-        <Platform sprite="GreenBigWall" position="-10.00131,-1.9"  count="750" />
+        <Platform sprite="GreenBigWall" position="-20.00137,5.8" count="750" />
+        <Platform sprite="GreenBigWall" position="-20.00131,-1.9"  count="750" />
         <Platform sprite="GreenBigWall" position="14.00131,5.6"  count="10" />
         <Platform sprite="GreenBigWall" position="40.00131,5.6"  count="10" />
         <Platform sprite="GreenBigWall" position="40.00131,-0.8"  count="10" />

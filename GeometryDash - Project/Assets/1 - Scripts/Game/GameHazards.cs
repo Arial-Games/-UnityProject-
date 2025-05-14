@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-
+using PowerOrbEffects = SO_GameHazards.PowerOrbEffects;
 public class GameHazards : MonoBehaviour
 {
     [SerializeField] SO_GameHazards so_GameHazards;
@@ -78,7 +78,6 @@ public class GameHazards : MonoBehaviour
     {
         if (so_GameHazards.isTrap && so_GameHazards.canKill && collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerController>().ToggleMode(1);
             DisableAllVisu();
             playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
             OnPlayerDeathInit();
@@ -95,11 +94,27 @@ public class GameHazards : MonoBehaviour
                 Destroy(gameObject);
             }
 
-            if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
+         if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
+        {
+            var powerUpManager = collision.GetComponent<PowerUpBehaviour>();
+            if (powerUpManager != null)
             {
-                gameRules.OnTakeCollectibles(this.transform);
-                Destroy(gameObject);
+                string effectType = so_GameHazards.powerOrbEffects switch
+                {
+                    PowerOrbEffects.Speed => "speed_2x",
+                    PowerOrbEffects.Invincibility => "invincible",
+                    PowerOrbEffects.Jump => "jump_2x",
+                    _ => "none"
+                };
+                
+                if (effectType != "none")
+                {
+                    powerUpManager.ActivatePowerUp(effectType, so_GameHazards.powerUpDuration);
+                    gameRules.OnTakeCollectibles(this.transform);
+                    Destroy(gameObject);
+                }
             }
+        }
 
             if (so_GameHazards.isGate)
             {

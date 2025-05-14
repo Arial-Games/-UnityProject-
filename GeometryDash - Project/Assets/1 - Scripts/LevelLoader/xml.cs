@@ -15,14 +15,15 @@ public class Level
     [XmlAttribute("difficulty")]
     public string Difficulty { get; set; }
 public List<Barrier> Barriers { get; set; }
+[XmlArray("PowerUps")]
+[XmlArrayItem("PowerUp")]
+public List<PowerUp> PowerUps { get; set; }
 
   [XmlElement("MiddleBackground")]
     public List<Background> MiddleBackgrounds { get; set; }
     public Background Background { get; set; }
     public Player Player { get; set; }
     public List<Zone> ObstacleZones { get; set; }
-            public List<Bumper> Bumpers { get; set; }
-
     public List<Platform> Platforms { get; set; }
     public List<Bonus> Bonuses { get; set; }
 }
@@ -98,7 +99,20 @@ public class Platform
         [XmlAttribute("count")]
         public int Count { get; set; }
     }
+public class PowerUp
+{
+    [XmlAttribute("type")]
+    public string Type { get; set; }
 
+    [XmlAttribute("position")]
+    public string Position { get; set; }
+
+    [XmlAttribute("duration")]
+    public float Duration { get; set; }
+
+    [XmlAttribute("effect")]
+    public string Effect { get; set; }
+}
 public class Bonus
 {
     [XmlAttribute("type")]

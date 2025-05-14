@@ -42,6 +42,9 @@ public class SO_GameHazards : ScriptableObject
     [Header("PowerUps")]
     public bool isPowerUp;
     public PowerOrbEffects powerOrbEffects;
+    [Range(0f, 30f)] public float powerUpDuration = 5f; 
+    [Range(1f, 5f)] public float powerUpStrength = 2f;  
+
 
     [Header("Other")]
     public bool isEndLine;
