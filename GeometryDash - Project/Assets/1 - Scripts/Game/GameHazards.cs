@@ -80,6 +80,7 @@ public class GameHazards : MonoBehaviour
         {
             DisableAllVisu();
             playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
+            collision.gameObject.GetComponent<PlayerController>().ToggleMode(1);
             OnPlayerDeathInit();
         }
     }
