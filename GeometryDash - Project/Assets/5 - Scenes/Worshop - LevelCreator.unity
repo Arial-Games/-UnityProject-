@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneRoot: {fileID: 1764145061}
-  paletteContainer: {fileID: 197922106}
+  paletteContainer: {fileID: 1385609191}
   paletteButtonPrefab: {fileID: 1356887153}
   so_WorkshopObjects:
   - {fileID: 11400000, guid: 6249a7d972ef83743978d0cee7bea2ed, type: 2}

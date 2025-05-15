@@ -91,11 +91,17 @@ public class ObjectsManager : MonoBehaviour
     {
         Debug.LogError("LevelEditor reference manquante!");
     }
-
-    floatingImage.sprite = selectedObject.objSprite;
-    floatingImage.enabled = true;
-    floatingImage.SetNativeSize();
-    isPlacingObject = true;
+    
+    if (selectedObject.objSprite != null)
+    {
+        floatingImage.sprite = selectedObject.objSprite;
+        floatingImage.enabled = true;
+        floatingImage.SetNativeSize();
+    }
+    else
+    {
+        floatingImage.enabled = false; // ← important si sprite est vide
+    }
 }
 
     void PlaceObject()
@@ -126,6 +132,7 @@ public class ObjectsManager : MonoBehaviour
 
         placedObjects.Add(newObject);
         placeObjSound.Play();
+        
     }
 
     void CancelPlacement()

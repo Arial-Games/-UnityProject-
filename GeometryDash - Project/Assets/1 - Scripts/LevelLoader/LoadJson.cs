@@ -145,6 +145,23 @@ public void LoadJsonLevel(int levelNum = -1)
     go.transform.localScale = new Vector3(endWall.sx, endWall.sy, 1);
 }
 
+if (lookup.TryGetValue("Roof", out var roofPrefab))
+{
+float firstRoofX = patternObjects
+    .Where(o => o.type == "Roof")
+    .Select(o => o.x)
+    .DefaultIfEmpty(0)
+    .Min();
+
+for (float x = playerSpawnPosition.x + 2f; x < firstRoofX; x += 1f)
+{
+    Vector3 pos = new Vector3(x, playerSpawnPosition.y - 1f, 0);
+    var r = Instantiate(roofPrefab, pos, Quaternion.identity, levelRoot);
+    r.transform.localScale = Vector3.one;
+}
+
+}
+
 
     }
     catch (System.Exception e)
