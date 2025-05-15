@@ -4,12 +4,26 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
+    public static PlayerInventory instance;
+
     [Header("Ressources")]
     [SerializeField] SO_PlayerStat SO_playerStats;
 
     //-------------------
     //  METHODES DEFAULT
     //-------------------
+
+    void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+        //DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -20,8 +34,8 @@ public class PlayerInventory : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.P))
         {
-            SO_playerStats.gold += 100;
-            SO_playerStats.cash += 200;
+            AddMoney(1000, "cash");
+            AddMoney(1000, "gold");
             Debug.LogWarning("CHEAT EN COURS");
         }
     }
