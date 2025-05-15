@@ -91,12 +91,13 @@ public class GameHazards : MonoBehaviour
         {
             if (so_GameHazards.isCollectibles && so_GameHazards.isStars)
             {
-                gameRules.OnTakeCollectibles(this.transform);
+                gameRules.OnTakeCollectibles(this.transform, true);
                 Destroy(gameObject);
             }
 
             if (so_GameHazards.isCollectibles && so_GameHazards.isPowerUp)
             {
+                gameRules.OnTakeCollectibles(this.transform, false);
                 var powerUpManager = collision.GetComponent<PowerUpBehaviour>();
                 if (powerUpManager != null)
                 {
@@ -111,7 +112,6 @@ public class GameHazards : MonoBehaviour
                     if (effectType != "none")
                     {
                         powerUpManager.ActivatePowerUp(effectType, so_GameHazards.powerUpDuration);
-                        gameRules.OnTakeCollectibles(this.transform);
                         Destroy(gameObject);
                     }
                 }
@@ -151,6 +151,7 @@ public class GameHazards : MonoBehaviour
                     modeID = 6;
                 }
                 collision.gameObject.GetComponent<PlayerController>().ToggleMode(modeID);
+                gameRules.OnGateEnter();
             }
         }
 

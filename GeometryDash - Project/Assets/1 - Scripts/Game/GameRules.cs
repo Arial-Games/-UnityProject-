@@ -18,7 +18,7 @@ public class GameRules : MonoBehaviour
     [Header("GUI"), SerializeField] Image[] starsUi;
     public TextMeshProUGUI scoreDisplay, bestScoreDisplay, tryNumberTxt, gameTimerTxt;
 
-    [Header("Audio"), SerializeField] AudioSource deathSound;
+    [Header("Audio"), SerializeField] AudioSource deathSound, takeCollectibleSound, onCrossGate;
 
     [Header("Animation"), SerializeField] Animator deathPanelAnimator;
 
@@ -70,6 +70,11 @@ public class GameRules : MonoBehaviour
     //  METHODES PUBLIC
     //-------------------
 
+    public void OnGateEnter()
+    {
+        onCrossGate.Play();
+    }
+
     public void OnPlayerDeath()
     {
         tryNumber++;
@@ -81,15 +86,17 @@ public class GameRules : MonoBehaviour
         tryNumberTxt.text = "Essai : " + tryNumber;
     }
 
-    public void OnTakeCollectibles(Transform objPos)
+    public void OnTakeCollectibles(Transform objPos, bool isStars)
     {
         playerInventory.AddMoney(UnityEngine.Random.Range(0, 20), "cash");
         playerInventory.AddMoney(UnityEngine.Random.Range(0, 5), "gold");
-        playerLevelScore += 1000;
+        if (isStars)
+            playerLevelScore += 1000;
 
         saveData.save();
 
-        Vector3 spawnPos = objPos.position + Vector3.down * -0.2f;
+        takeCollectibleSound.Play();
+        Vector3 spawnPos = objPos.position + Vector3.down * -0.7f;
         Destroy(Instantiate(particles[2], spawnPos, transform.rotation), 0.4f);
     }
 

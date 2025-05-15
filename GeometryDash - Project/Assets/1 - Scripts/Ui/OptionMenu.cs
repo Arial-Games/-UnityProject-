@@ -32,6 +32,7 @@ public class OptionMenu : MonoBehaviour
     [SerializeField, Header("Input")] Button changeJumpButton;
     [SerializeField] TextMeshProUGUI buttonText;
     bool waitingForInput = false;
+    public TMP_InputField inputField;
 
     [SerializeField] Slider[] soundSlider;
 
@@ -76,6 +77,17 @@ public class OptionMenu : MonoBehaviour
     //-------------------
     //  METHODES PUBLIC
     //-------------------
+
+    public void OnClickCheatBtn()
+    {
+        if (inputField.text.Trim().Equals("Gold365", System.StringComparison.OrdinalIgnoreCase))
+        {
+            Debug.Log("TEST");
+            PlayerInventory.instance.AddMoney(1000, "cash");
+            PlayerInventory.instance.AddMoney(1000, "gold");
+            // Action à effectuer quand "Money" est entré et Entrée est pressé
+        }
+    }
 
     public void OnButtonWindowsChange(int winId)
     {
