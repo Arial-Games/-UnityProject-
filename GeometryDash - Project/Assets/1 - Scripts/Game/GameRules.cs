@@ -119,11 +119,13 @@ public class GameRules : MonoBehaviour
         {
             starsUi[0].enabled = true;
         }
-        else if (playerLevelScore > 2500)
+
+        if (playerLevelScore > 2000)
         {
             starsUi[1].enabled = true;
         }
-        else if (playerLevelScore > 5000)
+
+        if (playerLevelScore > 3000)
         {
             starsUi[2].enabled = true;
         }
