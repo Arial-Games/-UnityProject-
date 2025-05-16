@@ -215,7 +215,6 @@ MonoBehaviour:
   paletteContainer: {fileID: 1385609191}
   paletteButtonPrefab: {fileID: 1356887153}
   so_WorkshopObjects:
-  - {fileID: 11400000, guid: 6249a7d972ef83743978d0cee7bea2ed, type: 2}
   - {fileID: 11400000, guid: 41dd23057bea9ca4a9898973a87e38ae, type: 2}
   - {fileID: 11400000, guid: 658a1d6483d264f41a750acf9902122b, type: 2}
   - {fileID: 11400000, guid: f5c6c278c321ded48a0b2fd3be40e45e, type: 2}
@@ -228,6 +227,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 79f843462fb0c4c42ba269c566509e36, type: 2}
   - {fileID: 11400000, guid: f6f948309790899438f88bf1d5c5f6b0, type: 2}
   - {fileID: 11400000, guid: fc10bf35860bca04ca9946bf55afb158, type: 2}
+  playerPrefab: {fileID: 9005473948018729976, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
   startScene_sc: {fileID: 253954381}
 --- !u!1 &66940127
 GameObject:
@@ -995,7 +995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   so_WorkshopObjects:
-  - {fileID: 11400000, guid: 6249a7d972ef83743978d0cee7bea2ed, type: 2}
+  - {fileID: 11400000, guid: d8d5cfae0aa48354d84eec2b4f833289, type: 2}
   - {fileID: 11400000, guid: 41dd23057bea9ca4a9898973a87e38ae, type: 2}
   - {fileID: 11400000, guid: 658a1d6483d264f41a750acf9902122b, type: 2}
   - {fileID: 11400000, guid: f5c6c278c321ded48a0b2fd3be40e45e, type: 2}
@@ -1048,6 +1048,7 @@ MonoBehaviour:
   interoPoint: {fileID: 21300000, guid: beb33459a97f34b458a5cdf626fe9702, type: 3}
   floatingImage: {fileID: 1610938732}
   placeObjSound: {fileID: 387343207}
+  playerPrefab: {fileID: 9005473948018729976, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
   placedObjects:
   - {fileID: 9005473948018729976, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
   - {fileID: 6921699821149384227, guid: bfba587c21a0e0f46bc8864ca284fa64, type: 3}
@@ -1251,6 +1252,8 @@ MonoBehaviour:
   tryNumberTxt: {fileID: 159642363}
   gameTimerTxt: {fileID: 255992093}
   deathSound: {fileID: 755415491}
+  takeCollectibleSound: {fileID: 0}
+  onCrossGate: {fileID: 0}
   deathPanelAnimator: {fileID: 159642366}
   playerLevelScore: 0
   bestPayerLevelScore: 0

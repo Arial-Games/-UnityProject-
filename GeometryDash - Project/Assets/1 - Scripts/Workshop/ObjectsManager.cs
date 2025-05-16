@@ -17,6 +17,7 @@ public class ObjectsManager : MonoBehaviour
     [SerializeField] Image floatingImage;
 
     [Header("Sound"), SerializeField] AudioSource placeObjSound;
+    [SerializeField] private GameObject playerPrefab;
 
     int levelData = 1000; // Size of the level
     bool isPlacingObject = false;
@@ -106,13 +107,18 @@ public class ObjectsManager : MonoBehaviour
 
     void PlaceObject()
     {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        worldPosition.z = 0;
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    worldPos.z = 0;
 
-        GameObject newObject = new GameObject(selectedObject.name);
-        SpriteRenderer renderer = newObject.AddComponent<SpriteRenderer>();
+    GameObject newObject;
+    if (selectedObject.typeName == "Player")
+        newObject = Instantiate(playerPrefab, worldPos, Quaternion.identity);
+    else {
+        newObject = new GameObject(selectedObject.name);
+        var renderer = newObject.AddComponent<SpriteRenderer>();
         renderer.sprite = selectedObject.objSprite;
-        newObject.transform.position = worldPosition;
+        newObject.transform.position = worldPos;
+    }
 
 
         levelData -= selectedObject.dataSize;

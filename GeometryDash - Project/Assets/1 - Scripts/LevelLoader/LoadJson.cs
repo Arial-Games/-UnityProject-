@@ -11,15 +11,22 @@ public class LoadJson : MonoBehaviour
     [SerializeField] private SO_WorkshopObjects[] availableObjects;
     [SerializeField] private Vector3 playerSpawnPosition = new Vector3(-20, 0, 0);
     private Dictionary<string, GameObject> lookup;
+        //srializeField] private GameObject playerPrefab;              // ← ajoute ça
     void Awake()
     {
         lookup = availableObjects
             .ToDictionary(so => so.typeName, so => so.prefab);
+
+            
     }
   void Start()
     {
+        
+        // Avant de charger le JSON, place le player
+
+
         // Verify required references
-        if (levelRoot == null  || availableObjects == null)
+        if (levelRoot == null || availableObjects == null)
         {
             Debug.LogError("❌ References manquantes dans l'Inspector!");
             return;
@@ -30,6 +37,9 @@ public class LoadJson : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+
+      // (playerPrefab != null)
+          //Instantiate(playerPrefab, playerSpawnPosition, Quaternion.identity, levelRoot); 
 
         // Instantiate player at spawn position
         //GameObject player = Instantiate(playerPrefab, playerSpawnPosition, Quaternion.identity);
@@ -103,25 +113,34 @@ public void LoadJsonLevel(int levelNum = -1)
         
         foreach (var obj in patternObjects)
         {
-            if (blacklist.Contains(obj.type)) continue;
-            if (!lookup.TryGetValue(obj.type, out var prefab)) continue;
-            var inst = Instantiate(prefab, new Vector3(obj.x, obj.y, 0),
-                                   Quaternion.Euler(0, 0, obj.rot), levelRoot);
-            inst.transform.localScale = new Vector3(obj.sx, obj.sy, 1);
+             if (!lookup.ContainsKey(obj.type)) continue; // saute “Basic-player”
+    if (blacklist.Contains(obj.type)) continue;
+    var prefab = lookup[obj.type];
+    Instantiate(prefab, new Vector3(obj.x, obj.y, 0),
+                Quaternion.Euler(0,0,obj.rot), levelRoot)
+       .transform.localScale = new Vector3(obj.sx, obj.sy, 1);
         }
 
         /* ---------- répétitions ---------- */
-        for (int r = 1; r < repetitions; r++)
+     for (int r = 1; r < repetitions; r++)
+{
+    foreach (var obj in patternObjects)
+    {
+        if (blacklist.Contains(obj.type)) 
+            continue;
+
+        GameObject pf;
+       
+         if (!lookup.TryGetValue(obj.type, out pf))
         {
-            foreach (var obj in patternObjects)
-            {
-                if (blacklist.Contains(obj.type)) continue;
-                if (!lookup.TryGetValue(obj.type, out var prefab)) continue;
-                var pos = new Vector3(obj.x + r * patternWidth, obj.y, 0);
-                var inst = Instantiate(prefab, pos, Quaternion.Euler(0, 0, obj.rot), levelRoot);
-                inst.transform.localScale = new Vector3(obj.sx, obj.sy, 1);
-            }
+            continue;
         }
+
+        Vector3 pos = new Vector3(obj.x + r * patternWidth, obj.y, 0);
+        var inst = Instantiate(pf, pos, Quaternion.Euler(0, 0, obj.rot), levelRoot);
+        inst.transform.localScale = new Vector3(obj.sx, obj.sy, 1);
+    }
+}
 
         /* ---------- objets blacklistés uniques ---------- */
         foreach (var obj in patternObjects.Where(o => blacklist.Contains(o.type)))

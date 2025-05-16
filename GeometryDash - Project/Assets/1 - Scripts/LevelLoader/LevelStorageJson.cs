@@ -17,7 +17,7 @@ public class LevelEditor : MonoBehaviour
     private int currentFileIndex = 1;
     // Flag pour autoriser ou non les modifications
     private bool isEditing = true;
-private bool isPlacingObject = false;
+    private bool isPlacingObject = false;
     private List<Placeable> placed = new List<Placeable>();
     [Header("Script"), SerializeField] StartScene startScene_sc;
     void Start()
@@ -56,27 +56,27 @@ private bool isPlacingObject = false;
         }
     }
     public void SelectObject(int i)
-{
-    if (i >= 0 && i < so_WorkshopObjects.Length)
     {
-        currentSO = so_WorkshopObjects[i];
-        Debug.Log($"▶ Objet sélectionné: {currentSO.typeName}");
-
-        isPlacingObject = true;
-
-        // Désactiver le bouton uniquement si c’est le Player
-        if (so_WorkshopObjects[i].typeName == "Player")
+        if (i >= 0 && i < so_WorkshopObjects.Length)
         {
-            Transform btnTransform = paletteContainer.GetChild(i);
-            Button btn = btnTransform.GetComponent<Button>();
-            if (btn != null)
+            currentSO = so_WorkshopObjects[i];
+            Debug.Log($"▶ Objet sélectionné: {currentSO.typeName}");
+
+            isPlacingObject = true;
+
+            // Désactiver le bouton uniquement si c’est le Player
+            if (so_WorkshopObjects[i].typeName == "Player")
             {
-                btn.interactable = false;
-                Debug.Log("✔️ Bouton Player désactivé");
+                Transform btnTransform = paletteContainer.GetChild(i);
+                Button btn = btnTransform.GetComponent<Button>();
+                if (btn != null)
+                {
+                    btn.interactable = false;
+                    Debug.Log("✔️ Bouton Player désactivé");
+                }
             }
         }
     }
-}
 
     public void ButtonData(int i)
     {
@@ -107,16 +107,12 @@ private bool isPlacingObject = false;
         {
             //Debug.Log($"🎯 Objet sélectionné: {currentSO.typeName}");
         }
-     if (currentSO.typeName == "Player" && placed.Exists(p => p.type == "Player"))
+        
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-        Debug.Log("❌ Player déjà placé");
-        return;
-    }
-    if (EventSystem.current.IsPointerOverGameObject())
-{
-    Debug.Log("⛔ Clic sur l’UI ignoré");
-    return;
-}
+            Debug.Log("⛔ Clic sur l’UI ignoré");
+            return;
+        }
         if (currentSO != null && Input.GetMouseButtonDown(0))
         {
 
@@ -146,7 +142,7 @@ private bool isPlacingObject = false;
                 sx = go.transform.localScale.x,
                 sy = go.transform.localScale.y
             });
-            
+
         }
     }
     public void ExportJsonOnly()

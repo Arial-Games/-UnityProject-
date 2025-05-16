@@ -23,7 +23,8 @@ public class GameHazards : MonoBehaviour
         playerVisu[3] = GameObject.Find("TriangleVisu");
 
         DisableAllVisu();
-        playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
+if (playerVisu!=null && playerVisu.Length>0 && playerVisu[0]!=null)
+    playerVisu[0].GetComponent<SpriteRenderer>().enabled = true;
     }
 
     void Update()
