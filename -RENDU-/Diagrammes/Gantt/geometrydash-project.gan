@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="projet UNITY " company="" webLink="http://" view-date="2024-11-03" view-index="0" gantt-divider-location="470" resource-divider-location="400" version="3.3.3312" locale="en_US">
+    <description><![CDATA[this is a project in unity software to be a simple version of Geometry Dash video game ]]></description>
+    <view zooming-state="default:4" id="gantt-chart">
+        <field id="tpd3" name="Name" width="300" order="0"/>
+        <field id="tpd4" name="Begin date" width="77" order="1"/>
+        <field id="tpd5" name="End date" width="77" order="2"/>
+        <field id="tpd15" name="Notes" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <timeline><![CDATA[0,47,42]]></timeline>
+        <option id="color.recent"><![CDATA[#000000 #ff3366 #cc3300 #660099 #cc00cc #9900cc #66ff99 #cc0000 #006666 #999900]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Name" width="250" order="0"/>
+        <field id="1" name="Default role" width="131" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="f566a9041d45492b94990b29ff2167ad" name="creation de diagramme UML" color="#000000" meeting="false" start="2024-11-04" duration="9" complete="0" priority="4" expand="true">
+            <depend id="21" type="2" difference="0" hardness="Strong"/>
+            <depend id="63" type="2" difference="0" hardness="Strong"/>
+            <task id="18" uid="bdde562587434421a1018585bf622d47" name="Diagramme de classe" meeting="false" start="2024-11-04" duration="5" complete="0" expand="true">
+                <depend id="19" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="19" uid="64aa86b3d92042adbfb81314162ea3e6" name="Diagramme d'activité" meeting="false" start="2024-11-11" duration="2" complete="0" expand="true">
+                <depend id="20" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="20" uid="b1210be8b55c4f6baacf4ae67cc17a71" name="Diagramme de cas d'utilisation" meeting="false" start="2024-11-13" duration="2" complete="0" expand="true"/>
+        </task>
+        <task id="34" uid="ddb17929cde64f909b26d1fd09491e32" name="Diagramme de l'etat transition" meeting="false" start="2024-11-14" duration="1" complete="0" expand="true"/>
+        <task id="21" uid="455aaa66ec684c7fb222f9370b4245d7" name="Création / Mise en place Projet Unity" color="#000000" meeting="false" start="2024-11-15" duration="13" complete="0" expand="true">
+            <task id="22" uid="23d4ba7a7bb64e1784a9b53ecbb886b8" name="Mise en place du Github" meeting="false" start="2024-11-15" duration="1" complete="0" expand="true">
+                <depend id="23" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="23" uid="73241639e6614c2b94aca3eac36d91ae" name="Création du projet Unity" meeting="false" start="2024-11-18" duration="12" complete="0" expand="true"/>
+        </task>
+        <task id="24" uid="5fcff17793bf40929ae154e67a2d2444" name="Création du Gantt / Gestion de projet" meeting="false" start="2024-11-04" duration="139" complete="0" expand="true"/>
+        <task id="25" uid="6a5e5a09b6d448a294a744baebf892ac" name="assets UI / 2D" meeting="false" start="2024-12-11" duration="53" complete="0" expand="true">
+            <task id="26" uid="71fd88a6091f49b19ec2e6a29c594171" name="creation de UI (interface)" meeting="false" start="2024-12-16" duration="10" complete="0" expand="true">
+                <task id="47" uid="5c9a5f76704745e8b8f10f30423f0c3e" name="creation d'interface de communaute" meeting="false" start="2024-12-16" duration="10" complete="0" expand="true"/>
+            </task>
+            <task id="27" uid="85693b3452234c5781607393f0245047" name="animations de caractere" meeting="false" start="2024-12-23" duration="2" complete="0" expand="true"/>
+            <task id="28" uid="35339dd7ee554ac5ace2b94d928d2f8b" name="creation des cartes" meeting="false" start="2024-12-23" duration="2" complete="0" expand="true"/>
+            <task id="29" uid="7ea12ab27a514edf829a35931d6bd0a3" name="creation des menus" meeting="false" start="2024-12-23" duration="2" complete="0" expand="true"/>
+            <task id="30" uid="519fbdc31244432ba38fe6fe0298ce6e" name="animation des obstacles" meeting="false" start="2024-12-23" duration="1" complete="0" expand="true"/>
+            <task id="31" uid="67abe2f7c36c482686b7e4755f61b40e" name="assets sons/ musiques" meeting="false" start="2024-12-11" duration="48" complete="0" expand="true">
+                <task id="33" uid="8da308eaccf441f395385180211ba33c" name="effets sonores" meeting="false" start="2024-12-23" duration="2" complete="0" expand="true"/>
+                <task id="32" uid="09f3574c6a314d1d98b7fa4b81ee15a4" name="Son des interactions / boutons" meeting="false" start="2024-12-11" duration="44" complete="0" expand="true">
+                    <task id="43" uid="96ceb23af6ee46e9ac83230cb1c1f00a" name="modification du Gantt" meeting="false" start="2024-12-11" duration="44" complete="0" expand="true"/>
+                </task>
+                <task id="36" uid="afe7d0ddb0c24a99a7ff7afe7e848ef2" name="creation de game manager" meeting="false" start="2024-12-11" duration="8" complete="0" expand="true"/>
+                <task id="37" uid="5db7a5484ab143478d8ed27772b47ac7" name="creation de UI manager" meeting="false" start="2024-12-11" duration="11" complete="0" expand="true"/>
+                <task id="38" uid="43d00f89196f4aac8df180a0ca9d4594" name="SO" meeting="false" start="2025-01-13" duration="15" complete="0" expand="true">
+                    <task id="39" uid="ef5c6ac6cd164a8988c165411a942cbb" name="SO-objet dans les niveaux" meeting="false" start="2025-01-13" duration="5" complete="0" expand="true">
+                        <depend id="40" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="40" uid="b19521b408044ecdba5f52bfe84325d7" name="SO- obstacles" meeting="false" start="2025-01-20" duration="4" complete="0" expand="true">
+                        <depend id="41" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="41" uid="281516d2d0404553b6c505c11c8e87ac" name="SO-shop objects" meeting="false" start="2025-01-24" duration="5" complete="0" expand="true"/>
+                    <task id="42" uid="df1b6cc4fdc64adebd042669f8ebd96f" name="SO- skins" meeting="false" start="2025-01-27" duration="5" complete="0" expand="true"/>
+                </task>
+                <task id="44" uid="d779520704304432be2af9175db28137" name="Creation des controllers" meeting="false" start="2025-02-03" duration="10" complete="0" expand="true">
+                    <task id="45" uid="af59a39b1d464c218f161ec13a6c73c2" name="creation de player controller" meeting="false" start="2025-02-03" duration="5" complete="0" expand="true">
+                        <depend id="46" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="46" uid="d5199a2253db4e938ca0116d9c58b31a" name="creation de camera controller" color="#8cb6ce" meeting="false" start="2025-02-10" duration="5" complete="0" expand="true"/>
+                </task>
+            </task>
+            <task id="48" uid="f719eaf214864569a3706943301572af" name="Rajout de echpe de menu" meeting="false" start="2025-02-17" duration="1" complete="0" expand="true"/>
+            <task id="49" uid="1a680c8c7f3e47be90d8b7e195176099" name="rajoute des fonctionnalites de interface geraphique" meeting="false" start="2025-02-18" duration="2" complete="0" expand="true">
+                <notes><![CDATA[Rajout des fonctionnalités IG comme la mise en fonctionnement des portails, des bumber, etc.. en in game à partir des SO]]></notes>
+            </task>
+            <task id="55" uid="ee5852f66bea4614ab51d9a9346dd43b" name="Creation de shop manager" meeting="false" start="2025-02-19" duration="3" complete="0" thirdDate="2025-02-19" thirdDate-constraint="1" expand="true">
+                <task id="56" uid="575d832e2af641a280cf4d248a7f39f7" name="Achat des objets" meeting="false" start="2025-02-19" duration="2" complete="0" expand="true"/>
+                <task id="57" uid="0b7cca32ec7540119ba68f0d2da3f958" name="Création des objets a acheter" meeting="false" start="2025-02-20" duration="2" complete="0" expand="true"/>
+                <task id="58" uid="09b61c35a2ef42a7a7dd6e75771b7a33" name="Achat des pièces delux" meeting="false" start="2025-02-20" duration="2" complete="0" expand="true"/>
+                <task id="59" uid="3cc5caaaaee94e9eb1bc38cc4d9f93ba" name="gerer les UI de la page" meeting="false" start="2025-02-21" duration="1" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="51" uid="5572d00d16f94e4b9bca8a812f80fb4c" name="Création d'un Inventory" meeting="false" start="2025-02-24" duration="1" complete="0" expand="true">
+            <depend id="53" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="62" uid="fbdd58c5ee6c41cda463fc8754440628" name="creation de systeme classement generale" meeting="false" start="2025-02-24" duration="2" complete="0" expand="true"/>
+        <task id="53" uid="7bf6893356de4992802c24be5a4c3e45" name="Creation de Save manager" meeting="false" start="2025-02-25" duration="4" complete="0" expand="true">
+            <task id="54" uid="c46791ceb9b8463cbe667c1266241b9d" name="Save de l'inventaire" meeting="false" start="2025-02-25" duration="1" complete="0" expand="true"/>
+            <task id="60" uid="431759e9507943a5a856b8a175bcff2b" name="Save de la progression" meeting="false" start="2025-02-26" duration="3" complete="0" expand="true"/>
+            <task id="61" uid="079265a539cf4b1c93c9c40b54c31270" name="Chargement retour des donnés" meeting="false" start="2025-02-28" duration="1" complete="0" expand="true"/>
+        </task>
+        <task id="63" uid="ddf4c26aab9d4b4bb0bb8d3c807add10" name="Crée un loadingScreen entre les scenes" meeting="false" start="2024-11-15" duration="4" complete="0" expand="true"/>
+        <task id="64" uid="e9e6c15df8da416faa05c48a7f6928c1" name="Création des codes communauté et les sous catégories" meeting="false" start="2025-03-04" duration="2" complete="0" expand="true"/>
+        <task id="65" uid="4210d40a2a8a40e49e9037bef277b46b" name="creation panel Game Over" meeting="false" start="2025-03-10" duration="2" complete="0" expand="true"/>
+        <task id="66" uid="0baf2286f5eb4cf88f6245ba5f034310" name="changement de skin / shop" meeting="false" start="2025-03-11" duration="1" complete="0" expand="true"/>
+        <task id="67" uid="45935f691fd04affa7876d6c5dddd860" name="creation option manager" meeting="false" start="2025-03-14" duration="4" complete="0" expand="true">
+            <depend id="77" type="2" difference="0" hardness="Strong"/>
+            <task id="68" uid="8b69451f8b38453ebaaaf7a3105535a1" name="son general" meeting="false" start="2025-03-14" duration="1" complete="0" expand="true">
+                <depend id="71" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="69" uid="3732e8e3a2084b909de667cd37822949" name="son effets" meeting="false" start="2025-03-17" duration="1" complete="0" expand="true"/>
+            <task id="70" uid="09c70b0493bd4e5aa3883d76bb4dd61f" name="fullscreen" meeting="false" start="2025-03-17" duration="2" complete="0" expand="true"/>
+            <task id="71" uid="2cf0ced7c6b94317895928176889965c" name="langue" meeting="false" start="2025-03-17" duration="3" complete="0" expand="true"/>
+        </task>
+        <task id="72" uid="6a50cd74b78849ca81ac8f17790a2350" name="completer les info des skins" meeting="false" start="2025-03-20" duration="1" complete="0" expand="true"/>
+        <task id="73" uid="99089216a38d402c9b5daa02322a18c9" name="Gestion des portails (skinSwap / gameControllerSwap)" meeting="false" start="2025-03-21" duration="1" complete="0" expand="true"/>
+        <task id="74" uid="cd13b88babbe4182b8156582b4bd0bb6" name="creation de LevelData (xml)" meeting="false" start="2025-03-24" duration="4" complete="0" expand="true">
+            <notes><![CDATA[niveau 1]]></notes>
+            <depend id="75" type="2" difference="0" hardness="Strong"/>
+            <depend id="82" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="75" uid="9e839fc0da1a45d7a050a29f6984b6c9" name="Traduction des textes (XML)" meeting="false" start="2025-03-28" duration="1" complete="0" expand="true"/>
+        <task id="76" uid="eddb2b2b8c804c10a7c1a910a8222974" name="finir les visual" meeting="false" start="2025-03-28" duration="1" complete="0" expand="true">
+            <notes><![CDATA[les powerups , spaceship , nouveau obstacles
+]]></notes>
+        </task>
+        <task id="77" uid="0e64b2ed6d3140aaa664b229b2ffdd25" name="option: mute button" meeting="false" start="2025-03-20" duration="4" complete="0" expand="true"/>
+        <task id="78" uid="f5d4059ef69f4b2f92e4844da86cb1e0" name="Sauvegarde des para / des bestScores" meeting="false" start="2025-03-27" duration="3" complete="0" expand="true">
+            <depend id="79" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="79" uid="af99f6ccc5de4c7b9880431c3646d417" name="Gestion des scores (OngletWorkshop)" meeting="false" start="2025-04-01" duration="4" complete="0" expand="true">
+            <notes><![CDATA[    global score ajoute a score de chaque niveau
+
+    ajouter le global score a communaute partie score]]></notes>
+        </task>
+        <task id="80" uid="d636295643e04308bb7df221d5ce7862" name="Création d'un LevelStarter" meeting="false" start="2025-04-07" duration="1" complete="0" expand="true">
+            <notes><![CDATA[Création d’un script centralisée qui permet de lancer les niveaux / gérer ceux déja fait et leurs progression]]></notes>
+        </task>
+        <task id="81" uid="3176f0de256943058c3e074052a8c779" name="Gain des pièces (Version initiale)" meeting="false" start="2025-04-10" duration="2" complete="0" expand="true"/>
+        <task id="82" uid="3494365598c94e1cb2e4236335c7a2a0" name="T1 - Création des LevelData (XML) - 2 à 5" meeting="false" start="2025-03-28" duration="5" complete="0" expand="true"/>
+        <task id="83" uid="17a4a3b344ed43fd80e4bd3a0695cf65" name="creation des nouveaux SO" meeting="false" start="2025-04-14" duration="3" complete="0" expand="true"/>
+        <task id="84" uid="e8ffd49a6cc7416598027cc12ac1bf35" name="Workshop de niveaux (UI / placement)" meeting="false" start="2025-04-15" duration="7" complete="0" expand="true">
+            <depend id="88" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="85" uid="783e2fa990ce440095f4014ca2c1d47b" name="Menu pause inGame" meeting="false" start="2025-04-24" duration="1" complete="0" expand="true"/>
+        <task id="86" uid="b84052721b44479d8f80ec11f7d5fa71" name="Sauvegarde du nombre d’essai jusqu’a la re ussite du niveau," meeting="false" start="2025-04-25" duration="1" complete="0" expand="true"/>
+        <task id="87" uid="8fc60abf36594d648b178c84908ffdc3" name="modification des diagramme UML" meeting="false" start="2025-04-24" duration="2" complete="0" expand="true"/>
+        <task id="88" uid="cf7fc5d9c32a41fdbe44f98d87921e39" name="finition de workshop" meeting="false" start="2025-04-24" duration="14" complete="0" expand="true"/>
+        <task id="89" uid="3532688db460442cbf9075953b023dd9" name="appliqer le fonctionnement de IA" meeting="false" start="2025-04-28" duration="11" complete="0" expand="true"/>
+        <task id="90" uid="c61de84e3f024cd5bc81b66667e628c5" name="les derniers test et build" meeting="false" start="2025-05-12" duration="5" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Shamim SEDGHI " function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="1" name="Ricardo ANNIS" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="2" name="Matys FREYERMUTH" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="24" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="25" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="34" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="74" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="76" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="82" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="84" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="87" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="88" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="90" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="62" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="61" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="64" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="66" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="72" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="78" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="83" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="18" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="19" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="20" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="47" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="28" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="29" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="43" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="37" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="46" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="49" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="57" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="59" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="21" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="31" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="33" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="34" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="19" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="20" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="21" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="36" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="37" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="75" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="77" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="78" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="80" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="81" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="84" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="89" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="90" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="22" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="23" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="51" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="62" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="54" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="60" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="61" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="63" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="64" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="65" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="68" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="69" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="70" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="71" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="73" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="79" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="85" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="86" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="27" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="30" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="33" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="39" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="40" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="41" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="42" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="45" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="46" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="100.0"/>
+        <allocation task-id="48" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="56" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="58" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
