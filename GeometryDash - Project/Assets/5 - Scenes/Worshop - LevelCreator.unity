@@ -227,7 +227,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 79f843462fb0c4c42ba269c566509e36, type: 2}
   - {fileID: 11400000, guid: f6f948309790899438f88bf1d5c5f6b0, type: 2}
   - {fileID: 11400000, guid: fc10bf35860bca04ca9946bf55afb158, type: 2}
-  playerPrefab: {fileID: 9005473948018729976, guid: 1ba156a4d37868e4d81bb3c472bc857e, type: 3}
   startScene_sc: {fileID: 253954381}
 --- !u!1 &66940127
 GameObject:
@@ -995,7 +994,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   so_WorkshopObjects:
-  - {fileID: 11400000, guid: d8d5cfae0aa48354d84eec2b4f833289, type: 2}
   - {fileID: 11400000, guid: 41dd23057bea9ca4a9898973a87e38ae, type: 2}
   - {fileID: 11400000, guid: 658a1d6483d264f41a750acf9902122b, type: 2}
   - {fileID: 11400000, guid: f5c6c278c321ded48a0b2fd3be40e45e, type: 2}
